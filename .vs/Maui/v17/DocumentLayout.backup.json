@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\israe\\source\\repos\\Maui\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "Maui\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\MauiProgram.cs",
+              "RelativeToolTip": "Maui\\MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:48:04.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Maui\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\App.xaml.cs",
+              "RelativeToolTip": "Maui\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:47:57.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "Maui\\View\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\LoginPage.xaml.cs",
+              "RelativeToolTip": "Maui\\View\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T20:47:07.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\LoginPage.xaml",
+              "RelativeToolTip": "Maui\\View\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-09T01:11:23.618Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
