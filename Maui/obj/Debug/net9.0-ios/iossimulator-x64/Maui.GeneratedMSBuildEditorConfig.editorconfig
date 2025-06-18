@@ -3,6 +3,11 @@ build_property.EnableAotAnalyzer =
 build_property.EnableSingleFileAnalyzer = 
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net9.0-ios
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -54,8 +59,20 @@ build_metadata.AdditionalFiles.ManifestResourceName = Maui.Resources.Styles.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/israe/source/repos/Maui/Maui/View/LoginPage.xaml]
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/DashboardTarefas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.LoginPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\LoginPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\LoginPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.DashboardTarefas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\DashboardTarefas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\DashboardTarefas.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Usuario/CadastrarUsuario.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Usuario.CadastrarUsuario.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Usuario\CadastrarUsuario.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Usuario\CadastrarUsuario.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Usuario/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Usuario.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Usuario\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Usuario\Login.xaml

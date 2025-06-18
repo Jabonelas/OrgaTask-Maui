@@ -1,5 +1,6 @@
 ﻿using Maui.DTOs;
 using Maui.DTOs.Usuario;
+using Maui.Helpers;
 using Maui.Interface;
 using Newtonsoft.Json;
 using System.Text;
@@ -11,9 +12,9 @@ namespace Maui.Service
     {
         private readonly HttpClient http;
 
-        public UsuarioService(HttpClient http)
+        public UsuarioService(HttpClient _http)
         {
-            http = http;
+            http = _http;
         }
 
         public async Task<(bool success, string errorMessage)> LoginAsync(UsuarioLoginDTO _dadosLogin)
@@ -23,21 +24,20 @@ namespace Maui.Service
                 var json = JsonConvert.SerializeObject(_dadosLogin);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var endpoint = SetandoEndPoint("api/usuarios/login");
 
-                using (var request = new HttpRequestMessage(HttpMethod.Post, endpoint))
+                var endpoint = ApiRoutes.SetandoEndPoint("api/usuarios/login");
+
+                using (var response = await http.PostAsync(endpoint, content))
                 {
-                    request.Content = content;
-                    var response = await http.SendAsync(request);
-
                     var responseContent = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode)
                     {
+
                         var result = JsonConvert.DeserializeObject<UserToken>(responseContent);
 
                         Preferences.Set("authToken", result.Token);
-                        Preferences.Set("usuarioLogado", _dadosLogin.login);
+                        Preferences.Set("usuarioLogado", _dadosLogin.Login);
 
                         return (true, null);
                     }
@@ -62,7 +62,7 @@ namespace Maui.Service
                 var json = JsonConvert.SerializeObject(_dadosUsuario);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var endpoint = SetandoEndPoint("api/usuarios");
+                var endpoint = ApiRoutes.SetandoEndPoint("api/usuarios");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Post, endpoint))
                 {
@@ -90,19 +90,6 @@ namespace Maui.Service
             }
         }
 
-        #region Metodo Privado
 
-        private string SetandoEndPoint(string _endpont)
-        {
-#if DEBUG
-            return $"{_endpont}";
-
-#else
-            return $"https://blazor-api.onrender.com/{_endpont}";
-
-#endif
-        }
-
-        #endregion Metodo Privado
     }
 }

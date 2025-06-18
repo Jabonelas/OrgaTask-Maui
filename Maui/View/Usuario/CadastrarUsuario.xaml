@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.View.Usuario.CadastrarUsuario">
+
+    <Grid>
+
+        <ScrollView>
+
+
+            <VerticalStackLayout Spacing="20" Padding="20">
+
+                <!--Cabecario-->
+                <Frame BackgroundColor="{StaticResource Azul}"
+                   Padding="20"
+                   CornerRadius="15"
+                   HasShadow="True"  >
+
+                    <VerticalStackLayout Spacing="20">
+
+                        <HorizontalStackLayout HorizontalOptions="Center">
+
+                            <Image Source="usuario_final.png"
+                           WidthRequest="28"
+                           HeightRequest="28"></Image>
+
+                            <Label Text="Cadastro de Usuários"
+                               FontAttributes="Bold"
+                               FontSize="24"
+                               TextColor="White"
+                               Margin="10,0,0,0"></Label>
+
+                        </HorizontalStackLayout>
+
+                        <Label Text="Preencha os campos ao lado para criar sua conta no OrgaTask e transforme a sua produtividade."
+                           FontSize="14"
+                           TextColor="White"
+                           HorizontalTextAlignment="Center"></Label>
+
+                        <!-- Benefícios -->
+                        <VerticalStackLayout Spacing="12">
+
+                            <HorizontalStackLayout>
+
+                                <Image Source="aceitar.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"></Image>
+
+                                <Label Text="Controle de acesso pessoal e seguro."
+                                   TextColor="White"
+                                   FontSize="12"
+                                   Margin="8,0,0,0"></Label>
+
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+
+                                <Image Source="aceitar.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"></Image>
+
+                                <Label Text="Organize suas tarefas de forma simples."
+                                   TextColor="White"
+                                   FontSize="12"
+                                   Margin="8,0,0,0"></Label>
+
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+
+                                <Image Source="aceitar.png"
+                                   WidthRequest="20"
+                                   HeightRequest="20"></Image>
+
+                                <Label Text="Acompanhe o progresso das suas tarefas."
+                                   TextColor="White"
+                                   FontSize="12"
+                                   Margin="8,0,0,0"></Label>
+
+                            </HorizontalStackLayout>
+
+                        </VerticalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+                <!--Cadastrar Usuairo-->
+                <Frame Padding="20" CornerRadius="15" HasShadow="True">
+
+                    <VerticalStackLayout Spacing="15">
+
+                        <Label Text="Nome Completo:"></Label>
+
+                        <Entry x:Name="txtNomeCompleto" Placeholder="Digite o nome completo..." Text="{Binding DadosUsuario.Nome}" ></Entry>
+
+                        <Label Text="A senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroNomeCompleto}" />
+
+                        <Label Text="Nome de Usuário:"></Label>
+
+                        <Entry x:Name="txtNomeUsuairo" Placeholder="Digite o usuário..." Text="{Binding DadosUsuario.Login}" ></Entry>
+
+                        <Label Text="A senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroUsuario}" />
+
+                        <Label Text="Senha:"></Label>
+
+                        <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+
+                            <Entry x:Name="txtSenha"
+                                   Placeholder="Digite a senha..."
+                                   IsPassword="{Binding IsSenhaOculta}"
+                                   Text="{Binding DadosUsuario.Senha}"
+                                   WidthRequest="250"
+                                   HorizontalOptions="FillAndExpand" />
+
+                            <Label Text="A senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroSenha}" />
+
+                            <ImageButton Source="{Binding IconeOlhoSenha}"
+                                         Command="{Binding ExibirSenhaCommand}"
+                                         BackgroundColor="Transparent"
+                                         WidthRequest="5"
+                                         HeightRequest="5"
+                                         Margin="0"
+                                         HorizontalOptions="End"
+                            />
+
+                        </HorizontalStackLayout>
+
+                        <Label Text="Confirmar Senha:"></Label>
+
+                        <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
+
+                            <Entry x:Name="txtConfirmarSenha"
+                                   Placeholder="Digite a confirmação da senha..."
+                                   IsPassword="{Binding IsConfirmacaoSenhaOculta}"
+                                   Text="{Binding DadosUsuario.ConfirmarSenha}"
+                                   WidthRequest="250"
+                                   HorizontalOptions="FillAndExpand" />
+
+                            <Label Text="A confimação senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroConfirmarSenha}" />
+
+                            <ImageButton Source="{Binding IconeOlhoConfirmacaoSenha}"
+                                         Command="{Binding ExibirConfirmacaoSenhaCommand}"
+                                         BackgroundColor="Transparent"
+                                         WidthRequest="5"
+                                         HeightRequest="5"
+                                         Margin="0"
+                                         HorizontalOptions="End"
+                                         />
+
+                        </HorizontalStackLayout>
+
+
+                        <Button x:Name="btnCriarUsuario" 
+                                Text="Cadastrar"
+                                ImageSource="verificar.png"
+                                ContentLayout="Left,10"
+                                BackgroundColor="#007AFF"
+                                TextColor="White"
+                                HeightRequest="45"
+                                CornerRadius="10"
+                                Command="{Binding CadastrarUsuarioCommand}"
+                                ></Button>
+
+
+                        <Button x:Name="btnCancelarCadastro" 
+                                Text="Cancelar"
+                                ImageSource="cancelar.png"
+                                ContentLayout="Left,10"
+                                BorderColor="Gray"
+                                BorderWidth="1.5"
+                                BackgroundColor="White"
+                                TextColor="Gray"
+                                HeightRequest="45"
+                                CornerRadius="10"
+                                Command="{Binding CancelarCadastroCommand}"
+                        ></Button>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <!-- OVERLAY DE LOADING -->
+        <Grid IsVisible="{Binding IsRefreshing}"
+              BackgroundColor="#80000000"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand"
+              InputTransparent="False">
+            <!-- Bloqueia interações -->
+
+            <ActivityIndicator IsRunning="True"
+                               Color="White"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

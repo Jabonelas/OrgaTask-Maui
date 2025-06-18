@@ -1,12 +1,12 @@
-﻿using Maui.Interface;
-using Maui.Service;
-using Maui.View;
+﻿using Maui.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace Maui
 {
     public static class MauiProgram
     {
+        public static IServiceProvider Services { get; private set; }
+
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
@@ -21,20 +21,15 @@ namespace Maui
                 });
 
 
-            // Registre os serviços
-            builder.Services.AddSingleton<IUsuarioService, UsuarioService>();
-            builder.Services.AddSingleton<ITarefaService, TarefaService>();
-
-            // Registre ViewModels e Views
-            builder.Services.AddTransient<LoginPage>();
-            //builder.Services.AddTransient<MainViewModel>();
-
+            builder.Services.AdicionarInjecoesDependencias();
 
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            var app = builder.Build();
+            Services = app.Services;
+            return app;
         }
     }
 }

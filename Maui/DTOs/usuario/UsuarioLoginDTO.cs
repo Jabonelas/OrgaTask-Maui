@@ -1,14 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Maui.DTOs.Usuario
 {
-    public class UsuarioLoginDTO
+    public class UsuarioLoginDTO : ObservableValidator
     {
-        [Required(ErrorMessage = "O login é obrigatório!")]
-        public string login { get; set; }
+        public string Login { get; set; }
 
-        [Required(ErrorMessage = "A senha é obrigatório!")]
-        [MaxLength(50, ErrorMessage = "O senha deve ter no máximo 50 caracteres.")]
-        public string senha { get; set; }
+        public string Senha { get; set; }
     }
 }
