@@ -1,12 +1,175 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui.View.Tarefa.DashboardTarefas"
-             Title="DashboardTarefas">
-    <VerticalStackLayout>
+             x:Class="Maui.View.Tarefa.DashboardTarefas">
+
+    <VerticalStackLayout >
+
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Dashboard de Tarefas"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            TextColor="{StaticResource Azul}"
+            FontSize="20"
+            FontAttributes="Bold"
+            Margin="0,0,0,20" />
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="8"  Margin="0,0,0,20" >
+
+            <Frame>
+                <VerticalStackLayout>
+                    <Image Source="clock.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" />
+                    <Label Text="Pendentes" HorizontalTextAlignment="Center" />
+                    <Label Text="0" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="16" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame>
+                <VerticalStackLayout>
+                    <Image Source="task.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" />
+                    <Label Text="Em Progresso" HorizontalTextAlignment="Center" />
+                    <Label Text="0" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="16" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame>
+                <VerticalStackLayout>
+                    <Image Source="check.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" />
+                    <Label Text="Concluídas" HorizontalTextAlignment="Center" />
+                    <Label Text="0" HorizontalTextAlignment="Center" FontAttributes="Bold" FontSize="16" />
+                </VerticalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+
+
+        <Frame Margin="10,0,10,10">
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout Spacing="8"  Margin="0,0,0,10" >
+
+                    <Image Source="chart.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" />
+                    <Label Text="Progresso Total" TextColor="{StaticResource Azul}" FontSize="16"></Label>
+
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout>
+
+                    <Grid ColumnDefinitions="*,Auto" Margin="0,0,0,8" >
+                        <Label 
+                            Text="Progresso" 
+                            FontSize="10" 
+                            VerticalOptions="Center" />
+
+                        <Label 
+                            Text="22.00%" 
+                            Grid.Column="1"  
+                            FontSize="10" 
+                            VerticalOptions="Center" />
+                    </Grid>
+
+                    <ProgressBar 
+                    Progress="0.5"  
+                    ProgressColor="{StaticResource Azul}"
+                    BackgroundColor="LightGray"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Center"  
+                    Margin="0,0,0,5"/>
+
+                    <HorizontalStackLayout >
+
+                        <Image Source="information.png" WidthRequest="13" HeightRequest="13"  VerticalOptions="Center"/>
+                        <Label Text="Você completou 22.22% das tarefas cadastradas"  VerticalOptions="Center"  FontSize="10"    ></Label>
+
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </Frame>
+
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <!-- Título com badge -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="warning.png" WidthRequest="20" HeightRequest="21"/>
+                    <Label Text="Tarefas Prioritárias"
+                       FontSize="16"
+                       TextColor="{StaticResource Azul}"/>
+                </HorizontalStackLayout>
+
+                <Frame Grid.Column="1"
+                   Padding="5"
+                   BackgroundColor="#F72585"
+                   CornerRadius="12"
+                   HasShadow="False"
+                   VerticalOptions="Center">
+                    <Label Text="4 Itens"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="12"/>
+                </Frame>
+            </Grid>
+
+            <!-- Lista de tarefas -->
+            <CollectionView ItemsSource="{Binding Tarefas}" Margin="0,10,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="15"
+                           BackgroundColor="#FFF0F5"
+                           Padding="15"
+                           Margin="0,5"
+                           HasShadow="True">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Título da tarefa -->
+                                <Label Text="{Binding Titulo}"
+                                   FontAttributes="Bold"
+                                   FontSize="16"
+                                   Grid.ColumnSpan="2"/>
+
+                                <!-- Data de criação e prazo -->
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Text="{Binding InfoDetalhes}"
+                                   FontSize="12"
+                                   TextColor="Gray"/>
+
+                                <!-- Status -->
+                                <Frame Grid.Row="1"
+                                   Grid.Column="1"
+                                   Padding="5,2"
+                                   BackgroundColor="{Binding CorStatus}"
+                                   CornerRadius="10"
+                                   HasShadow="False">
+                                    <Label Text="{Binding Status}"
+                                       TextColor="White"
+                                       FontSize="10"
+                                       FontAttributes="Bold"/>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+
     </VerticalStackLayout>
+
+
 </ContentPage>

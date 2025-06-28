@@ -2,36 +2,17 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\LoginViewModel.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\DashboardTarefas.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\Login.xaml</string>
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\Login.xaml.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\CadastrarUsuario.xaml</string>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\CadastrarUsuario.xaml.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\LoginViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\CadastrarUsuarioViewModel.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\Interface\IUsuarioService.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\Service\UsuarioService.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Usuario\UsuarioLoginDTO.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Usuario\UsuarioCadastrarDTO.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\.nuget\packages\microsoft.maui.resizetizer\9.0.51\buildTransitive\Microsoft.Maui.Resizetizer.After.targets</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\DashboardTarefasViewModel.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

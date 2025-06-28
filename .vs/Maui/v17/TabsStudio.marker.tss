@@ -1,22 +1,2 @@
 <?xml version="1.0"?>
-<ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <TabHighlightState>
-    <extensions>
-      <string>Maui\DTOs\Usuario\UsuarioCadastrarDTO.cs</string>
-    </extensions>
-    <highlightIndex>1</highlightIndex>
-  </TabHighlightState>
-  <TabHighlightState>
-    <extensions>
-      <string>Maui\ViewModel\Usuario\CadastrarUsuarioViewModel.cs</string>
-    </extensions>
-    <highlightIndex>1</highlightIndex>
-  </TabHighlightState>
-  <TabHighlightState>
-    <extensions>
-      <string>Maui\View\Usuario\CadastrarUsuario.xaml.cs</string>
-      <string>Maui\View\Usuario\CadastrarUsuario.xaml</string>
-    </extensions>
-    <highlightIndex>1</highlightIndex>
-  </TabHighlightState>
-</ArrayOfTabHighlightState>
+<ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />

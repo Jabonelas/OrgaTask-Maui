@@ -1,13 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="Maui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Maui"
-    Title="Maui">
+    xmlns:usuario="clr-namespace:Maui.View.Usuario"
+    xmlns:tarefa="clr-namespace:Maui.View.Tarefa"
+    Title="OrgaTask"
+    FlyoutBehavior="Disabled">
+
+    <!-- Telas fora do TabBar -->
+    <ShellContent
+        Route="Login"
+        ContentTemplate="{DataTemplate usuario:Login}" />
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="CadastrarUsuario"
+        ContentTemplate="{DataTemplate usuario:CadastrarUsuario}" />
+
+    <!-- TabBar fixado na parte inferior -->
+    <TabBar Route="MainTabs">
+        <ShellContent
+            Icon="home.png"
+            Route="Main"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+
+        <ShellContent
+            Icon="home.png"
+            Route="DashboardTarefas"
+            ContentTemplate="{DataTemplate tarefa:DashboardTarefas}" />
+    </TabBar>
 </Shell>

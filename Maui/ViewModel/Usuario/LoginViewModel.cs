@@ -67,13 +67,15 @@ namespace Maui.ViewModel.Usuario
 
                 if (success)
                 {
-                    var page = services.GetRequiredService<DashboardTarefas>();
+                    await Shell.Current.GoToAsync("//DashboardTarefas");
 
-                    await navigation.PushAsync(page);
+
+                    //var page = services.GetRequiredService<DashboardTarefas>();
+
+                    //await navigation.PushAsync(page);
+
+
                 }
-
-                Application.Current.MainPage.DisplayAlert("Atenção!", errorMessage, "OK");
-
             }
             catch (Exception ex)
             {
@@ -110,8 +112,11 @@ namespace Maui.ViewModel.Usuario
         [RelayCommand]
         public async void CriarConta()
         {
-            var page = services.GetRequiredService<CadastrarUsuario>();
-            await navigation.PushAsync(page);
+
+            await Shell.Current.GoToAsync("//CadastrarUsuario");
+
+            //var page = services.GetRequiredService<CadastrarUsuario>();
+            //await navigation.PushAsync(page);
         }
 
         public string IconeOlhoSenha => IsSenhaOculta ? "olho_aberto.png" : "olho_fechado.png";

@@ -2,11 +2,11 @@
 using Maui.Interface;
 using Maui.ViewModel.Usuario;
 
-namespace Maui.View;
+namespace Maui.View.Usuario;
 
-public partial class LoginPage : ContentPage
+public partial class Login : ContentPage
 {
-    public LoginPage(IUsuarioService _usuarioService, IServiceProvider _services)
+    public Login(IUsuarioService _usuarioService, IServiceProvider _services)
     {
         InitializeComponent();
 

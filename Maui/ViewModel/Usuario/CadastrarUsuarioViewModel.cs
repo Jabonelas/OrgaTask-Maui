@@ -36,14 +36,14 @@ namespace Maui.ViewModel.Usuario
 
         [ObservableProperty]
         private bool mostrarErroConfirmarSenha;
-        
+
         [ObservableProperty]
         private bool isRefreshing;
 
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(IconeOlhoSenha))]
         private bool isSenhaOculta = true;
-        
+
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(IconeOlhoConfirmacaoSenha))]
         private bool isConfirmacaoSenhaOculta = true;
@@ -135,13 +135,13 @@ namespace Maui.ViewModel.Usuario
 
                 if (success)
                 {
-                    var page = services.GetRequiredService<DashboardTarefas>();
 
-                    await navigation.PushAsync(page);
+                    await Shell.Current.GoToAsync("//DashboardTarefas");
+
+                    //var page = services.GetRequiredService<DashboardTarefas>();
+
+                    //await navigation.PushAsync(page);
                 }
-
-                Application.Current.MainPage.DisplayAlert("Atenção!", errorMessage, "OK");
-
             }
             catch (Exception ex)
             {
@@ -153,6 +153,23 @@ namespace Maui.ViewModel.Usuario
             finally
             {
                 IsRefreshing = false;
+            }
+        }
+
+
+        [RelayCommand]
+        private async Task CancelarCadastro()
+        {
+
+            var resposta = await Application.Current.MainPage.DisplayAlert(
+                "Atenção!",
+                "Tem certeza que deseja cancelar o cadastro do usuário?",
+                "Sim",
+                "Não");
+
+            if (resposta)
+            {
+                await Shell.Current.GoToAsync("//Login");
             }
         }
 
