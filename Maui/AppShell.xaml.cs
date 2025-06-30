@@ -1,9 +1,4 @@
-﻿using Maui.View;
-using Maui.View.Tarefa;
-using Maui.View.Usuario;
-using System.Diagnostics;
-
-namespace Maui
+﻿namespace Maui
 {
     public partial class AppShell : Shell
     {
@@ -12,6 +7,6 @@ namespace Maui
             InitializeComponent();
         }
 
-     
+
     }
 }

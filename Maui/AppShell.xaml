@@ -19,14 +19,29 @@
 
     <!-- TabBar fixado na parte inferior -->
     <TabBar Route="MainTabs">
-        <ShellContent
-            Icon="home.png"
-            Route="Main"
-            ContentTemplate="{DataTemplate local:MainPage}" />
+  
 
         <ShellContent
             Icon="home.png"
             Route="DashboardTarefas"
             ContentTemplate="{DataTemplate tarefa:DashboardTarefas}" />
+
+        <ShellContent
+            Icon="cadastrar_tarefa.png"
+            Route="CadastrarTarefa"
+            ContentTemplate="{DataTemplate tarefa:CadastrarTarefa}" />
+
+        <ShellContent
+            Icon="lista_tarefa.png"
+            Route="Main"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+
+        <ShellContent
+            Icon="trocar_usuario.png"
+            Route="Main"
+            ContentTemplate="{DataTemplate local:MainPage}" />
+
+       
+
     </TabBar>
 </Shell>

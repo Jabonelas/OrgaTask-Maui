@@ -3,6 +3,7 @@ OpenSans-Semibold.ttf
 SEGOEUI.TTF
 SEGOEUIB.TTF
 aceitar.scale-100.png
+adicionar.scale-100.png
 adicionar_amigo.scale-100.png
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -50,10 +51,13 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
+cadastrar_tarefa.scale-100.png
+calendar.scale-100.png
 cancelar.scale-100.png
 chart.scale-100.png
 check.scale-100.png
 clock.scale-100.png
+clock_gray.scale-100.png
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
@@ -62,10 +66,12 @@ dotnet_bot.scale-400.png
 entrada.scale-100.png
 home.scale-100.png
 information.scale-100.png
+lista_tarefa.scale-100.png
 olho_aberto.scale-100.png
 olho_fechado.scale-100.png
 seguranca.scale-100.png
 task.scale-100.png
+trocar_usuario.scale-100.png
 usuario_final.scale-100.png
 verificar.scale-100.png
 warning.scale-100.png

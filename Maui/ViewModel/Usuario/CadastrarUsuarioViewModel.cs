@@ -2,25 +2,12 @@
 using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Usuario;
 using Maui.Interface;
-using Maui.View.Tarefa;
 
 namespace Maui.ViewModel.Usuario
 {
     public partial class CadastrarUsuarioViewModel : ObservableObject
     {
         private readonly IUsuarioService iUsuarioService;
-        private readonly IServiceProvider services;
-        private readonly INavigation navigation;
-
-        public CadastrarUsuarioViewModel(IUsuarioService _iUsuarioService, IServiceProvider _services,
-            INavigation _navigation)
-        {
-            iUsuarioService = _iUsuarioService;
-            services = _services;
-            navigation = _navigation;
-
-            DadosUsuario = new UsuarioCadastrarDTO();
-        }
 
         [ObservableProperty]
         private UsuarioCadastrarDTO dadosUsuario;
@@ -48,7 +35,12 @@ namespace Maui.ViewModel.Usuario
         [NotifyPropertyChangedFor(nameof(IconeOlhoConfirmacaoSenha))]
         private bool isConfirmacaoSenhaOculta = true;
 
+        public CadastrarUsuarioViewModel(IUsuarioService _iUsuarioService)
+        {
+            iUsuarioService = _iUsuarioService;
 
+            DadosUsuario = new UsuarioCadastrarDTO();
+        }
 
         [RelayCommand]
         private async Task CadastrarUsuario()
@@ -87,7 +79,6 @@ namespace Maui.ViewModel.Usuario
             }
 
             return true;
-
         }
 
 
@@ -95,23 +86,23 @@ namespace Maui.ViewModel.Usuario
         {
             try
             {
-                (bool success, string errorMessage) = await iUsuarioService.CadastrarUsuarioAsync(dadosUsuario);
+                (bool Sucesso, string ErrorMessagem) = await iUsuarioService.CadastrarUsuarioAsync(dadosUsuario);
 
-                if (success)
+                if (Sucesso)
                 {
                     await RealizarLoginAsync();
-
-                    return;
                 }
-
-                Application.Current.MainPage.DisplayAlert("Atenção!", errorMessage, "OK");
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Atenção!", ErrorMessagem, "OK");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao realizar Cadastro do usuário: {ex.Message}");
 
-                Application.Current.MainPage.DisplayAlert("Atenção!",
-                    "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Atenção!",
+                     "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
             }
             finally
             {
@@ -135,20 +126,19 @@ namespace Maui.ViewModel.Usuario
 
                 if (success)
                 {
-
                     await Shell.Current.GoToAsync("//DashboardTarefas");
-
-                    //var page = services.GetRequiredService<DashboardTarefas>();
-
-                    //await navigation.PushAsync(page);
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Atenção!", $"{errorMessage}", "OK");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao realizar login: {ex.Message}");
 
-                Application.Current.MainPage.DisplayAlert("Atenção!",
-                    "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Atenção!",
+                      "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
             }
             finally
             {
@@ -161,11 +151,9 @@ namespace Maui.ViewModel.Usuario
         private async Task CancelarCadastro()
         {
 
-            var resposta = await Application.Current.MainPage.DisplayAlert(
-                "Atenção!",
+            var resposta = await Application.Current.MainPage.DisplayAlert("Atenção!",
                 "Tem certeza que deseja cancelar o cadastro do usuário?",
-                "Sim",
-                "Não");
+                "Sim", "Não");
 
             if (resposta)
             {

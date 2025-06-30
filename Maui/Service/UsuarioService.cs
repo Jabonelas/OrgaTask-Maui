@@ -15,17 +15,33 @@ namespace Maui.Service
         public UsuarioService(HttpClient _http)
         {
             http = _http;
+
+#if DEBUG
+
+            // Ignora validação de certificado
+            if (DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                var handler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+                };
+
+                http = new HttpClient(handler);
+            }
+
+#endif
         }
 
-        public async Task<(bool success, string errorMessage)> LoginAsync(UsuarioLoginDTO _dadosLogin)
+        public async Task<(bool Sucesso, string ErrorMessagem)> LoginAsync(UsuarioLoginDTO _dadosLogin)
         {
             try
             {
                 var json = JsonConvert.SerializeObject(_dadosLogin);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-
                 var endpoint = ApiRoutes.SetandoEndPoint("api/usuarios/login");
+
+
 
                 using (var response = await http.PostAsync(endpoint, content))
                 {
@@ -55,7 +71,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage)> CadastrarUsuarioAsync(UsuarioCadastrarDTO _dadosUsuario)
+        public async Task<(bool Sucesso, string ErrorMessagem)> CadastrarUsuarioAsync(UsuarioCadastrarDTO _dadosUsuario)
         {
             try
             {

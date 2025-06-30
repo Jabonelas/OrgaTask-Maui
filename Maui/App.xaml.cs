@@ -1,6 +1,4 @@
-﻿using Maui.View;
-
-namespace Maui
+﻿namespace Maui
 {
     public partial class App : Application
     {

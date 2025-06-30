@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Maui.DTOs.Tarefa
+﻿namespace Maui.DTOs.Tarefa
 {
     public class TarefaAlterarDTO
     {
@@ -12,7 +10,7 @@ namespace Maui.DTOs.Tarefa
 
         public string Prioridade { get; set; }
 
-        public int Prazo { get; set; }
+        public int? Prazo { get; set; }
 
         public string Status { get; set; }
     }

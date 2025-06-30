@@ -2,26 +2,12 @@
 using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Usuario;
 using Maui.Interface;
-using Maui.View.Tarefa;
-using Maui.View.Usuario;
-using System.ComponentModel.DataAnnotations;
 
 namespace Maui.ViewModel.Usuario
 {
     public partial class LoginViewModel : ObservableObject
     {
         private readonly IUsuarioService iUsuarioService;
-        private readonly IServiceProvider services;
-        private readonly INavigation navigation;
-
-        public LoginViewModel(IUsuarioService _iUsuarioService, IServiceProvider _services, INavigation _navigation)
-        {
-            iUsuarioService = _iUsuarioService;
-            services = _services;
-            navigation = _navigation;
-
-            UsuarioLogin = new UsuarioLoginDTO();
-        }
 
         [ObservableProperty]
         private UsuarioLoginDTO usuarioLogin;
@@ -39,10 +25,21 @@ namespace Maui.ViewModel.Usuario
         [NotifyPropertyChangedFor(nameof(IconeOlhoSenha))]
         private bool isSenhaOculta = true;
 
+        public LoginViewModel(IUsuarioService _iUsuarioService)
+        {
+            iUsuarioService = _iUsuarioService;
+
+            UsuarioLogin = new UsuarioLoginDTO();
+        }
 
         [RelayCommand]
         private async Task Entrar()
         {
+
+            usuarioLogin.Login = "israel oliveira";
+            //usuarioLogin.Login = "string";
+            usuarioLogin.Senha = "string";
+
             if (!IsCamposPreenchidos())
             {
                 return;
@@ -58,31 +55,28 @@ namespace Maui.ViewModel.Usuario
             await RealizarLoginAsync();
         }
 
-
         private async Task RealizarLoginAsync()
         {
             try
             {
-                var (success, errorMessage) = await iUsuarioService.LoginAsync(usuarioLogin);
+                var (Sucesso, ErrorMessagem) = await iUsuarioService.LoginAsync(usuarioLogin);
 
-                if (success)
+                if (Sucesso)
                 {
                     await Shell.Current.GoToAsync("//DashboardTarefas");
 
-
-                    //var page = services.GetRequiredService<DashboardTarefas>();
-
-                    //await navigation.PushAsync(page);
-
-
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Atenção!", $"{ErrorMessagem}", "OK");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao realizar login: {ex.Message}");
 
-                Application.Current.MainPage.DisplayAlert("Atenção!",
-                    "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Atenção!",
+                      "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
             }
             finally
             {
@@ -93,11 +87,9 @@ namespace Maui.ViewModel.Usuario
         private bool IsCamposPreenchidos()
         {
             MostrarErroUsuario = string.IsNullOrEmpty(UsuarioLogin?.Login) ? true : false;
-
             MostrarErroSenha = string.IsNullOrEmpty(UsuarioLogin?.Senha) ? true : false;
 
             OnPropertyChanged(nameof(MostrarErroUsuario));
-
             OnPropertyChanged(nameof(MostrarErroSenha));
 
             if (MostrarErroUsuario || MostrarErroSenha)
@@ -112,11 +104,7 @@ namespace Maui.ViewModel.Usuario
         [RelayCommand]
         public async void CriarConta()
         {
-
             await Shell.Current.GoToAsync("//CadastrarUsuario");
-
-            //var page = services.GetRequiredService<CadastrarUsuario>();
-            //await navigation.PushAsync(page);
         }
 
         public string IconeOlhoSenha => IsSenhaOculta ? "olho_aberto.png" : "olho_fechado.png";

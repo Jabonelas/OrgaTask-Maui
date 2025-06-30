@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Maui.DTOs.Usuario
+﻿namespace Maui.DTOs.Usuario
 {
     public class UsuarioCadastrarDTO
     {

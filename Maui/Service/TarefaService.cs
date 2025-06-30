@@ -1,5 +1,6 @@
 ﻿using Maui.DTOs;
 using Maui.DTOs.Tarefa;
+using Maui.Helpers;
 using Maui.Interface;
 using Newtonsoft.Json;
 using System.Net;
@@ -13,9 +14,24 @@ namespace Maui.Service
     {
         private readonly HttpClient http;
 
-        public TarefaService(HttpClient http)
+        public TarefaService(HttpClient _http)
         {
-            http = http;
+            http = _http;
+
+#if DEBUG
+
+            // Ignora validação de certificado
+            if (DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                var handler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+                };
+
+                http = new HttpClient(handler);
+            }
+
+#endif
         }
 
         public class PagedResult<T>
@@ -24,14 +40,14 @@ namespace Maui.Service
             public int TotalCount { get; set; }
         }
 
-        public async Task<(bool success, string errorMessage, List<TarefaConsultaDTO> Items, int TotalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status)
+        public async Task<(bool Sucesso, string errorMessage, List<TarefaConsultaDTO> listaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status)
         {
             try
             {
                 UserToken dadosToken = new UserToken();
                 dadosToken = await PegarDadosToken();
 
-                var endpoint = SetandoEndPoint($"api/tarefas/paginado/{_status}?pageNumber={_pageNumber}&pageSize={_pageSize}");
+                var endpoint = ApiRoutes.SetandoEndPoint($"api/tarefas/paginado/{_status}?pageNumber={_pageNumber}&pageSize={_pageSize}");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, endpoint))
                 {
@@ -66,7 +82,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage)> CadastrarTarefaAsync(TarefaAlterarDTO _dadosTarefa)
+        public async Task<(bool Sucesso, string ErrorMessagem)> CadastrarTarefaAsync(TarefaAlterarDTO _dadosTarefa)
         {
             try
             {
@@ -80,7 +96,7 @@ namespace Maui.Service
                 var json = JsonConvert.SerializeObject(_dadosTarefa);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var endpoint = SetandoEndPoint($"api/tarefas");
+                var endpoint = ApiRoutes.SetandoEndPoint($"api/tarefas");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Post, endpoint))
                 {
@@ -113,7 +129,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage)> AlterarTarefaAsync(TarefaAlterarDTO _dadosTarefa)
+        public async Task<(bool Sucesso, string ErrorMessagem)> AlterarTarefaAsync(TarefaAlterarDTO _dadosTarefa)
         {
             try
             {
@@ -127,7 +143,7 @@ namespace Maui.Service
                 var json = JsonConvert.SerializeObject(_dadosTarefa);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var endpoint = SetandoEndPoint($"api/tarefas");
+                var endpoint = ApiRoutes.SetandoEndPoint($"api/tarefas");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Put, endpoint))
                 {
@@ -160,7 +176,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage, TarefaAlterarDTO)> BuscarTarefaAsync(int _id)
+        public async Task<(bool Sucesso, string ErrorMessagem, TarefaAlterarDTO TarefaAlterarDTO)> BuscarTarefaAsync(int _id)
         {
             try
             {
@@ -171,7 +187,7 @@ namespace Maui.Service
                     return (false, "Token de autenticação inválido", null);
                 }
 
-                var endpoint = SetandoEndPoint($"api/tarefas/{_id}");
+                var endpoint = ApiRoutes.SetandoEndPoint($"api/tarefas/{_id}");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, endpoint))
                 {
@@ -206,7 +222,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage)> DeletarTarefaAsync(int _id)
+        public async Task<(bool Sucesso, string ErrorMessagem)> DeletarTarefaAsync(int _id)
         {
             try
             {
@@ -217,7 +233,7 @@ namespace Maui.Service
                     return (false, "Token de autenticação inválido");
                 }
 
-                var endpoint = SetandoEndPoint($"api/tarefas/{_id}");
+                var endpoint = ApiRoutes.SetandoEndPoint($"api/tarefas/{_id}");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Delete, endpoint))
                 {
@@ -249,7 +265,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage, TarefaQtdStatusDTO)> BuscarQtdStatusTarefaAsync()
+        public async Task<(bool Sucesso, string ErrorMessagem, TarefaQtdStatusDTO TarefaQtdStatusDTO)> BuscarQtdStatusTarefaAsync()
         {
             try
             {
@@ -260,7 +276,7 @@ namespace Maui.Service
                     return (false, "Token de autenticação inválido", null);
                 }
 
-                var endpoint = SetandoEndPoint("api/tarefas/status_completo");
+                var endpoint = ApiRoutes.SetandoEndPoint("api/tarefas/status_completo");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, endpoint))
                 {
@@ -295,7 +311,7 @@ namespace Maui.Service
             }
         }
 
-        public async Task<(bool success, string errorMessage, List<TarefaPrioridadeAltaDTO>)> BuscarTarefasPrioridadeAltaAsync()
+        public async Task<(bool Sucesso, string ErrorMessagem, List<TarefaPrioridadeAltaDTO> ListaTarefaPrioridadeAltaDTO)> BuscarTarefasPrioridadeAltaAsync()
         {
             try
             {
@@ -306,7 +322,7 @@ namespace Maui.Service
                     return (false, "Token de autenticação inválido", null);
                 }
 
-                var endpoint = SetandoEndPoint("api/tarefas/prioridade_alta");
+                var endpoint = ApiRoutes.SetandoEndPoint("api/tarefas/prioridade_alta");
 
                 using (var request = new HttpRequestMessage(HttpMethod.Get, endpoint))
                 {
@@ -343,16 +359,7 @@ namespace Maui.Service
 
         #region Métodos privados
 
-        private string SetandoEndPoint(string _endpont)
-        {
-#if DEBUG
-            return $"{_endpont}";
 
-#else
-            return $"https://blazor-api.onrender.com/{_endpont}";
-
-#endif
-        }
 
         private async Task<UserToken> PegarDadosToken()
         {

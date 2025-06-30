@@ -6,11 +6,24 @@
         {
             string endPoint = "";
 
+
 #if DEBUG
-            endPoint = $"https://localhost:7091/{_endPoint}";
+            if (DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                // Endereço especial para emulador Android
+                endPoint = $"https://10.0.2.2:7091/{_endPoint}";
+            }
+            else
+            {
+                // Localhost para Windows/iOS/Mac/etc
+                endPoint = $"https://localhost:7091/{_endPoint}";
+            }
 #else
-                endPoint = $"https://blazor-api.onrender.com{_endPoint}";
+    // Configuração de produção
+    endPoint = $"https://blazor-api.onrender.com/{_endPoint}";
 #endif
+
+
             return endPoint;
         }
     }

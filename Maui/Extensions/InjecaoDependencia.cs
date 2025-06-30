@@ -2,6 +2,7 @@
 using Maui.Service;
 using Maui.View.Tarefa;
 using Maui.View.Usuario;
+using Maui.ViewModel.Tarefa;
 using Maui.ViewModel.Usuario;
 
 namespace Maui.Extensions
@@ -21,11 +22,14 @@ namespace Maui.Extensions
             // ViewModels
             services.AddTransient<LoginViewModel>();
             services.AddTransient<CadastrarUsuarioViewModel>();
+            services.AddTransient<DashboardTarefasViewModel>();
+            services.AddTransient<CadastrarTarefaViewModel>();
 
             // Views)
             services.AddTransient<Login>();
             services.AddTransient<CadastrarUsuario>();
             services.AddTransient<DashboardTarefas>();
+            services.AddTransient<CadastrarTarefa>();
 
 
 

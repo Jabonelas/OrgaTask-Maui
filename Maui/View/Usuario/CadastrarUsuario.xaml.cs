@@ -5,12 +5,10 @@ namespace Maui.View.Usuario;
 
 public partial class CadastrarUsuario : ContentPage
 {
-    public CadastrarUsuario(IUsuarioService _usuarioService, IServiceProvider _services)
+    public CadastrarUsuario(IUsuarioService _usuarioService)
     {
         InitializeComponent();
 
-        var navigation = this.Navigation;
-
-        BindingContext = new CadastrarUsuarioViewModel(_usuarioService, _services, navigation);
+        BindingContext = new CadastrarUsuarioViewModel(_usuarioService);
     }
 }

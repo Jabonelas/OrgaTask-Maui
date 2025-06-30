@@ -5,8 +5,8 @@ namespace Maui.Interface
 {
     public interface IUsuarioService
     {
-        Task<(bool success, string errorMessage)> LoginAsync(UsuarioLoginDTO _dadosLogin);
+        Task<(bool Sucesso, string ErrorMessagem)> LoginAsync(UsuarioLoginDTO _dadosLogin);
 
-        Task<(bool success, string errorMessage)> CadastrarUsuarioAsync(UsuarioCadastrarDTO _dadosUsuario);
+        Task<(bool Sucesso, string ErrorMessagem)> CadastrarUsuarioAsync(UsuarioCadastrarDTO _dadosUsuario);
     }
 }
