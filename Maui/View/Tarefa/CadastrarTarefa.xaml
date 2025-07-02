@@ -7,7 +7,7 @@
 
         <ScrollView>
 
-            <VerticalStackLayout Spacing="20" Padding="20">
+            <VerticalStackLayout Spacing="20" Padding="10">
                 <!-- Cabeçalho -->
                 <Frame BackgroundColor="{StaticResource Azul}" Padding="20" CornerRadius="15" HasShadow="True">
                     <VerticalStackLayout Spacing="20">
@@ -25,7 +25,8 @@
 
                         </HorizontalStackLayout>
 
-                        <Label Text="Preencha os campo ao lado para criar uma nova tarefa e organizar seu trabalho." FontSize="14" TextColor="White" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="Preencha os campo ao lado para criar uma nova tarefa e organizar seu trabalho." 
+                               FontSize="14" TextColor="White" HorizontalTextAlignment="Center"></Label>
 
                         <!-- Benefícios -->
                         <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
@@ -51,12 +52,12 @@
 
                 </Frame>
 
-
+                <!--Cadastrar Tarefa-->
                 <Frame Padding="20" CornerRadius="15" HasShadow="True">
-                    <VerticalStackLayout Spacing="15">
+                    <VerticalStackLayout Spacing="10">
                         
                         <Label Text="Título:" />
-                        <Entry x:Name="txtTitulo" Placeholder="Digite o título..." />
+                        <Entry x:Name="txtTitulo" Placeholder="Digite o título..." Text="{Binding TarefaAlterarDTO.Titulo}"/>
                         <Label Text="O título é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroTitulo}" />
 
                         <Grid>
@@ -75,11 +76,10 @@
                             <Label Text="Prazo (dias):" Grid.Column="1" Grid.Row="0" />
 
                             <Picker 
-                                Title="Selecione a opção..." 
                                 Grid.Column="0" 
                                 Grid.Row="1"
                                 ItemsSource="{Binding ListaDePrioridades}" 
-                                SelectedItem="{Binding PrioridadeSelecionada}"
+                                SelectedItem="{Binding TarefaAlterarDTO.Prioridade}"
                             />
 
                             <Label Text="A prioridade é obrigatória!"   Grid.Column="0" Grid.Row="2"  TextColor="Red"  IsVisible="{Binding MostrarErroPrioridade}" />
@@ -90,6 +90,7 @@
                                 Grid.Row="1"
                                 Placeholder="Informe um prazo..." 
                                 Keyboard="Numeric" 
+                                Text="{Binding TarefaAlterarDTO.Prazo}"
                             />
                             <Label Text="O prazo é obrigatório!"   Grid.Column="1" Grid.Row="2"  TextColor="Red"  IsVisible="{Binding MostrarErroPrazo}" />
 
@@ -102,15 +103,15 @@
                             AutoSize="TextChanges" 
                             MaxLength="500"
                             HeightRequest="100"
+                            Text="{Binding TarefaAlterarDTO.Descricao}"
                         />
                         <Label Text="A descrição é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroDescricao}" />
 
                         <Label Text="Status:" />
                         <Picker 
-                            Title="Selecione uma opção..." 
                             Margin="0,5,10,0"
-                            ItemsSource="{Binding ListaDeSatus}" 
-                            SelectedItem="{Binding StatusSelecionado}"
+                            ItemsSource="{Binding ListaDeStatus}" 
+                            SelectedItem="{Binding TarefaAlterarDTO.Status}"
                         />
 
                         <Label Text="O status é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroStatus}" />

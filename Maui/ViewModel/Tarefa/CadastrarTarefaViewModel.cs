@@ -2,13 +2,6 @@
 using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Tarefa;
 using Maui.Interface;
-using Maui.View.Tarefa;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Maui.ViewModel.Tarefa
 {
@@ -16,23 +9,44 @@ namespace Maui.ViewModel.Tarefa
     {
         private readonly ITarefaService iTarefaService;
 
-        [ObservableProperty] private bool mostrarErroTitulo;
+        private readonly INotificacaoService iNotificacaoService;
 
-        [ObservableProperty] private bool mostrarErroPrioridade;
+        [ObservableProperty] 
+        private bool mostrarErroTitulo;
 
-        [ObservableProperty] private bool mostrarErroPrazo;
+        [ObservableProperty]
+        private bool mostrarErroPrioridade;
 
-        [ObservableProperty] private bool mostrarErroDescricao;
+        [ObservableProperty]
+        private bool mostrarErroPrazo;
 
-        [ObservableProperty] private bool mostrarErroStatus;
+        [ObservableProperty]
+        private bool mostrarErroDescricao;
 
-        [ObservableProperty] private TarefaAlterarDTO tarefaAlterarDTO;
+        [ObservableProperty]
+        private bool mostrarErroStatus;
 
-        public CadastrarTarefaViewModel(ITarefaService _iTarefaService)
+        [ObservableProperty]
+        private TarefaAlterarDTO tarefaAlterarDTO;
+
+        [ObservableProperty]
+        private List<string> listaDePrioridades = new List<string>();
+
+        [ObservableProperty]
+        private List<string> listaDeStatus = new List<string>();
+
+
+        public CadastrarTarefaViewModel(ITarefaService _iTarefaService, INotificacaoService _iNotificacaoService)
         {
             iTarefaService = _iTarefaService;
 
             TarefaAlterarDTO = new TarefaAlterarDTO();
+
+            PreencherListaPrioridade();
+
+            PreencherListaStatus();
+
+            iNotificacaoService = _iNotificacaoService;
         }
 
 
@@ -43,7 +57,7 @@ namespace Maui.ViewModel.Tarefa
             {
                 return;
             }
-
+            
             await CadastrarTarefaAsync();
         }
 
@@ -55,7 +69,10 @@ namespace Maui.ViewModel.Tarefa
 
                 if (Sucesso)
                 {
-                    await Shell.Current.GoToAsync("//DashboardTarefas");
+
+                    await iNotificacaoService.MostrarNotificacaoAsync("Operação realizada com sucesso!");
+
+                    LimparCampos();
                 }
                 else
                 {
@@ -85,12 +102,20 @@ namespace Maui.ViewModel.Tarefa
             OnPropertyChanged(nameof(MostrarErroDescricao));
             OnPropertyChanged(nameof(MostrarErroStatus));
 
-            if (MostrarErroTitulo || MostrarErroPrioridade || MostrarErroPrazo || MostrarErroDescricao || MostrarErroStatus) 
+            if (MostrarErroTitulo || MostrarErroPrioridade || MostrarErroPrazo || MostrarErroDescricao ||
+                MostrarErroStatus)
             {
                 return false;
             }
 
             return true;
+        }
+
+        private void LimparCampos()
+        {
+            TarefaAlterarDTO = new TarefaAlterarDTO();
+
+            OnPropertyChanged(nameof(TarefaAlterarDTO));
         }
 
         [RelayCommand]
@@ -105,5 +130,20 @@ namespace Maui.ViewModel.Tarefa
                 await Shell.Current.GoToAsync("//DashboardTarefas");
             }
         }
+
+        private void PreencherListaPrioridade()
+        {
+            ListaDePrioridades.Add("Alta");
+            ListaDePrioridades.Add("Média");
+            ListaDePrioridades.Add("Baixa");
+        }
+
+        private void PreencherListaStatus()
+        {
+            ListaDeStatus.Add("Pendente");
+            ListaDeStatus.Add("Em Progresso");
+            ListaDeStatus.Add("Concluído");
+        }
+
     }
 }

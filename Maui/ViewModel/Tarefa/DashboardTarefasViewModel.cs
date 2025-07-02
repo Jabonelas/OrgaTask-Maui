@@ -3,7 +3,6 @@ using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Tarefa;
 using Maui.Interface;
 using System.Collections.ObjectModel;
-using System.Windows.Input;
 
 namespace Maui.ViewModel.Tarefa
 {
@@ -199,6 +198,13 @@ namespace Maui.ViewModel.Tarefa
                 RecarregarPage = false;
             }
 
+        }
+
+
+        [RelayCommand]
+        private async Task TarefaSelecionada(int id)
+        {
+            await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin=DashboardTarefas");
         }
     }
 }

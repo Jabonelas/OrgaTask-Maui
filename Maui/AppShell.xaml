@@ -38,8 +38,8 @@
 
         <ShellContent
             Icon="trocar_usuario.png"
-            Route="Main"
-            ContentTemplate="{DataTemplate local:MainPage}" />
+            Route="VisualizarTarefa"
+            ContentTemplate="{DataTemplate tarefa:VisualizarTarefa}" />
 
        
 

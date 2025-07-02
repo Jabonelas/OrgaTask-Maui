@@ -11,13 +11,13 @@ public partial class DashboardTarefas : ContentPage
     {
         InitializeComponent();
 
-        dashboardTarefasViewModel = new DashboardTarefasViewModel(_iTarefaService); 
-        BindingContext = dashboardTarefasViewModel; 
+        dashboardTarefasViewModel = new DashboardTarefasViewModel(_iTarefaService);
+        BindingContext = dashboardTarefasViewModel;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await dashboardTarefasViewModel.InitializeAsync(); 
+        await dashboardTarefasViewModel.InitializeAsync();
     }
 }

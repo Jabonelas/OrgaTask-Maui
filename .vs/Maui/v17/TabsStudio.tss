@@ -2,29 +2,31 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\CadastrarTarefaViewModel.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\CadastrarTarefa.xaml</string>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\CadastrarTarefa.xaml.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\VisualizarTarefaViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\DashboardTarefasViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\Login.xaml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\CadastrarUsuario.xaml</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\VisualizarTarefa.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\DashboardTarefas.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\LoginViewModel.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\CadastrarTarefa.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\CadastrarUsuarioViewModel.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\CadastrarTarefaViewModel.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Interface\ITarefaService.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\AppShell.xaml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\Login.xaml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

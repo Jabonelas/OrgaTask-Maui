@@ -5,7 +5,7 @@
 
     <Grid>
         <ScrollView>
-            <VerticalStackLayout Spacing="20" Padding="20">
+            <VerticalStackLayout Spacing="20" Padding="10">
 
                 <!-- Cabeçalho -->
                 <Frame BackgroundColor="{StaticResource Azul}"
@@ -28,7 +28,6 @@
                                    TextColor="White"
                                    HorizontalTextAlignment="Center" />
 
-                        <!-- Benefícios -->
                         <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
                             <HorizontalStackLayout>
                                 <Image Source="aceitar.png" WidthRequest="20" HeightRequest="20" />
@@ -60,7 +59,7 @@
 
                 <!-- Login -->
                 <Frame Padding="20" CornerRadius="15" HasShadow="True">
-                    <VerticalStackLayout Spacing="15">
+                    <VerticalStackLayout Spacing="10">
 
                         <Label Text="Usuário:"/>
                         <Entry x:Name="txtUsuario" Placeholder="Digite seu usuário..." Text="{Binding UsuarioLogin.Login}"/>
@@ -117,7 +116,6 @@
             </VerticalStackLayout>
         </ScrollView>
 
-        <!-- OVERLAY DE LOADING -->
         <Grid IsVisible="{Binding IsRefreshing}"
               BackgroundColor="#80000000"
               VerticalOptions="FillAndExpand"

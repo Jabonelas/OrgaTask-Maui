@@ -8,7 +8,7 @@
         <ScrollView>
 
 
-            <VerticalStackLayout Spacing="20" Padding="20">
+            <VerticalStackLayout Spacing="20" Padding="10">
 
                 <!--Cabecario-->
                 <Frame BackgroundColor="{StaticResource Azul}"
@@ -37,7 +37,6 @@
                            TextColor="White"
                            HorizontalTextAlignment="Center"></Label>
 
-                        <!-- Benefícios -->
                         <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
 
                             <HorizontalStackLayout>
@@ -86,9 +85,9 @@
                 </Frame>
 
                 <!--Cadastrar Usuairo-->
-                <Frame Padding="20" CornerRadius="15" HasShadow="True">
+                <Frame Padding="20" CornerRadius="15" HasShadow="True" >
 
-                    <VerticalStackLayout Spacing="15">
+                    <VerticalStackLayout Spacing="10">
 
                         <Label Text="Nome Completo:"></Label>
 
@@ -199,13 +198,11 @@
 
         </ScrollView>
 
-        <!-- OVERLAY DE LOADING -->
         <Grid IsVisible="{Binding IsRefreshing}"
               BackgroundColor="#80000000"
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
               InputTransparent="False">
-            <!-- Bloqueia interações -->
 
             <ActivityIndicator IsRunning="True"
                                Color="White"

@@ -9,6 +9,8 @@ namespace Maui.ViewModel.Usuario
     {
         private readonly IUsuarioService iUsuarioService;
 
+        private readonly INotificacaoService iNotificacaoService;
+
         [ObservableProperty]
         private UsuarioCadastrarDTO dadosUsuario;
 
@@ -35,11 +37,13 @@ namespace Maui.ViewModel.Usuario
         [NotifyPropertyChangedFor(nameof(IconeOlhoConfirmacaoSenha))]
         private bool isConfirmacaoSenhaOculta = true;
 
-        public CadastrarUsuarioViewModel(IUsuarioService _iUsuarioService)
+        public CadastrarUsuarioViewModel(IUsuarioService _iUsuarioService, INotificacaoService _iNotificacaoService)
         {
             iUsuarioService = _iUsuarioService;
 
             DadosUsuario = new UsuarioCadastrarDTO();
+
+            iNotificacaoService = _iNotificacaoService;
         }
 
         [RelayCommand]
@@ -90,6 +94,8 @@ namespace Maui.ViewModel.Usuario
 
                 if (Sucesso)
                 {
+            
+
                     await RealizarLoginAsync();
                 }
                 else
@@ -127,6 +133,8 @@ namespace Maui.ViewModel.Usuario
                 if (success)
                 {
                     await Shell.Current.GoToAsync("//DashboardTarefas");
+
+                    await iNotificacaoService.MostrarNotificacaoAsync("Operação realizada com sucesso!");
                 }
                 else
                 {

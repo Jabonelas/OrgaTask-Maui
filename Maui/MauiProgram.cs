@@ -1,4 +1,5 @@
-﻿using Maui.Extensions;
+﻿using CommunityToolkit.Maui;
+using Maui.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace Maui
@@ -12,13 +13,14 @@ namespace Maui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                     fonts.AddFont("SEGOEUIB.ttf", "SegoeUIBold");
                     fonts.AddFont("SEGOEUI.ttf", "SegoeUI");
-                });
+                }).UseMauiCommunityToolkit();
 
 
             builder.Services.AdicionarInjecoesDependencias();

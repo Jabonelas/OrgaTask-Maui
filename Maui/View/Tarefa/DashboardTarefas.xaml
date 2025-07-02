@@ -1,18 +1,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Maui.View.Tarefa"
              x:Class="Maui.View.Tarefa.DashboardTarefas"
              BackgroundColor="White">
 
-    <!--<ScrollView>-->
 
-        <RefreshView
+    <RefreshView
             IsRefreshing="{Binding RecarregarPage, Mode=TwoWay}"
             Command="{Binding RecarregarDashboardCommand}"
             RefreshColor="{StaticResource Azul}">
-            <ScrollView>
+        <ScrollView>
 
-        <VerticalStackLayout Padding="10" Spacing="20">
-              
+            <VerticalStackLayout Padding="10" Spacing="10">
+
                 <Label 
                 Text="Dashboard de Tarefas"
                 HorizontalOptions="Center"
@@ -20,8 +20,8 @@
                 FontSize="20"
                 FontAttributes="Bold" />
 
+                <!--Qtd tarefa por Prioridade-->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                    <!-- Pendente -->
                     <Frame>
                         <VerticalStackLayout>
                             <Image Source="clock.png" WidthRequest="20" />
@@ -30,7 +30,6 @@
                         </VerticalStackLayout>
                     </Frame>
 
-                    <!-- Em Progresso -->
                     <Frame>
                         <VerticalStackLayout>
                             <Image Source="task.png" WidthRequest="20" />
@@ -39,7 +38,6 @@
                         </VerticalStackLayout>
                     </Frame>
 
-                    <!-- Concluídas -->
                     <Frame>
                         <VerticalStackLayout>
                             <Image Source="check.png" WidthRequest="20" />
@@ -90,7 +88,6 @@
                                 <Label Text="Tarefas Prioritárias" FontSize="18" TextColor="{StaticResource Azul}" />
                             </HorizontalStackLayout>
 
-
                             <Frame Grid.Column="1"
                                Padding="5"
                                BackgroundColor="#F72585"
@@ -106,7 +103,6 @@
 
                         </Grid>
 
-                        <!-- Lista de Tarefas -->
                         <VerticalStackLayout 
                     BindableLayout.ItemsSource="{Binding ListaTarefaPrioridadeAlta}"
                     IsVisible="{Binding ListaCarregada}">
@@ -115,9 +111,14 @@
 
                                 <DataTemplate>
 
-                                    <Frame CornerRadius="15" BackgroundColor="#FFF0F5" Padding="15" Margin="0,5" HasShadow="False">
+                                    <Frame CornerRadius="15" BackgroundColor="#FFF0F5" Padding="15" Margin="0,5" HasShadow="False" >
 
-                                        <Grid >
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:DashboardTarefas}}, Path=BindingContext.TarefaSelecionadaCommand}" 
+                                                CommandParameter="{Binding Id}" />
+                                        </Frame.GestureRecognizers>
+                                        <Grid  >
 
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto"/>
@@ -129,8 +130,6 @@
                                                 <ColumnDefinition Width="Auto" />
                                             </Grid.ColumnDefinitions>
 
-                                            <!-- Título -->
-
                                             <Label Text="{Binding Titulo}"
                                                FontAttributes="Bold"
                                                FontSize="14"
@@ -140,7 +139,7 @@
                                                Margin="0,0,0,5" />
 
                                             <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="10">
-                                                <!-- Criado -->
+
                                                 <HorizontalStackLayout Spacing="4">
                                                     <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
                                                     <Label Text="{Binding Data, StringFormat='Criado: {0:dd/MM/yyyy}'}"
@@ -149,7 +148,6 @@
                                                        VerticalOptions="Center"/>
                                                 </HorizontalStackLayout>
 
-                                                <!-- Prazo -->
                                                 <HorizontalStackLayout Spacing="4">
                                                     <Image Source="clock_gray.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
                                                     <Label Text="{Binding DescricaoPrazo}" 
@@ -160,7 +158,6 @@
 
                                             </VerticalStackLayout>
 
-                                            <!-- Status -->
 
                                             <Frame Grid.Row="1" Grid.Column="1"
                                                Padding="6,2"
@@ -185,20 +182,20 @@
 
                         </VerticalStackLayout>
 
-                        <!-- Overlay de Loading -->
+
                         <Grid 
-                    IsVisible="{Binding ListaCarregada, Converter={StaticResource InverseBoolConverter}}"
-                    BackgroundColor="#E6FFFFFF" 
-                                VerticalOptions="Fill"
-                    HorizontalOptions="Fill">
+                           IsVisible="{Binding ListaCarregada, Converter={StaticResource InverseBoolConverter}}"
+                           BackgroundColor="#E6FFFFFF" 
+                           VerticalOptions="Fill"
+                           HorizontalOptions="Fill">
 
                             <ActivityIndicator
-                        IsRunning="True"
-                        Color="{StaticResource Azul}"
-                        WidthRequest="60"
-                        HeightRequest="60"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
+                               IsRunning="True"
+                               Color="{StaticResource Azul}"
+                               WidthRequest="60"
+                               HeightRequest="60"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"/>
                         </Grid>
 
                     </VerticalStackLayout>
@@ -207,10 +204,9 @@
 
             </VerticalStackLayout>
 
-                </ScrollView>
+        </ScrollView>
 
     </RefreshView>
 
-    <!--</ScrollView>-->
 
 </ContentPage>

@@ -15,6 +15,9 @@ namespace Maui.Extensions
             // Infraestrutura
             services.AddSingleton<HttpClient>();
 
+            //Notificacao
+            services.AddSingleton<INotificacaoService, NotificacaoService>();
+
             // Serviços
             services.AddSingleton<IUsuarioService, UsuarioService>();
             services.AddSingleton<ITarefaService, TarefaService>();
@@ -24,13 +27,14 @@ namespace Maui.Extensions
             services.AddTransient<CadastrarUsuarioViewModel>();
             services.AddTransient<DashboardTarefasViewModel>();
             services.AddTransient<CadastrarTarefaViewModel>();
+            services.AddTransient<VisualizarTarefaViewModel>();
 
-            // Views)
+            // Views
             services.AddTransient<Login>();
             services.AddTransient<CadastrarUsuario>();
             services.AddTransient<DashboardTarefas>();
             services.AddTransient<CadastrarTarefa>();
-
+            services.AddTransient<VisualizarTarefa>();
 
 
 
