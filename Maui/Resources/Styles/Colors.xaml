@@ -13,7 +13,12 @@
     <Color x:Key="SecondaryDarkText">#9880e5</Color>
     <Color x:Key="Tertiary">#2B0B98</Color>
 
-    <Color x:Key="Azul">#FF1E3C97</Color>
+    <Color x:Key="Azul">#009de0</Color>
+    <Color x:Key="Placeholder">#A0A0A0</Color>
+    <Color x:Key="Text">#0A2C44</Color>
+    <Color x:Key="TextAlert">#E74C3C</Color>
+    <Color x:Key="Background">#F4F9FC</Color>
+    <Color x:Key="BackgroundLoader">#80000000</Color>
     <Color x:Key="White">White</Color>
     <Color x:Key="Black">Black</Color>
     <Color x:Key="Magenta">#D600AA</Color>

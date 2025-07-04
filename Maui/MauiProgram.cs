@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui;
 using Maui.Extensions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
 
 namespace Maui
 {
@@ -22,6 +23,19 @@ namespace Maui
                     fonts.AddFont("SEGOEUI.ttf", "SegoeUI");
                 }).UseMauiCommunityToolkit();
 
+            builder.ConfigureLifecycleEvents(events => {
+#if ANDROID
+                events.AddAndroid(android => {
+                    android.OnCreate((activity, bundle) => {
+                        // Cor da StatusBar (Azul claro no exemplo)
+                        activity.Window?.SetStatusBarColor(Android.Graphics.Color.Rgb(0, 157, 224));
+
+                        // Cor dos ícones (Branco ou Preto)
+                        activity.Window?.SetNavigationBarColor(Android.Graphics.Color.Rgb(0, 157, 224));
+                    });
+                });
+#endif
+            });
 
             builder.Services.AdicionarInjecoesDependencias();
 

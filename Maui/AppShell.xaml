@@ -14,6 +14,15 @@
         ContentTemplate="{DataTemplate usuario:Login}" />
 
     <ShellContent
+        Route="VisualizarTarefa"
+        ContentTemplate="{DataTemplate tarefa:VisualizarTarefa}" />
+
+
+    <ShellContent
+        Route="EditarTarefa"
+        ContentTemplate="{DataTemplate tarefa:EditarTarefa}" />
+
+    <ShellContent
         Route="CadastrarUsuario"
         ContentTemplate="{DataTemplate usuario:CadastrarUsuario}" />
 
@@ -33,8 +42,8 @@
 
         <ShellContent
             Icon="lista_tarefa.png"
-            Route="Main"
-            ContentTemplate="{DataTemplate local:MainPage}" />
+            Route="ExibirTarefas"
+            ContentTemplate="{DataTemplate tarefa:ExibirTarefas}" />
 
         <ShellContent
             Icon="trocar_usuario.png"

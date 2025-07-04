@@ -11908,16 +11908,18 @@ public final class R {
     public static final int notify_panel_notification_icon_bg=0x7f0700f2;
     public static final int olho_aberto=0x7f0700f3;
     public static final int olho_fechado=0x7f0700f4;
-    public static final int seguranca=0x7f0700f5;
-    public static final int task=0x7f0700f6;
-    public static final int test_level_drawable=0x7f0700f7;
-    public static final int tooltip_frame_dark=0x7f0700f8;
-    public static final int tooltip_frame_light=0x7f0700f9;
-    public static final int trocar_usuario=0x7f0700fa;
-    public static final int usuario_final=0x7f0700fb;
-    public static final int verificar=0x7f0700fc;
-    public static final int voltar=0x7f0700fd;
-    public static final int warning=0x7f0700fe;
+    public static final int pen=0x7f0700f5;
+    public static final int seguranca=0x7f0700f6;
+    public static final int splash=0x7f0700f7;
+    public static final int task=0x7f0700f8;
+    public static final int test_level_drawable=0x7f0700f9;
+    public static final int tooltip_frame_dark=0x7f0700fa;
+    public static final int tooltip_frame_light=0x7f0700fb;
+    public static final int trocar_usuario=0x7f0700fc;
+    public static final int usuario_final=0x7f0700fd;
+    public static final int verificar=0x7f0700fe;
+    public static final int voltar=0x7f0700ff;
+    public static final int warning=0x7f070100;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

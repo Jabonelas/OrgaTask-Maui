@@ -15,6 +15,7 @@ obj\Debug\net9.0-android\resizetizer\r\drawable\information.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\lista_tarefa.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\olho_aberto.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\olho_fechado.png
+obj\Debug\net9.0-android\resizetizer\r\drawable\pen.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\seguranca.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\task.png
 obj\Debug\net9.0-android\resizetizer\r\drawable\trocar_usuario.png

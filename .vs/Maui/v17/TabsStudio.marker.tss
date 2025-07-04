@@ -2,7 +2,13 @@
 <ArrayOfTabHighlightState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <TabHighlightState>
     <extensions>
-      <string>Maui\ViewModel\Tarefa\DashboardTarefasViewModel.cs</string>
+      <string>Maui\ViewModel\Tarefa\EditarTarefaViewModel.cs</string>
+    </extensions>
+    <highlightIndex>1</highlightIndex>
+  </TabHighlightState>
+  <TabHighlightState>
+    <extensions>
+      <string>Maui\View\Tarefa\EditarTarefa.xaml</string>
     </extensions>
     <highlightIndex>1</highlightIndex>
   </TabHighlightState>

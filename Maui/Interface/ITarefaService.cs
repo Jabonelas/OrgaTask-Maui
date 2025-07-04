@@ -7,7 +7,7 @@ namespace Maui.Interface
     {
 
 
-        Task<(bool Sucesso, string errorMessage, List<TarefaConsultaDTO> listaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status);
+        Task<(bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status);
 
         Task<(bool Sucesso, string ErrorMessagem)> DeletarTarefaAsync(int _id);
 

@@ -40,7 +40,7 @@ namespace Maui.Service
             public int TotalCount { get; set; }
         }
 
-        public async Task<(bool Sucesso, string errorMessage, List<TarefaConsultaDTO> listaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status)
+        public async Task<(bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status)
         {
             try
             {

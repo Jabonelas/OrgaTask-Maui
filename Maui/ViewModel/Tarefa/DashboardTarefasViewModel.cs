@@ -204,7 +204,8 @@ namespace Maui.ViewModel.Tarefa
         [RelayCommand]
         private async Task TarefaSelecionada(int id)
         {
-            await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin=DashboardTarefas");
+            //await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin=DashboardTarefas");
+            await Shell.Current.GoToAsync($"///EditarTarefa?idTarefa={id}&origin=DashboardTarefas");
         }
     }
 }

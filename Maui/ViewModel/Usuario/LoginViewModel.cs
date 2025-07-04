@@ -36,7 +36,8 @@ namespace Maui.ViewModel.Usuario
         private async Task Entrar()
         {
 
-            usuarioLogin.Login = "israel oliveira";
+            usuarioLogin.Login = "teste11";
+            //usuarioLogin.Login = "israel oliveira";
             //usuarioLogin.Login = "string";
             usuarioLogin.Senha = "string";
 

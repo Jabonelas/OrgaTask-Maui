@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.View.Tarefa.ExibirTarefas"
+    BackgroundColor="{StaticResource Background}">
+
+
+    <RefreshView
+        IsRefreshing="{Binding RecarregarPage, Mode=TwoWay}"
+        Command="{Binding RecarregarDashboardCommand}"
+        RefreshColor="{StaticResource Azul}">
+        <ScrollView>
+
+            <VerticalStackLayout Padding="10" Spacing="10">
+
+                <VerticalStackLayout>
+                    <Label 
+            Text="Todas as Minhas Tarefas"
+            HorizontalOptions="Center"
+            TextColor="{StaticResource Azul}"
+            FontSize="20"
+            FontAttributes="Bold" />
+
+
+                    <Button x:Name="btnNovaTarefa" 
+                            Margin="0,10,0,10"
+                Text="Nova Tarefa"
+                ImageSource="adicionar.png"
+                BackgroundColor="{StaticResource Azul}"
+                TextColor="White"
+                HeightRequest="45"
+                CornerRadius="10" 
+                Command="{Binding SalvarCommand}" HorizontalOptions="Start"/>
+
+
+                    <Frame>
+
+                        <VerticalStackLayout 
+                    BindableLayout.ItemsSource="{Binding ListaTarefaPrioridadeAlta}"
+                    >
+                            <!--IsVisible="{Binding ListaCarregada}"-->
+
+                            <BindableLayout.ItemTemplate>
+
+                                <DataTemplate>
+
+                                    <Frame CornerRadius="15" BackgroundColor="#FFF0F5" Padding="15" Margin="0,5" HasShadow="False" >
+
+
+                                        <Grid>
+
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+
+
+
+                                            <Frame Grid.Row="0" Grid.Column="0"   Margin="0,0,0,10"
+                                       Padding="6,2"
+                                       BackgroundColor="{Binding CorStatus}"
+                                       CornerRadius="12"
+                                       HorizontalOptions="Start">
+
+                                                <HorizontalStackLayout>
+
+                                                    <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
+
+                                                    <Label Text="{Binding Status}"
+                                               FontSize="10"
+                                               FontAttributes="Bold"
+                                               VerticalOptions="Center"/>
+
+                                                </HorizontalStackLayout>
+
+                                            </Frame>
+
+
+                                            <Frame Grid.Row="0" Grid.Column="1"   Margin="0,0,0,10"
+                                       Padding="6,2"
+                                       BackgroundColor="{Binding CorStatus}"
+                                       CornerRadius="12"
+                                       HorizontalOptions="End">
+
+                                                <HorizontalStackLayout>
+
+                                                    <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" HorizontalOptions="Start"/>
+
+                                                    <Label Text="{Binding Status}"
+                                           FontSize="10"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="End"
+                                         />
+
+                                                </HorizontalStackLayout>
+
+                                            </Frame>
+
+                                            <VerticalStackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"   Margin="0,0,0,10">
+
+                                                <Label Text="{Binding Titulo}"
+                                               FontAttributes="Bold"
+                                               FontSize="14"
+                                               TextColor="Black"
+                                               Margin="0,0,0,10" />
+
+
+                                                <Label Text="{Binding Descricao}"
+                                       FontAttributes="Bold"
+                                       FontSize="12"
+                                       TextColor="Gray"
+                                       Margin="0,0,0,5" />
+
+                                            </VerticalStackLayout>
+
+                                            <VerticalStackLayout Grid.Row="2" Grid.Column="0" Spacing="10">
+
+                                                <HorizontalStackLayout Spacing="4">
+                                                    <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
+                                                    <Label Text="{Binding Data, StringFormat='Criado: {0:dd/MM/yyyy}'}"
+                                                       FontSize="11"
+                                                       TextColor="Gray"
+                                                       VerticalOptions="Center"/>
+                                                </HorizontalStackLayout>
+
+                                                <HorizontalStackLayout Spacing="4">
+                                                    <Image Source="clock_gray.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
+                                                    <Label Text="{Binding DescricaoPrazo}" 
+                                                       FontSize="11"
+                                                       TextColor="Gray"
+                                                       VerticalOptions="Center"/>
+                                                </HorizontalStackLayout>
+
+                                            </VerticalStackLayout>
+
+
+
+                                            <!--<Frame Grid.Row="1" Grid.Column="1"
+                                               Padding="6,2"
+                                               BackgroundColor="{Binding CorStatus}"
+                                               CornerRadius="12"
+                                               HasShadow="False"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="End">
+
+                                    <Label Text="{Binding Status}"
+                                                   FontSize="10"
+                                                   FontAttributes="Bold"
+                                                   VerticalOptions="Center"/>
+                                </Frame>-->
+
+                                        </Grid>
+                                    </Frame>
+
+                                </DataTemplate>
+
+                            </BindableLayout.ItemTemplate>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+
+                </VerticalStackLayout>
+
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </RefreshView>
+</ContentPage>

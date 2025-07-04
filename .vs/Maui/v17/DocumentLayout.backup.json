@@ -3,40 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\israe\\source\\repos\\Maui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\visualizartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\visualizartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\cadastrartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\cadastrartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\dashboardtarefas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\dashboardtarefas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\editartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\editartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\dashboardtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\dashboardtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\usuario\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\usuario\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\usuario\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\usuario\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\editartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\editartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\cadastrartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\cadastrartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\visualizartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\visualizartarefa.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\editartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\editartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\visualizartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\visualizartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\usuario\\cadastrarusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\usuario\\cadastrarusuario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\exibirtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\exibirtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\dashboardtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\dashboardtarefasviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\interface\\itarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\interface\\itarefaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\dashboardtarefas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\dashboardtarefas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\cadastrartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\cadastrartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\visualizartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\visualizartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\viewmodel\\tarefa\\cadastrartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\viewmodel\\tarefa\\cadastrartarefaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefa\\cadastrartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefa\\cadastrartarefa.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|c:\\users\\israe\\source\\repos\\maui\\maui\\view\\tarefaformview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{84684F97-E27B-49B9-BAC9-84EE51D58B58}|Maui\\Maui.csproj|solutionrelative:maui\\view\\tarefaformview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,11 +82,232 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CadastrarTarefaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs \u2B24",
+              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs \u2B24",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAzwNQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T02:28:17.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Usuario\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Usuario\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Usuario\\LoginViewModel.cs",
+              "RelativeToolTip": "Maui\\ViewModel\\Usuario\\LoginViewModel.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwCYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T02:07:13.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CadastrarTarefa.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml.cs",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml.cs",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:59:23.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditarTarefa.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\EditarTarefa.xaml.cs",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\EditarTarefa.xaml.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\EditarTarefa.xaml.cs",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\EditarTarefa.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:57:53.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VisualizarTarefa.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml.cs",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml.cs",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:57:02.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VisualizarTarefaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
+              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAKMAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:17:12.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\AppShell.xaml",
+              "RelativeDocumentMoniker": "Maui\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\AppShell.xaml",
+              "RelativeToolTip": "Maui\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T01:15:11.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DashboardTarefasViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
+              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAiwM8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T01:14:50.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExibirTarefasViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\ExibirTarefasViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\ExibirTarefasViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\ExibirTarefasViewModel.cs",
+              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\ExibirTarefasViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:59:06.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditarTarefaViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\EditarTarefaViewModel.cs",
+              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\EditarTarefaViewModel.cs",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\EditarTarefaViewModel.cs",
+              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\EditarTarefaViewModel.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAkwPsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T00:58:56.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditarTarefa.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\EditarTarefa.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\EditarTarefa.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\EditarTarefa.xaml",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\EditarTarefa.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T00:58:24.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VisualizarTarefa.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T00:51:56.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CadastrarTarefa.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T00:51:54.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DashboardTarefas.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\DashboardTarefas.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\DashboardTarefas.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\DashboardTarefas.xaml",
+              "RelativeToolTip": "Maui\\View\\Tarefa\\DashboardTarefas.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMQAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T00:40:06.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TarefaFormView.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\TarefaFormView.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\TarefaFormView.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\TarefaFormView.xaml",
+              "RelativeToolTip": "Maui\\View\\TarefaFormView.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-04T00:25:50.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\Resources\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "Maui\\Resources\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\Resources\\Styles\\Colors.xaml",
+              "RelativeToolTip": "Maui\\Resources\\Styles\\Colors.xaml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwC0AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-03T22:09:59.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CadastrarUsuario.xaml",
+              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Usuario\\CadastrarUsuario.xaml",
+              "RelativeDocumentMoniker": "Maui\\View\\Usuario\\CadastrarUsuario.xaml",
+              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Usuario\\CadastrarUsuario.xaml",
+              "RelativeToolTip": "Maui\\View\\Usuario\\CadastrarUsuario.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-03T21:53:17.197Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,113 +317,9 @@
               "RelativeDocumentMoniker": "Maui\\View\\Usuario\\Login.xaml",
               "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Usuario\\Login.xaml",
               "RelativeToolTip": "Maui\\View\\Usuario\\Login.xaml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEsAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T23:59:09.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\AppShell.xaml",
-              "RelativeDocumentMoniker": "Maui\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\AppShell.xaml",
-              "RelativeToolTip": "Maui\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T23:51:44.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ITarefaService.cs",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\Interface\\ITarefaService.cs",
-              "RelativeDocumentMoniker": "Maui\\Interface\\ITarefaService.cs",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\Interface\\ITarefaService.cs",
-              "RelativeToolTip": "Maui\\Interface\\ITarefaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T22:26:02.56Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CadastrarTarefaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
-              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
-              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\CadastrarTarefaViewModel.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAwwHcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T22:23:37.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CadastrarTarefa.xaml",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
-              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
-              "RelativeToolTip": "Maui\\View\\Tarefa\\CadastrarTarefa.xaml",
-              "ViewState": "AgIAAGsAAAAAAAAAAAApwHYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T22:05:31.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardTarefas.xaml",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\DashboardTarefas.xaml",
-              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\DashboardTarefas.xaml",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\DashboardTarefas.xaml",
-              "RelativeToolTip": "Maui\\View\\Tarefa\\DashboardTarefas.xaml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T20:41:27.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "VisualizarTarefa.xaml",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
-              "RelativeDocumentMoniker": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
-              "RelativeToolTip": "Maui\\View\\Tarefa\\VisualizarTarefa.xaml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAgwEQAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-01T20:41:26.36Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DashboardTarefasViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
-              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
-              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\DashboardTarefasViewModel.cs",
-              "ViewState": "AgIAALEAAAAAAAAAAAAiwM0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:41:17.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VisualizarTarefaViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
-              "RelativeDocumentMoniker": "Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs",
-              "ToolTip": "C:\\Users\\israe\\source\\repos\\Maui\\Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs \u2B24",
-              "RelativeToolTip": "Maui\\ViewModel\\Tarefa\\VisualizarTarefaViewModel.cs \u2B24",
-              "ViewState": "AgIAACkAAAAAAAAAAAAUwEwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T20:41:13.208Z",
+              "WhenOpened": "2025-07-03T21:52:05.587Z",
               "EditorCaption": ""
             }
           ]

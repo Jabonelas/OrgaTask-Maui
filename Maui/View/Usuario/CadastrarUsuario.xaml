@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui.View.Usuario.CadastrarUsuario">
+             x:Class="Maui.View.Usuario.CadastrarUsuario"
+             BackgroundColor="{StaticResource Background}">
 
     <Grid>
 
         <ScrollView>
 
-
-            <VerticalStackLayout Spacing="20" Padding="10">
+            <VerticalStackLayout Spacing="10" Padding="10">
 
                 <!--Cabecario-->
                 <Frame BackgroundColor="{StaticResource Azul}"
@@ -32,10 +32,14 @@
 
                         </HorizontalStackLayout>
 
-                        <Label Text="Preencha os campos ao lado para criar sua conta no OrgaTask e transforme a sua produtividade."
-                           FontSize="14"
-                           TextColor="White"
-                           HorizontalTextAlignment="Center"></Label>
+                        <ContentView HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="Preencha os campos ao lado para criar sua conta no OrgaTask e transforme a sua produtividade." 
+                                   FontSize="14" 
+                                   TextColor="White"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"/>
+                        </ContentView>
 
                         <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
 
@@ -89,19 +93,36 @@
 
                     <VerticalStackLayout Spacing="10">
 
-                        <Label Text="Nome Completo:"></Label>
+                        <Label Text="Nome Completo:" 
+                               TextColor="{StaticResource Text}"></Label>
 
-                        <Entry x:Name="txtNomeCompleto" Placeholder="Digite o nome completo..." Text="{Binding DadosUsuario.Nome}" ></Entry>
+                        <Entry x:Name="txtNomeCompleto" 
+                               Placeholder="Digite o nome completo..." 
+                               Text="{Binding DadosUsuario.Nome}"
+                               BackgroundColor="{StaticResource Background}"
+                               TextColor="{StaticResource Text}"
+                               PlaceholderColor="{StaticResource Placeholder}"></Entry>
 
-                        <Label Text="O nome obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroNomeCompleto}" />
+                        <Label Text="O nome obrigatório!" 
+                               TextColor="{StaticResource TextAlert}" 
+                               IsVisible="{Binding MostrarErroNomeCompleto}" />
 
-                        <Label Text="Nome de Usuário:"></Label>
+                        <Label Text="Nome de Usuário:" 
+                               TextColor="{StaticResource Text}"></Label>
 
-                        <Entry x:Name="txtNomeUsuairo" Placeholder="Digite o usuário..." Text="{Binding DadosUsuario.Login}" ></Entry>
+                        <Entry x:Name="txtNomeUsuairo" 
+                               Placeholder="Digite o usuário..." 
+                               Text="{Binding DadosUsuario.Login}"
+                               BackgroundColor="{StaticResource Background}"
+                               TextColor="{StaticResource Text}"
+                               PlaceholderColor="{StaticResource Placeholder}"></Entry>
 
-                        <Label Text="Usuário é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroUsuario}" />
+                        <Label Text="Usuário é obrigatório!" 
+                               TextColor="{StaticResource TextAlert}" 
+                               IsVisible="{Binding MostrarErroUsuario}" />
 
-                        <Label Text="Senha:"></Label>
+                        <Label Text="Senha:"
+                               TextColor="{StaticResource Text}"></Label>
 
                         <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
 
@@ -110,9 +131,14 @@
                                    IsPassword="{Binding IsSenhaOculta}"
                                    Text="{Binding DadosUsuario.Senha}"
                                    WidthRequest="250"
-                                   HorizontalOptions="FillAndExpand" />
+                                   HorizontalOptions="FillAndExpand" 
+                                   BackgroundColor="{StaticResource Background}"
+                                   TextColor="{StaticResource Text}"
+                                   PlaceholderColor="{StaticResource Placeholder}"/>
 
-                            <Label Text="A senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroSenha}" />
+                            <Label Text="A senha é obrigatório!"
+                                   TextColor="{StaticResource TextAlert}" 
+                                   IsVisible="{Binding MostrarErroSenha}" />
 
                             <ImageButton Source="{Binding IconeOlhoSenha}"
                                          Command="{Binding ExibirSenhaCommand}"
@@ -124,7 +150,8 @@
 
                         </HorizontalStackLayout>
 
-                        <Label Text="Confirmar Senha:"></Label>
+                        <Label Text="Confirmar Senha:"
+                               TextColor="{StaticResource Text}"></Label>
 
                         <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
 
@@ -133,9 +160,14 @@
                                    IsPassword="{Binding IsConfirmacaoSenhaOculta}"
                                    Text="{Binding DadosUsuario.ConfirmarSenha}"
                                    WidthRequest="250"
-                                   HorizontalOptions="FillAndExpand" />
+                                   HorizontalOptions="FillAndExpand" 
+                                   BackgroundColor="{StaticResource Background}"
+                                   TextColor="{StaticResource Text}"
+                                   PlaceholderColor="{StaticResource Placeholder}"/>
 
-                            <Label Text="A confimação senha é obrigatório!" TextColor="Red"  IsVisible="{Binding MostrarErroConfirmarSenha}" />
+                            <Label Text="A confimação senha é obrigatório!"
+                                   TextColor="{StaticResource TextAlert}" 
+                                   IsVisible="{Binding MostrarErroConfirmarSenha}" />
 
                             <ImageButton Source="{Binding IconeOlhoConfirmacaoSenha}"
                                          Command="{Binding ExibirConfirmacaoSenhaCommand}"
@@ -166,7 +198,7 @@
                                 Text="Cadastrar"
                                 ImageSource="verificar.png"
                                 ContentLayout="Left,10"
-                                BackgroundColor="#007AFF"
+                                BackgroundColor="{StaticResource Azul}"
                                 TextColor="White"
                                 HeightRequest="45"
                                 CornerRadius="10"
@@ -178,10 +210,10 @@
                                 Text="Cancelar"
                                 ImageSource="cancelar.png"
                                 ContentLayout="Left,10"
-                                BorderColor="Gray"
+                                BorderColor="{StaticResource Azul}"
                                 BorderWidth="1.5"
                                 BackgroundColor="White"
-                                TextColor="Gray"
+                                TextColor="{StaticResource Azul}"
                                 HeightRequest="45"
                                 CornerRadius="10"
                                 Command="{Binding CancelarCadastroCommand}"
@@ -199,7 +231,7 @@
         </ScrollView>
 
         <Grid IsVisible="{Binding IsRefreshing}"
-              BackgroundColor="#80000000"
+              BackgroundColor="{StaticResource BackgroundLoader}"
               VerticalOptions="FillAndExpand"
               HorizontalOptions="FillAndExpand"
               InputTransparent="False">

@@ -28,6 +28,8 @@ namespace Maui.Extensions
             services.AddTransient<DashboardTarefasViewModel>();
             services.AddTransient<CadastrarTarefaViewModel>();
             services.AddTransient<VisualizarTarefaViewModel>();
+            services.AddTransient<ExibirTarefasViewModel>();
+            services.AddTransient<EditarTarefaViewModel>();
 
             // Views
             services.AddTransient<Login>();
@@ -35,6 +37,8 @@ namespace Maui.Extensions
             services.AddTransient<DashboardTarefas>();
             services.AddTransient<CadastrarTarefa>();
             services.AddTransient<VisualizarTarefa>();
+            services.AddTransient<ExibirTarefas>();
+            services.AddTransient<EditarTarefa>();
 
 
 

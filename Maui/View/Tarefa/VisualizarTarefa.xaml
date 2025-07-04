@@ -1,103 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui.View.Tarefa.VisualizarTarefa">
-    <VerticalStackLayout>
+             x:Class="Maui.View.Tarefa.VisualizarTarefa"
+             xmlns:views="clr-namespace:Maui.View"
+             xmlns:tarefa="clr-namespace:Maui.DTOs.Tarefa"
+    BackgroundColor="{StaticResource Background}">
 
+    <Grid>
 
+        <ScrollView>
 
-        <Grid>
-            <ScrollView>
+            <VerticalStackLayout >
 
-                <VerticalStackLayout Spacing="20" Padding="10">
-                    <!--Cabeçalho-->
-                    <Frame BackgroundColor="{StaticResource  Azul}" Padding="20" CornerRadius="15" HasShadow="True">
+                <views:TarefaFormView />
 
-                        <VerticalStackLayout Spacing="20">
+            </VerticalStackLayout>
 
-                            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-                                <Image Source="detalhe_tarefa.png" HeightRequest="28" WidthRequest="28"></Image>
-                                <Label Text="Detalhes da Tarefa" TextColor="White" FontSize="24" Margin="10,0,0,0" FontAttributes="Bold"></Label>
+        </ScrollView>
 
-                            </HorizontalStackLayout>
-
-
-                            <Label Text="Visualize todos os detalhes desta tarefa." FontSize="14" TextColor="White" HorizontalOptions="Center"></Label>
-
-                            <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
-
-                                <HorizontalStackLayout>
-                                    <Image Source="aceitar.png" HeightRequest="20" WidthRequest="20"></Image>
-                                    <Label Text="Detalhes completos da tarefa." TextColor="White" FontSize="12" Margin="8,0,0,0" ></Label>
-                                </HorizontalStackLayout>
-
-                                <HorizontalStackLayout>
-                                    <Image Source="aceitar.png" HeightRequest="20" WidthRequest="20"></Image>
-                                    <Label Text="Prioridade e status claros." TextColor="White" FontSize="12" Margin="8,0,0,0" ></Label>
-                                </HorizontalStackLayout>
-
-                                <HorizontalStackLayout>
-                                    <Image Source="aceitar.png" HeightRequest="20" WidthRequest="20"></Image>
-                                    <Label Text="Prazo e descrição destalhados." TextColor="White" FontSize="12" Margin="8,0,0,0" ></Label>
-                                </HorizontalStackLayout>
-
-                            </VerticalStackLayout>
-
-                        </VerticalStackLayout>
-
-                    </Frame>
-
-                    <Frame Padding="20" CornerRadius="15" HasShadow="True">
-                        <VerticalStackLayout Spacing="10">
-                            <Label Text="Título:"></Label>
-                            <Entry x:Name="txtTitulo" Text="{Binding TarefaAlterarDTO.Titulo}" IsEnabled="False"></Entry>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"></RowDefinition>
-                                    <RowDefinition Height="Auto"></RowDefinition>
-                                </Grid.RowDefinitions>
-
-
-                                <Label Text="Prioridade:" Grid.Row="0" Grid.Column="0"></Label>
-                                <Label Text="Prazo (dias):" Grid.Row="0" Grid.Column="1"></Label>
-
-                                <Entry x:Name="txtPrioridade" Text="{Binding TarefaAlterarDTO.Prioridade }" Grid.Row="1" Grid.Column="0" IsEnabled="False"></Entry>
-                                <Entry x:Name="txtPrazo" Text="{Binding TarefaAlterarDTO.Prazo }" Grid.Row="1" Grid.Column="1" IsEnabled="False"></Entry>
-
-                            </Grid>
-
-                            <Label Text="Descrição:"></Label>
-                            <Editor x:Name="txtDescricao" AutoSize="TextChanges" Text="{Binding TarefaAlterarDTO.Descricao}" IsEnabled="False"></Editor>
-
-                            <Label Text="Status:"></Label>
-                            <Entry Text="{Binding TarefaAlterarDTO.Status}" IsEnabled="False"></Entry>
-
-                                <Button x:Name="btnVoltar" Text="Voltar" Grid.Column="0" Grid.Row="0" Margin="0,10,20,0"
-                                        ImageSource="voltar.png"
-                                        ContentLayout="Left, 10"
-                                        BorderColor="Gray"
-                                        BorderWidth="1.5"
-                                        BackgroundColor="White"
-                                        TextColor="Gray"
-                                        CornerRadius="10"
-                                        HeightRequest="45"
-                                        Command="{Binding VoltarCommand}"/>
-
-                        </VerticalStackLayout>
-
-                    </Frame>
-
-                </VerticalStackLayout>
-
-            </ScrollView>
-
-        </Grid>
-
-    </VerticalStackLayout>
-
+    </Grid>
 </ContentPage>

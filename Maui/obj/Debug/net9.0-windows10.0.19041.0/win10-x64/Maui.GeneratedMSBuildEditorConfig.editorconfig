@@ -63,6 +63,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Maui.Resources.Styles.Styl
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/israe/source/repos/Maui/Maui/View/TarefaFormView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.TarefaFormView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TarefaFormView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TarefaFormView.xaml
+
 [C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/CadastrarTarefa.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.CadastrarTarefa.xaml
@@ -74,6 +80,18 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.DashboardTarefas.xaml
 build_metadata.AdditionalFiles.TargetPath = View\Tarefa\DashboardTarefas.xaml
 build_metadata.AdditionalFiles.RelativePath = View\Tarefa\DashboardTarefas.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/EditarTarefa.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.EditarTarefa.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\EditarTarefa.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\EditarTarefa.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/ExibirTarefas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.ExibirTarefas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\ExibirTarefas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\ExibirTarefas.xaml
 
 [C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/VisualizarTarefa.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

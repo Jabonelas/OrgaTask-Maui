@@ -9,6 +9,27 @@
             <inheritdoc/>
             <inheritdoc/>
         </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.TarefaAlterarDTO">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.tarefaAlterarDTO"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.IdTarefa">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.idTarefa"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.Origin">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.origin"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.IconeCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.iconeCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.TituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.tituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.SubtituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.subtituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.IsEnabled">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.isEnabled"/>
+        </member>
         <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.MostrarErroTitulo">
             <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.mostrarErroTitulo"/>
         </member>
@@ -24,8 +45,11 @@
         <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.MostrarErroStatus">
             <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.mostrarErroStatus"/>
         </member>
-        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.TarefaAlterarDTO">
-            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.tarefaAlterarDTO"/>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.MostarBtnVoltar">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.mostarBtnVoltar"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.ListaItensCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.listaItensCabecalho"/>
         </member>
         <member name="P:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.ListaDePrioridades">
             <inheritdoc cref="F:Maui.ViewModel.Tarefa.CadastrarTarefaViewModel.listaDePrioridades"/>
@@ -93,6 +117,124 @@
         <member name="P:Maui.ViewModel.Tarefa.DashboardTarefasViewModel.TarefaSelecionadaCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.DashboardTarefasViewModel.TarefaSelecionada(System.Int32)"/>.</summary>
         </member>
+        <member name="T:Maui.ViewModel.Tarefa.EditarTarefaViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.TarefaAlterarDTO">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.tarefaAlterarDTO"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.IdTarefa">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.idTarefa"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.Origin">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.origin"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.IconeCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.iconeCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.TituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.tituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.SubtituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.subtituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.IsEnabled">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.isEnabled"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostrarErroTitulo">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostrarErroTitulo"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostrarErroPrioridade">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostrarErroPrioridade"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostrarErroPrazo">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostrarErroPrazo"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostrarErroDescricao">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostrarErroDescricao"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostrarErroStatus">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostrarErroStatus"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.MostarBtnVoltar">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.mostarBtnVoltar"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.ListaItensCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.listaItensCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.ListaDePrioridades">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.listaDePrioridades"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.ListaDeStatus">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.listaDeStatus"/>
+        </member>
+        <member name="M:Maui.ViewModel.Tarefa.EditarTarefaViewModel.OnIdTarefaChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.IdTarefa"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.IdTarefa"/> is changed.</remarks>
+        </member>
+        <member name="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.salvarCommand">
+            <summary>The backing field for <see cref="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.SalvarCommand"/>.</summary>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.SalvarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.EditarTarefaViewModel.Salvar"/>.</summary>
+        </member>
+        <member name="F:Maui.ViewModel.Tarefa.EditarTarefaViewModel.cancelarCommand">
+            <summary>The backing field for <see cref="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.CancelarCommand"/>.</summary>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.EditarTarefaViewModel.CancelarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.EditarTarefaViewModel.Cancelar"/>.</summary>
+        </member>
+        <member name="T:Maui.ViewModel.Tarefa.ExibirTarefasViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.PorcentagemConcluida">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.porcentagemConcluida"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.FrasePorcentagemConcluida">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.frasePorcentagemConcluida"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.QtdTarefasPrioritarias">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.qtdTarefasPrioritarias"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.CorStatus">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.corStatus"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.TarefaQtdStatusDTO">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.tarefaQtdStatusDTO"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.ListaCarregada">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.listaCarregada"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.RecarregarPage">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.recarregarPage"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.ListaTarefaPrioridadeAlta">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.listaTarefaPrioridadeAlta"/>
+        </member>
+        <member name="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.carregarDadosCommand">
+            <summary>The backing field for <see cref="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.CarregarDadosCommand"/>.</summary>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.CarregarDadosCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.CarregarDadosAsync"/>.</summary>
+        </member>
+        <member name="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.recarregarDashboardCommand">
+            <summary>The backing field for <see cref="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.RecarregarDashboardCommand"/>.</summary>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.RecarregarDashboardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.RecarregarDashboard"/>.</summary>
+        </member>
+        <member name="F:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.tarefaSelecionadaCommand">
+            <summary>The backing field for <see cref="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.TarefaSelecionadaCommand"/>.</summary>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.TarefaSelecionadaCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Maui.ViewModel.Tarefa.ExibirTarefasViewModel.TarefaSelecionada(System.Int32)"/>.</summary>
+        </member>
         <member name="T:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel">
             <inheritdoc/>
             <inheritdoc/>
@@ -105,6 +247,48 @@
         </member>
         <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.Origin">
             <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.origin"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.IconeCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.iconeCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.TituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.tituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.SubtituloCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.subtituloCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.IsEnabled">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.isEnabled"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostrarErroTitulo">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostrarErroTitulo"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostrarErroPrioridade">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostrarErroPrioridade"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostrarErroPrazo">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostrarErroPrazo"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostrarErroDescricao">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostrarErroDescricao"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostrarErroStatus">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostrarErroStatus"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostarBtnCancelar">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostarBtnCancelar"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.MostarBtnSalvar">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.mostarBtnSalvar"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.ListaItensCabecalho">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.listaItensCabecalho"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.ListaDePrioridades">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.listaDePrioridades"/>
+        </member>
+        <member name="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.ListaDeStatus">
+            <inheritdoc cref="F:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.listaDeStatus"/>
         </member>
         <member name="M:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.OnIdTarefaChanged(System.Int32)">
             <summary>Executes the logic for when <see cref="P:Maui.ViewModel.Tarefa.VisualizarTarefaViewModel.IdTarefa"/> just changed.</summary>
@@ -343,6 +527,27 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TarefaAlterarDTO">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TarefaAlterarDTO" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IdTarefa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IdTarefa" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Origin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Origin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IconeCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IconeCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TituloCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TituloCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SubtituloCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SubtituloCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEnabled" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MostrarErroTitulo">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MostrarErroTitulo" generated properties.</summary>
         </member>
@@ -358,8 +563,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MostrarErroStatus">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MostrarErroStatus" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TarefaAlterarDTO">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TarefaAlterarDTO" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MostarBtnVoltar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MostarBtnVoltar" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ListaItensCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ListaItensCabecalho" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ListaDePrioridades">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ListaDePrioridades" generated properties.</summary>
@@ -391,11 +599,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ListaTarefaPrioridadeAlta">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ListaTarefaPrioridadeAlta" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IdTarefa">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IdTarefa" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MostarBtnCancelar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MostarBtnCancelar" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Origin">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Origin" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MostarBtnSalvar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MostarBtnSalvar" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DadosUsuario">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DadosUsuario" generated properties.</summary>
@@ -436,6 +644,27 @@
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TarefaAlterarDTO">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TarefaAlterarDTO" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IdTarefa">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IdTarefa" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Origin">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Origin" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IconeCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IconeCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TituloCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TituloCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SubtituloCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SubtituloCabecalho" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEnabled" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MostrarErroTitulo">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MostrarErroTitulo" generated properties.</summary>
         </member>
@@ -451,8 +680,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MostrarErroStatus">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MostrarErroStatus" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TarefaAlterarDTO">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TarefaAlterarDTO" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MostarBtnVoltar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MostarBtnVoltar" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ListaItensCabecalho">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ListaItensCabecalho" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ListaDePrioridades">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ListaDePrioridades" generated properties.</summary>
@@ -484,11 +716,11 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ListaTarefaPrioridadeAlta">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ListaTarefaPrioridadeAlta" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IdTarefa">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IdTarefa" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MostarBtnCancelar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MostarBtnCancelar" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Origin">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Origin" generated properties.</summary>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MostarBtnSalvar">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MostarBtnSalvar" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DadosUsuario">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DadosUsuario" generated properties.</summary>

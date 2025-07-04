@@ -1,3 +1,7 @@
+OpenSans-Regular.ttf
+OpenSans-Semibold.ttf
+SEGOEUI.TTF
+SEGOEUIB.TTF
 aceitar.scale-100.png
 adicionar.scale-100.png
 adicionar_amigo.scale-100.png
@@ -71,5 +75,11 @@ task.scale-100.png
 trocar_usuario.scale-100.png
 usuario_final.scale-100.png
 verificar.scale-100.png
+voltar.scale-100.png
 warning.scale-100.png
+splashSplashScreen.scale-100.png
+splashSplashScreen.scale-125.png
+splashSplashScreen.scale-150.png
+splashSplashScreen.scale-200.png
+splashSplashScreen.scale-400.png
 AboutAssets.txt

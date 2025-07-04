@@ -71,10 +71,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\TarefaFormView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Tarefa\CadastrarTarefa.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Tarefa\DashboardTarefas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Tarefa\EditarTarefa.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Tarefa\ExibirTarefas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Tarefa\VisualizarTarefa.xaml">
