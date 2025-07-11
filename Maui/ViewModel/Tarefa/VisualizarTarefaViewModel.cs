@@ -1,20 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Maui.Interface;
-using Maui.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Maui.DTOs.Tarefa;
+using Maui.Interface;
 using Maui.Models;
 
 namespace Maui.ViewModel.Tarefa
 {
-
     [QueryProperty(nameof(IdTarefa), "idTarefa")]
-
     [QueryProperty(nameof(Origin), "origin")]
     public partial class VisualizarTarefaViewModel : ObservableObject
     {
@@ -73,7 +65,6 @@ namespace Maui.ViewModel.Tarefa
 
         public VisualizarTarefaViewModel(ITarefaService _iTarefaService)
         {
-
             iTarefaService = _iTarefaService;
 
             TarefaAlterarDTO = new TarefaAlterarDTO();
@@ -85,11 +76,10 @@ namespace Maui.ViewModel.Tarefa
             PreencherListaStatus();
         }
 
-        partial void OnIdTarefaChanged(int value)
+        private partial void OnIdTarefaChanged(int value)
         {
-            CarregarTarefaAsync(value);
+            _ = CarregarTarefaAsync(value);
         }
-  
 
         private void PreencherCabecario()
         {
@@ -102,7 +92,6 @@ namespace Maui.ViewModel.Tarefa
 
         private void PreencherListaItensCabecario()
         {
-
             ListaItensCabecalho.AddRange(new[]
             {
                 new ItemCabecalhoTarefa.ItensCabecario

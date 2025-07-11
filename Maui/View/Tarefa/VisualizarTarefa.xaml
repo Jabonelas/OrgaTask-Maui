@@ -10,13 +10,10 @@
 
         <ScrollView>
 
-            <VerticalStackLayout >
+            <VerticalStackLayout>
 
                 <views:TarefaFormView />
-
             </VerticalStackLayout>
-
         </ScrollView>
-
     </Grid>
 </ContentPage>

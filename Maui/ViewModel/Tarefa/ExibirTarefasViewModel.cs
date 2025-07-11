@@ -2,19 +2,17 @@
 using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Tarefa;
 using Maui.Interface;
-using Maui.Service;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Maui.ViewModel.Tarefa
 {
+    [QueryProperty(nameof(Status), "status")]
     public partial class ExibirTarefasViewModel : ObservableObject
     {
         private readonly ITarefaService iTarefaService;
+
+        [ObservableProperty]
+        private int currentPage = 1;
 
         [ObservableProperty]
         private decimal porcentagemConcluida;
@@ -26,7 +24,10 @@ namespace Maui.ViewModel.Tarefa
         private string qtdTarefasPrioritarias = "0 item";
 
         [ObservableProperty]
-        private Color corStatus;
+        private string status;
+
+        [ObservableProperty]
+        private string titulo;
 
         [ObservableProperty]
         private TarefaQtdStatusDTO tarefaQtdStatusDTO;
@@ -38,69 +39,151 @@ namespace Maui.ViewModel.Tarefa
         private bool recarregarPage;
 
         [ObservableProperty]
-        private ObservableCollection<Tarefas> listaTarefaPrioridadeAlta;
+        private ObservableCollection<Tarefas> listaTarefas;
+
+        [ObservableProperty]
+        private bool isLoadingMore;
+
+        [ObservableProperty]
+        private bool hasMoreItems = true;
 
         public ExibirTarefasViewModel(ITarefaService _iTarefaService)
         {
             iTarefaService = _iTarefaService;
 
-            ListaTarefaPrioridadeAlta = new ObservableCollection<ExibirTarefasViewModel.Tarefas>();
+            ListaTarefas = new ObservableCollection<ExibirTarefasViewModel.Tarefas>();
 
             TarefaQtdStatusDTO = new TarefaQtdStatusDTO();
         }
 
+        private partial void OnStatusChanged(string value)
+        {
+            if (!string.IsNullOrEmpty(Status))
+            {
+                status = value;
+
+                _ = CarregarDadosAsync();
+            }
+        }
 
         public async Task InitializeAsync()
         {
-            await CarregarDadosAsync();
+            if (string.IsNullOrEmpty(Status))
+            {
+                await CarregarDadosAsync();
+            }
         }
 
         [RelayCommand]
         private async Task CarregarDadosAsync()
         {
+            SetandoTitulo(Status);
 
-            await PreencherTarefasPrioritariasAsync();
+            await PreencherTarefasAsync();
         }
 
-
-        private async Task PreencherTarefasPrioritariasAsync()
+        [RelayCommand]
+        private async Task RecarregarPagina()
         {
             try
             {
-                //ListaCarregada = false;
+                RecarregarPage = true;
 
-                int pageNumber = 1;
-                int pageSize = 12;
-                string status = "todas";
-
-                 (bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount)  = await iTarefaService.ObterTarefasPaginadasAsync( pageNumber, pageSize, status);
-
-                if (Sucesso && ListaTarefaConsultaDTO != null)
-                {
-                    ListaTarefaPrioridadeAlta.Clear();
-
-                    foreach (var tarefa in ListaTarefaConsultaDTO)
-                    {
-                        ListaTarefaPrioridadeAlta.Add(CriarItemTarefa(tarefa));
-                    }
-                }
-                else
-                {
-                    await Application.Current.MainPage.DisplayAlert("Atenção!", $"{ErrorMessagem}", "OK");
-                }
-
+                await PreencherTarefasAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao exibir dados do dashboard: {ex.Message}");
 
-                await Application.Current.MainPage.DisplayAlert("Atenção!",
-                      "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Erro", "Falha ao recarregar Dashboard.", "OK");
             }
             finally
             {
-                //ListaCarregada = true;
+                RecarregarPage = false;
             }
+        }
+
+        private async Task PreencherTarefasAsync(bool loadMore = false)
+        {
+            try
+            {
+                if (!loadMore)
+                {
+                    ListaCarregada = false;
+                    currentPage = 1;
+                    hasMoreItems = true;
+                    ListaTarefas.Clear();
+                }
+                else
+                {
+                    if (isLoadingMore || !hasMoreItems)
+                    {
+                        return;
+                    }
+
+                    isLoadingMore = true;
+                }
+
+                int pageSize = 12;
+
+                (bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount) =
+                    await iTarefaService.ObterTarefasPaginadasAsync(currentPage, pageSize, Status);
+
+                if (Sucesso && ListaTarefaConsultaDTO.Any())
+                {
+                    ListaTarefas.Clear();
+
+                    foreach (var tarefa in ListaTarefaConsultaDTO)
+                    {
+                        ListaTarefas.Add(CriarItemTarefa(tarefa));
+                    }
+
+                    hasMoreItems = ListaTarefaConsultaDTO.Count >= pageSize;
+                    currentPage++;
+                }
+                else if (!ListaTarefaConsultaDTO.Any() && loadMore)
+                {
+                    hasMoreItems = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao exibir lista de tarefas: {ex.Message}");
+
+                await Application.Current.MainPage.DisplayAlert("Atenção!",
+                    "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+            }
+            finally
+            {
+                ListaCarregada = true;
+                isLoadingMore = false;
+            }
+        }
+
+        private void SetandoTitulo(string? _status)
+        {
+            switch (_status)
+            {
+                case "Concluído":
+                    Titulo = "Todas as Minhas Tarefas Concluídas";
+                    return;
+
+                case "Em_Progresso":
+                    Titulo = "Todas as Minhas Tarefas Em Progresso";
+                    return;
+
+                case "Pendente":
+                    Titulo = "Todas as Minhas Tarefas Pendentes";
+                    return;
+            }
+
+            Titulo = "Todas as Minhas Tarefas";
+        }
+
+        [RelayCommand]
+        private async Task LoadMoreItems()
+        {
+            await PreencherTarefasAsync(true);
         }
 
         private Tarefas CriarItemTarefa(TarefaConsultaDTO tarefa)
@@ -109,14 +192,17 @@ namespace Maui.ViewModel.Tarefa
             {
                 Id = tarefa.Id,
                 Titulo = tarefa.Titulo,
-                Data = tarefa.Data,
+                Data = tarefa.DataCriacao,
                 Prazo = tarefa.Prazo,
                 DescricaoPrazo = ObterDescricaoPrazo(tarefa.Prazo),
                 Descricao = tarefa.Descricao,
-                Prioridade = tarefa.Prioridade,
-                CorPrioridade = SetarCorStatus(tarefa.Status),
+                Prioridade = $" Prioridade: {tarefa.Prioridade}",
+                CorPrioridade = SetarCorPrioridade(tarefa.Prioridade),
+                IconePrioridade = SetarIconePrioridade(tarefa.Prioridade),
                 CorStatus = SetarCorStatus(tarefa.Status),
-                Status = tarefa.Status
+                IconeStatus = SetarIconeStatus(tarefa.Status),
+                Status = $" Status: {tarefa.Status}",
+                CorFundo = SetarCorFundo(tarefa.Status)
             };
         }
 
@@ -124,23 +210,89 @@ namespace Maui.ViewModel.Tarefa
         {
             return _prazo < 0
                 ? $"Prazo: {Math.Abs(_prazo)} dia(s) em atraso."
-                : $"Prazo:{_prazo} dia(s) restante(s).";
+                : $"Prazo: {_prazo} dia(s) restante(s).";
         }
 
-    
+        private Color SetarCorPrioridade(string _prioridade)
+        {
+            switch (_prioridade)
+            {
+                case "Baixa":
+                    return Color.FromArgb("#43A047");
+
+                case "Média":
+                    return Color.FromArgb("#FB8C00");
+
+                case "Alta":
+                    return Color.FromArgb("#E53935");
+            }
+
+            return Colors.Gray;
+        }
 
         private Color SetarCorStatus(string _status)
         {
             switch (_status)
             {
                 case "Concluído":
-                    return Color.FromArgb("#61C377");
+                    return Color.FromArgb("#66BB6A");
 
                 case "Em Progresso":
-                    return Color.FromArgb("#48A6D4");
+                    return Color.FromArgb("#FBC02D");
 
                 case "Pendente":
-                    return Color.FromArgb("#A0A0A1");
+                    return Color.FromArgb("#D32F2F");
+            }
+
+            return Colors.Gray;
+        }
+
+        private ImageSource SetarIconePrioridade(string _prioridade)
+        {
+            switch (_prioridade)
+            {
+                case "Baixa":
+                    return ImageSource.FromFile("prioridade_baixa.png");
+
+                case "Média":
+                    return ImageSource.FromFile("prioridade_media.png");
+
+                case "Alta":
+                    return ImageSource.FromFile("prioridade_alta.png");
+            }
+
+            return null;
+        }
+
+        private ImageSource SetarIconeStatus(string _status)
+        {
+            switch (_status)
+            {
+                case "Concluído":
+                    return ImageSource.FromFile("status_concluido.png");
+
+                case "Em Progresso":
+                    return ImageSource.FromFile("status_em_progresso.png");
+
+                case "Pendente":
+                    return ImageSource.FromFile("status_pendente.png");
+            }
+
+            return null;
+        }
+
+        private Color SetarCorFundo(string _status)
+        {
+            switch (_status)
+            {
+                case "Concluído":
+                    return Color.FromArgb("#f4fbf6");
+
+                case "Em Progresso":
+                    return Color.FromArgb("#fff8f3");
+
+                case "Pendente":
+                    return Color.FromArgb("#fdf5f6");
             }
 
             return Colors.Gray;
@@ -155,41 +307,62 @@ namespace Maui.ViewModel.Tarefa
             public int Prazo { get; set; }
             public string DescricaoPrazo { get; set; }
             public string Prioridade { get; set; }
+            public ImageSource IconePrioridade { get; set; }
             public Color CorPrioridade { get; set; }
-            public Color CorStatus { get; set; }
             public string Status { get; set; }
-
+            public ImageSource IconeStatus { get; set; }
+            public Color CorStatus { get; set; }
+            public Color CorFundo { get; set; }
         }
 
-
         [RelayCommand]
-        private async Task RecarregarDashboard()
+        private async Task Recarregar()
         {
             try
             {
-                //RecarregarPage = true;
+                RecarregarPage = true;
 
                 await CarregarDadosAsync();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Erro ao exibir dados do dashboard: {ex.Message}");
+                Console.WriteLine($"Erro ao exibir lista de tarefas: {ex.Message}");
 
                 await Application.Current.MainPage.DisplayAlert("Erro", "Falha ao recarregar Dashboard.", "OK");
             }
             finally
             {
-                //RecarregarPage = false;
+                RecarregarPage = false;
             }
-
         }
-
 
         [RelayCommand]
-        private async Task TarefaSelecionada(int id)
+        private async Task Visualizar(int id)
         {
-            await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin=DashboardTarefas");
+            string exibirTarefa = Uri.EscapeDataString($"ExibirTarefas?status={Status}");
+            await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin={exibirTarefa}");
         }
 
+        [RelayCommand]
+        private async Task EditarTarefa(int id)
+        {
+            string editarTarefa = Uri.EscapeDataString($"ExibirTarefas?status={Status}");
+            await Shell.Current.GoToAsync($"///EditarTarefa?idTarefa={id}&origin={editarTarefa}");
+        }
+
+        [RelayCommand]
+        private async Task ExcluirTarefa(int id)
+        {
+            var resposta = await Application.Current.MainPage.DisplayAlert("Atenção!",
+                "Tem certeza que deseja excluir esta tarefa?",
+                "Sim", "Não");
+
+            if (resposta)
+            {
+                await iTarefaService.DeletarTarefaAsync(id);
+
+                await RecarregarPagina();
+            }
+        }
     }
 }

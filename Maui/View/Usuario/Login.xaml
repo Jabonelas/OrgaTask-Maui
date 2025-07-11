@@ -25,11 +25,11 @@
                         </HorizontalStackLayout>
 
                         <ContentView HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label Text="Acesse sua conta para gerenciar suas tarefas e aumentar sua produtividade." 
-                                   FontSize="14" 
+                            <Label Text="Acesse sua conta para gerenciar suas tarefas e aumentar sua produtividade."
+                                   FontSize="14"
                                    TextColor="White"
                                    HorizontalOptions="Center"
-                                   HorizontalTextAlignment="Center"/>
+                                   HorizontalTextAlignment="Center" />
                         </ContentView>
 
                         <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
@@ -38,7 +38,7 @@
                                 <Label Text="Controle suas tarefas de forma eficiente."
                                        TextColor="White"
                                        FontSize="12"
-                                       Margin="8,0,0,0"/>
+                                       Margin="8,0,0,0" />
                             </HorizontalStackLayout>
 
                             <HorizontalStackLayout>
@@ -46,7 +46,7 @@
                                 <Label Text="Organize por prioridades e prazos."
                                        TextColor="White"
                                        FontSize="12"
-                                       Margin="8,0,0,0"/>
+                                       Margin="8,0,0,0" />
                             </HorizontalStackLayout>
 
                             <HorizontalStackLayout>
@@ -54,10 +54,9 @@
                                 <Label Text="Acompanhe seu progresso diário."
                                        TextColor="White"
                                        FontSize="12"
-                                       Margin="8,0,0,0"/>
+                                       Margin="8,0,0,0" />
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
-
                     </VerticalStackLayout>
                 </Frame>
 
@@ -65,21 +64,21 @@
                 <Frame Padding="20" CornerRadius="15" HasShadow="True" BackgroundColor="White">
                     <VerticalStackLayout Spacing="10">
 
-                        <Label Text="Usuário:" 
-                               TextColor="{StaticResource Text}"/>
+                        <Label Text="Usuário:"
+                               TextColor="{StaticResource Text}" />
 
-                        <Entry x:Name="txtUsuario" Placeholder="Digite seu usuário..." 
-                               Text="{Binding UsuarioLogin.Login}" 
+                        <Entry x:Name="txtUsuario" Placeholder="Digite seu usuário..."
+                               Text="{Binding UsuarioLogin.Login}"
                                BackgroundColor="{StaticResource Background}"
                                TextColor="{StaticResource Text}"
-                               PlaceholderColor="{StaticResource Placeholder}"/>
+                               PlaceholderColor="{StaticResource Placeholder}" />
 
-                        <Label Text="O usuário é obrigatório!" 
-                               TextColor="{StaticResource TextAlert}" 
-                               IsVisible="{Binding MostrarErroUsuario}"/>
+                        <Label Text="O usuário é obrigatório!"
+                               TextColor="{StaticResource TextAlert}"
+                               IsVisible="{Binding MostrarErroUsuario}" />
 
-                        <Label Text="Senha:" 
-                               TextColor="{StaticResource Text}"/>
+                        <Label Text="Senha:"
+                               TextColor="{StaticResource Text}" />
 
                         <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
                             <Entry x:Name="txtSenha"
@@ -90,7 +89,7 @@
                                    HorizontalOptions="FillAndExpand"
                                    BackgroundColor="{StaticResource Background}"
                                    TextColor="{StaticResource Text}"
-                                   PlaceholderColor="{StaticResource Placeholder}"/>
+                                   PlaceholderColor="{StaticResource Placeholder}" />
 
                             <ImageButton Source="{Binding IconeOlhoSenha}"
                                          Command="{Binding ExibirSenhaCommand}"
@@ -101,8 +100,8 @@
                                          HorizontalOptions="End" />
                         </HorizontalStackLayout>
 
-                        <Label Text="A senha é obrigatória!" 
-                               TextColor="{StaticResource TextAlert}" 
+                        <Label Text="A senha é obrigatória!"
+                               TextColor="{StaticResource TextAlert}"
                                IsVisible="{Binding MostrarErroSenha}" />
 
                         <Button x:Name="btnEntrar"
@@ -112,8 +111,8 @@
                                 BackgroundColor="{StaticResource Azul}"
                                 TextColor="White"
                                 HeightRequest="45"
-                                CornerRadius="10" 
-                                Command="{Binding EntrarCommand}"/>
+                                CornerRadius="10"
+                                Command="{Binding EntrarCommand}" />
 
                         <Button x:Name="btnCriarConta"
                                 Text="Criar uma conta"
@@ -125,10 +124,9 @@
                                 TextColor="{StaticResource Azul}"
                                 CornerRadius="10"
                                 HeightRequest="45"
-                                Command="{Binding CriarContaCommand}"/>
+                                Command="{Binding CriarContaCommand}" />
                     </VerticalStackLayout>
                 </Frame>
-
             </VerticalStackLayout>
         </ScrollView>
 

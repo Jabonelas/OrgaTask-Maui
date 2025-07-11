@@ -9,14 +9,10 @@
 
         <ScrollView>
 
-            <VerticalStackLayout >
+            <VerticalStackLayout>
 
                 <view:TarefaFormView />
-
             </VerticalStackLayout>
-
         </ScrollView>
-
     </Grid>
-
 </ContentPage>

@@ -4,7 +4,6 @@
              x:Class="Maui.View.Tarefa.DashboardTarefas"
              BackgroundColor="{StaticResource Background}">
 
-
     <RefreshView
             IsRefreshing="{Binding RecarregarPage, Mode=TwoWay}"
             Command="{Binding RecarregarDashboardCommand}"
@@ -13,7 +12,7 @@
 
             <VerticalStackLayout Padding="10" Spacing="10">
 
-                <Label 
+                <Label
                 Text="Dashboard de Tarefas"
                 HorizontalOptions="Center"
                 TextColor="{StaticResource Azul}"
@@ -21,52 +20,204 @@
                 FontAttributes="Bold" />
 
                 <!--Qtd tarefa por Prioridade-->
-                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                    <Frame>
-                        <VerticalStackLayout>
-                            <Image Source="clock.png" 
-                                   WidthRequest="20" />
-                            <Label Text="Pendentes" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="{StaticResource Text}"/>
-                            <Label Text="{Binding TarefaQtdStatusDTO.Pendente}" 
-                                   FontAttributes="Bold" 
-                                   FontSize="18" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="{StaticResource Text}"/>
-                        </VerticalStackLayout>
-                    </Frame>
+                <Frame>
 
-                    <Frame>
-                        <VerticalStackLayout>
-                            <Image Source="task.png" 
-                                   WidthRequest="20" />
-                            <Label Text="Em Progresso" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="{StaticResource Text}"/>
-                            <Label Text="{Binding TarefaQtdStatusDTO.EmProgresso}" 
-                                   FontAttributes="Bold" 
-                                   FontSize="18" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="{StaticResource Text}"/>
-                        </VerticalStackLayout>
-                    </Frame>
+                    <VerticalStackLayout>
 
-                    <Frame>
-                        <VerticalStackLayout>
-                            <Image Source="check.png" 
-                                   WidthRequest="20" />
-                            <Label Text="Concluídas"
-                                   HorizontalTextAlignment="Center"
-                                   TextColor="{StaticResource Text}"/>
-                            <Label Text="{Binding TarefaQtdStatusDTO.Concluido}" 
-                                   FontAttributes="Bold" 
-                                   FontSize="18" 
-                                   HorizontalTextAlignment="Center" 
-                                   TextColor="{StaticResource Text}"/>
-                        </VerticalStackLayout>
-                    </Frame>
-                </HorizontalStackLayout>
+                        <HorizontalStackLayout Spacing="10">
+                            <Image Source="chart_status.png" WidthRequest="20" />
+                            <Label Text="Status das Tarefas"
+                                   TextColor="{StaticResource Azul}"
+                                   FontSize="18" />
+                        </HorizontalStackLayout>
+
+                        <Label Text="Toque em um card para filtrar as tarefas por status"
+                               TextColor="{StaticResource Text}"
+                               FontSize="10" />
+
+                        <Grid ColumnDefinitions="*,*,*"
+      Margin="0,8,0,0"
+      HorizontalOptions="FillAndExpand">
+
+                            <!-- Cartão Pendentes -->
+                            <Frame Grid.Column="0"
+           Padding="10"
+           Margin="5"
+           CornerRadius="20"
+           HasShadow="True"
+           BackgroundColor="White"
+           HorizontalOptions="FillAndExpand">
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding ExibirTarefasCommand}"
+                                        CommandParameter="Pendente"
+                                        NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+
+                                <Grid>
+                                    <!-- Faixa lateral vermelha -->
+                                    <BoxView BackgroundColor="#ff6b6b"
+                                             WidthRequest="4"
+                                             HorizontalOptions="Start"
+                                             VerticalOptions="FillAndExpand"
+                                             CornerRadius="10,0,0,10" />
+
+                                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+
+                                        <!-- Ícone com fundo -->
+                                        <Grid>
+                                            <Ellipse WidthRequest="40" HeightRequest="40" Fill="#FFF0F0" />
+                                            <Image Source="clock.png"
+                           WidthRequest="20"
+                           HeightRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                                        </Grid>
+
+                                        <Label Text="Pendentes"
+                       FontSize="14"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+
+                                        <Label Text="{Binding TarefaQtdStatusDTO.Pendente}"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+
+                            <!-- Cartão Em Progresso -->
+                            <Frame Grid.Column="1"
+           Padding="10"
+           Margin="5"
+           CornerRadius="20"
+           HasShadow="True"
+           BackgroundColor="White"
+           HorizontalOptions="FillAndExpand">
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding ExibirTarefasCommand}"
+                                        CommandParameter="Em_Progresso"
+                                        NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+
+                                <Grid>
+                                    <!-- Faixa lateral amarela -->
+                                    <BoxView BackgroundColor="#FFD166"
+                     WidthRequest="4"
+                     HorizontalOptions="Start"
+                     VerticalOptions="FillAndExpand"
+                     CornerRadius="10,0,0,10" />
+
+                                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+
+                                        <Grid>
+                                            <Ellipse WidthRequest="40" HeightRequest="40" Fill="#FFF7E5" />
+                                            <Image Source="task.png"
+                           WidthRequest="20"
+                           HeightRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                                        </Grid>
+
+                                        <Label Text="Em Progresso"
+                       FontSize="14"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+
+                                        <Label Text="{Binding TarefaQtdStatusDTO.EmProgresso}"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+
+                            <!-- Cartão Concluídas -->
+                            <Frame Grid.Column="2"
+           Padding="10"
+           Margin="5"
+           CornerRadius="20"
+           HasShadow="True"
+           BackgroundColor="White"
+           HorizontalOptions="FillAndExpand">
+
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding ExibirTarefasCommand}"
+                                        CommandParameter="Concluído"
+                                        NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+
+                                <Grid>
+                                    <!-- Faixa lateral verde -->
+                                    <BoxView BackgroundColor="#06d6a0"
+                     WidthRequest="4"
+                     HorizontalOptions="Start"
+                     VerticalOptions="FillAndExpand"
+                     CornerRadius="10,0,0,10" />
+
+                                    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="8">
+
+                                        <Grid>
+                                            <Ellipse WidthRequest="40" HeightRequest="40" Fill="#E7FAEF" />
+                                            <Image Source="check.png"
+                           WidthRequest="20"
+                           HeightRequest="20"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                                        </Grid>
+
+                                        <Label Text="Concluídas"
+                       FontSize="14"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+
+                                        <Label Text="{Binding TarefaQtdStatusDTO.Concluido}"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       TextColor="{StaticResource Text}"
+                       HorizontalTextAlignment="Center" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+
+                        <!--<Grid ColumnDefinitions="*,*,*"
+                              Margin="0,8,0,0"
+                              HorizontalOptions="FillAndExpand">
+
+                            <Frame Grid.Column="0" Padding="10" Margin="5" HorizontalOptions="FillAndExpand">
+                                <VerticalStackLayout>
+                                    <Image Source="clock.png" WidthRequest="20" />
+                                    <Label Text="Pendentes" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" FontSize="13" />
+                                    <Label Text="{Binding TarefaQtdStatusDTO.Pendente}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" />
+                                </VerticalStackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="1" Padding="10" Margin="5" HorizontalOptions="FillAndExpand">
+                                <VerticalStackLayout>
+                                    <Image Source="task.png" WidthRequest="20" />
+                                    <Label Text="Em Progresso" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" FontSize="13" />
+                                    <Label Text="{Binding TarefaQtdStatusDTO.EmProgresso}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" />
+                                </VerticalStackLayout>
+                            </Frame>
+
+                            <Frame Grid.Column="2" Padding="10" Margin="5" HorizontalOptions="FillAndExpand">
+                                <VerticalStackLayout>
+                                    <Image Source="check.png" WidthRequest="20" />
+                                    <Label Text="Concluídas" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" FontSize="13" />
+                                    <Label Text="{Binding TarefaQtdStatusDTO.Concluido}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center" TextColor="{StaticResource Text}" />
+                                </VerticalStackLayout>
+                            </Frame>
+                        </Grid>-->
+                    </VerticalStackLayout>
+                </Frame>
 
                 <!-- Progresso Total -->
                 <Frame>
@@ -74,33 +225,32 @@
 
                         <HorizontalStackLayout Spacing="10">
                             <Image Source="chart.png" WidthRequest="20" />
-                            <Label Text="Progresso Total" 
-                                   TextColor="{StaticResource Azul}" 
-                                   FontSize="18"/>
+                            <Label Text="Progresso Total"
+                                   TextColor="{StaticResource Azul}"
+                                   FontSize="18" />
                         </HorizontalStackLayout>
 
-                        <Grid ColumnDefinitions="*,Auto" 
+                        <Grid ColumnDefinitions="*,Auto"
                               Margin="0,8,0,8">
-                            <Label Text="Progresso" 
-                                   FontSize="11" 
-                                   TextColor="{StaticResource Text}"/>
-                            <Label Text="{Binding TarefaQtdStatusDTO.PorcentagemConcluidas, StringFormat='{0}%'}" 
+                            <Label Text="Progresso"
+                                   FontSize="11"
+                                   TextColor="{StaticResource Text}" />
+                            <Label Text="{Binding TarefaQtdStatusDTO.PorcentagemConcluidas, StringFormat='{0}%'}"
                                    Grid.Column="1" FontSize="11"
-                                   TextColor="{StaticResource Text}"/>
+                                   TextColor="{StaticResource Text}" />
                         </Grid>
 
                         <ProgressBar Progress="{Binding PorcentagemConcluida}"
-                                     ProgressColor="{StaticResource Azul}" 
+                                     ProgressColor="{StaticResource Azul}"
                                      BackgroundColor="LightGray" />
 
                         <HorizontalStackLayout Margin="0,2,0,0"
                                                Spacing="4">
                             <Image Source="information.png" WidthRequest="13" />
-                            <Label Text="{Binding FrasePorcentagemConcluida}" 
-                                   FontSize="10" 
-                                   TextColor="{StaticResource Text}"/>
+                            <Label Text="{Binding FrasePorcentagemConcluida}"
+                                   FontSize="10"
+                                   TextColor="{StaticResource Text}" />
                         </HorizontalStackLayout>
-
                     </VerticalStackLayout>
                 </Frame>
 
@@ -117,26 +267,25 @@
                             </Grid.ColumnDefinitions>
 
                             <HorizontalStackLayout Spacing="10">
-                                <Image Source="warning.png" WidthRequest="20"/>
+                                <Image Source="warning.png" WidthRequest="20" />
                                 <Label Text="Tarefas Prioritárias" FontSize="18"
                                        TextColor="{StaticResource Azul}" />
                             </HorizontalStackLayout>
 
                             <Frame Grid.Column="1"
                                Padding="5"
-                               BackgroundColor="#F72585"
+                               BackgroundColor="{StaticResource Azul}"
                                CornerRadius="12"
                                VerticalOptions="Center">
 
                                 <Label Text="{Binding QtdTarefasPrioritarias}"
                                    TextColor="White"
                                    FontAttributes="Bold"
-                                   FontSize="12"/>
+                                   FontSize="12" />
                             </Frame>
-
                         </Grid>
 
-                        <VerticalStackLayout 
+                        <VerticalStackLayout
                     BindableLayout.ItemsSource="{Binding ListaTarefaPrioridadeAlta}"
                     IsVisible="{Binding ListaCarregada}">
 
@@ -144,19 +293,19 @@
 
                                 <DataTemplate>
 
-                                    <Frame CornerRadius="15" BackgroundColor="#FFF0F5" Padding="15" Margin="0,5" HasShadow="False" >
+                                    <Frame CornerRadius="15" BackgroundColor="#fdf5f6" Padding="15" Margin="0,5" HasShadow="False">
 
                                         <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer 
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:DashboardTarefas}}, Path=BindingContext.TarefaSelecionadaCommand}" 
+                                            <TapGestureRecognizer
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:DashboardTarefas}}, Path=BindingContext.TarefaSelecionadaCommand}"
                                                 CommandParameter="{Binding Id}" />
                                         </Frame.GestureRecognizers>
 
-                                        <Grid  >
+                                        <Grid>
 
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="Auto"/>
-                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
                                             </Grid.RowDefinitions>
 
                                             <Grid.ColumnDefinitions>
@@ -175,24 +324,23 @@
                                             <VerticalStackLayout Grid.Row="1" Grid.Column="0" Spacing="10">
 
                                                 <HorizontalStackLayout Spacing="5">
-                                                    <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
+                                                    <Image Source="calendar.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
                                                     <Label Text="{Binding Data, StringFormat='Criado: {0:dd/MM/yyyy}'}"
                                                        FontSize="11"
                                                        TextColor="Gray"
-                                                       VerticalOptions="Center"/>
+                                                       VerticalOptions="Center" />
                                                 </HorizontalStackLayout>
 
                                                 <HorizontalStackLayout Spacing="5">
-                                                    <Image Source="clock_gray.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center"/>
-                                                    <Label Text="{Binding DescricaoPrazo}" 
+                                                    <Image Source="clock_gray.png" WidthRequest="14" HeightRequest="14" VerticalOptions="Center" />
+                                                    <Label Text="{Binding DescricaoPrazo}"
                                                        FontSize="11"
                                                        TextColor="Gray"
-                                                       VerticalOptions="Center"/>
+                                                       VerticalOptions="Center" />
                                                 </HorizontalStackLayout>
-
                                             </VerticalStackLayout>
 
-                                            <Frame Grid.Row="1" Grid.Column="1"
+                                            <Frame Grid.Row="0" Grid.Column="1"
                                                Padding="6,2"
                                                BackgroundColor="{Binding CorStatus}"
                                                CornerRadius="12"
@@ -204,21 +352,15 @@
                                                    FontSize="11"
                                                    FontAttributes="Bold"
                                                    VerticalOptions="Center"
-                                                   TextColor="White"/>
+                                                   TextColor="White" />
                                             </Frame>
-
                                         </Grid>
-
                                     </Frame>
-
                                 </DataTemplate>
-
                             </BindableLayout.ItemTemplate>
-
                         </VerticalStackLayout>
 
-
-                        <Grid 
+                        <Grid
                            IsVisible="{Binding ListaCarregada, Converter={StaticResource InverseBoolConverter}}"
                            BackgroundColor="{StaticResource BackgroundLoader}"
                            VerticalOptions="Fill"
@@ -230,17 +372,11 @@
                                WidthRequest="60"
                                HeightRequest="60"
                                HorizontalOptions="Center"
-                               VerticalOptions="Center"/>
+                               VerticalOptions="Center" />
                         </Grid>
-
                     </VerticalStackLayout>
-
                 </Frame>
-
             </VerticalStackLayout>
-
         </ScrollView>
-
     </RefreshView>
-
 </ContentPage>

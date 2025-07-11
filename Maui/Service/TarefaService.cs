@@ -7,10 +7,9 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 
-
 namespace Maui.Service
 {
-    class TarefaService : ITarefaService
+    internal class TarefaService : ITarefaService
     {
         private readonly HttpClient http;
 
@@ -359,8 +358,6 @@ namespace Maui.Service
 
         #region Métodos privados
 
-
-
         private async Task<UserToken> PegarDadosToken()
         {
             UserToken dadosToken = new UserToken();
@@ -368,12 +365,9 @@ namespace Maui.Service
             //Pegando o token que foi gerado
             dadosToken.Token = Preferences.Get("authToken", string.Empty);
 
-
-
             return dadosToken;
         }
 
         #endregion Métodos privados
-
     }
 }

@@ -108,7 +108,6 @@ namespace Maui.ViewModel.Tarefa
                 {
                     await Application.Current.MainPage.DisplayAlert("Atenção!", $"{ErrorMessagem}", "OK");
                 }
-
             }
             catch (Exception ex)
             {
@@ -148,18 +147,19 @@ namespace Maui.ViewModel.Tarefa
         {
             QtdTarefasPrioritarias = _qtdTarefasPrioritarias == 1 ? "1 item" : $"{_qtdTarefasPrioritarias} Itens";
         }
+
         private Color SetarCorStatus(string _status)
         {
             switch (_status)
             {
                 case "Concluído":
-                    return Color.FromArgb("#61C377");
+                    return Color.FromArgb("#66BB6A");
 
                 case "Em Progresso":
-                    return Color.FromArgb("#48A6D4");
+                    return Color.FromArgb("#FBC02D");
 
                 case "Pendente":
-                    return Color.FromArgb("#A0A0A1");
+                    return Color.FromArgb("#D32F2F");
             }
 
             return Colors.Gray;
@@ -174,9 +174,7 @@ namespace Maui.ViewModel.Tarefa
             public string DescricaoPrazo { get; set; }
             public Color CorStatus { get; set; }
             public string Status { get; set; }
-
         }
-
 
         [RelayCommand]
         private async Task RecarregarDashboard()
@@ -197,15 +195,19 @@ namespace Maui.ViewModel.Tarefa
             {
                 RecarregarPage = false;
             }
-
         }
-
 
         [RelayCommand]
         private async Task TarefaSelecionada(int id)
         {
             //await Shell.Current.GoToAsync($"///VisualizarTarefa?idTarefa={id}&origin=DashboardTarefas");
             await Shell.Current.GoToAsync($"///EditarTarefa?idTarefa={id}&origin=DashboardTarefas");
+        }
+
+        [RelayCommand]
+        private async Task ExibirTarefas(string status)
+        {
+            await Shell.Current.GoToAsync($"///ExibirTarefas?status={status}");
         }
     }
 }

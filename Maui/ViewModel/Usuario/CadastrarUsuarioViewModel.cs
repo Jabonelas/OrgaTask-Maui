@@ -49,7 +49,6 @@ namespace Maui.ViewModel.Usuario
         [RelayCommand]
         private async Task CadastrarUsuario()
         {
-
             if (!IsCamposPreenchidos())
             {
                 return;
@@ -85,7 +84,6 @@ namespace Maui.ViewModel.Usuario
             return true;
         }
 
-
         private async Task RealizarCadastroAsync()
         {
             try
@@ -94,8 +92,6 @@ namespace Maui.ViewModel.Usuario
 
                 if (Sucesso)
                 {
-            
-
                     await RealizarLoginAsync();
                 }
                 else
@@ -114,9 +110,7 @@ namespace Maui.ViewModel.Usuario
             {
                 IsRefreshing = false;
             }
-
         }
-
 
         private async Task RealizarLoginAsync()
         {
@@ -154,11 +148,9 @@ namespace Maui.ViewModel.Usuario
             }
         }
 
-
         [RelayCommand]
         private async Task CancelarCadastro()
         {
-
             var resposta = await Application.Current.MainPage.DisplayAlert("Atenção!",
                 "Tem certeza que deseja cancelar o cadastro do usuário?",
                 "Sim", "Não");

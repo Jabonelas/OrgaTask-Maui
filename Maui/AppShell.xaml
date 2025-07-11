@@ -17,7 +17,6 @@
         Route="VisualizarTarefa"
         ContentTemplate="{DataTemplate tarefa:VisualizarTarefa}" />
 
-
     <ShellContent
         Route="EditarTarefa"
         ContentTemplate="{DataTemplate tarefa:EditarTarefa}" />
@@ -28,7 +27,6 @@
 
     <!-- TabBar fixado na parte inferior -->
     <TabBar Route="MainTabs">
-  
 
         <ShellContent
             Icon="home.png"
@@ -44,13 +42,5 @@
             Icon="lista_tarefa.png"
             Route="ExibirTarefas"
             ContentTemplate="{DataTemplate tarefa:ExibirTarefas}" />
-
-        <ShellContent
-            Icon="trocar_usuario.png"
-            Route="VisualizarTarefa"
-            ContentTemplate="{DataTemplate tarefa:VisualizarTarefa}" />
-
-       
-
     </TabBar>
 </Shell>

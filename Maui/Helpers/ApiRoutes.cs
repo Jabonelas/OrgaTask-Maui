@@ -6,7 +6,6 @@
         {
             string endPoint = "";
 
-
 #if DEBUG
             if (DeviceInfo.Platform == DevicePlatform.Android)
             {
@@ -22,7 +21,6 @@
     // Configuração de produção
     endPoint = $"https://blazor-api.onrender.com/{_endPoint}";
 #endif
-
 
             return endPoint;
         }

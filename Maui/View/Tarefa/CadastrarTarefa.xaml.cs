@@ -11,6 +11,4 @@ public partial class CadastrarTarefa : ContentPage
 
         BindingContext = new CadastrarTarefaViewModel(_iTarefaService, _iNotificacaoService);
     }
-
-
 }

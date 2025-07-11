@@ -1,6 +1,5 @@
 ﻿using Maui.DTOs.Usuario;
 
-
 namespace Maui.Interface
 {
     public interface IUsuarioService

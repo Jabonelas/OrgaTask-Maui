@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Maui.Models
+﻿namespace Maui.Models
 {
-   public class ItemCabecalhoTarefa
+    public class ItemCabecalhoTarefa
     {
         public class ItensCabecario
         {

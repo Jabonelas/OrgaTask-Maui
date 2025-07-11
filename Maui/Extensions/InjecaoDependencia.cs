@@ -9,7 +9,6 @@ namespace Maui.Extensions
 {
     internal static class InjecaoDependencia
     {
-
         public static IServiceCollection AdicionarInjecoesDependencias(this IServiceCollection services)
         {
             // Infraestrutura
@@ -40,10 +39,7 @@ namespace Maui.Extensions
             services.AddTransient<ExibirTarefas>();
             services.AddTransient<EditarTarefa>();
 
-
-
             return services;
         }
-
     }
 }

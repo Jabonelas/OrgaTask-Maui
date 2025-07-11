@@ -35,12 +35,6 @@ namespace Maui.ViewModel.Usuario
         [RelayCommand]
         private async Task Entrar()
         {
-
-            usuarioLogin.Login = "teste11";
-            //usuarioLogin.Login = "israel oliveira";
-            //usuarioLogin.Login = "string";
-            usuarioLogin.Senha = "string";
-
             if (!IsCamposPreenchidos())
             {
                 return;
@@ -65,7 +59,6 @@ namespace Maui.ViewModel.Usuario
                 if (Sucesso)
                 {
                     await Shell.Current.GoToAsync("//DashboardTarefas");
-
                 }
                 else
                 {
@@ -101,7 +94,6 @@ namespace Maui.ViewModel.Usuario
             return true;
         }
 
-
         [RelayCommand]
         public async void CriarConta()
         {
@@ -109,7 +101,6 @@ namespace Maui.ViewModel.Usuario
         }
 
         public string IconeOlhoSenha => IsSenhaOculta ? "olho_aberto.png" : "olho_fechado.png";
-
 
         [RelayCommand]
         private void ExibirSenha()

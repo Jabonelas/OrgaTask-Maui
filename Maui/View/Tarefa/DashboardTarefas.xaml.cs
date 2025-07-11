@@ -18,6 +18,7 @@ public partial class DashboardTarefas : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+
         await dashboardTarefasViewModel.InitializeAsync();
     }
 }

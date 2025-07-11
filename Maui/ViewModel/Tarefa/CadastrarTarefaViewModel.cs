@@ -6,7 +6,6 @@ using Maui.Models;
 
 namespace Maui.ViewModel.Tarefa
 {
-
     [QueryProperty(nameof(Origin), "origin")]
     public partial class CadastrarTarefaViewModel : ObservableObject
     {
@@ -62,7 +61,6 @@ namespace Maui.ViewModel.Tarefa
         [ObservableProperty]
         private List<string> listaDeStatus = new List<string>();
 
-
         public CadastrarTarefaViewModel(ITarefaService _iTarefaService, INotificacaoService _iNotificacaoService)
         {
             iTarefaService = _iTarefaService;
@@ -77,15 +75,12 @@ namespace Maui.ViewModel.Tarefa
 
             PreencherCabecario();
 
-
             MostrarErroTitulo = false;
             MostrarErroPrioridade = false;
             MostrarErroPrazo = false;
             MostrarErroDescricao = false;
             MostrarErroStatus = false;
         }
-
-
 
         private void PreencherCabecario()
         {
@@ -98,7 +93,6 @@ namespace Maui.ViewModel.Tarefa
 
         private void PreencherListaItensCabecario()
         {
-
             ListaItensCabecalho.AddRange(new[]
             {
                 new ItemCabecalhoTarefa.ItensCabecario
@@ -133,7 +127,6 @@ namespace Maui.ViewModel.Tarefa
             ListaDeStatus.Add("Concluído");
         }
 
-
         [RelayCommand]
         private async Task Salvar()
         {
@@ -153,7 +146,6 @@ namespace Maui.ViewModel.Tarefa
 
                 if (Sucesso)
                 {
-
                     await iNotificacaoService.MostrarNotificacaoAsync("Operação realizada com sucesso!");
 
                     LimparCampos();

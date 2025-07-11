@@ -1,19 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Maui.DTOs.Tarefa;
 using Maui.Interface;
 using Maui.Models;
 
 namespace Maui.ViewModel.Tarefa
 {
-
     [QueryProperty(nameof(IdTarefa), "idTarefa")]
-
     [QueryProperty(nameof(Origin), "origin")]
     public partial class EditarTarefaViewModel : ObservableObject
     {
@@ -69,7 +62,6 @@ namespace Maui.ViewModel.Tarefa
         [ObservableProperty]
         private List<string> listaDeStatus = new List<string>();
 
-
         public EditarTarefaViewModel(ITarefaService _iTarefaService, INotificacaoService _iNotificacaoService)
         {
             iTarefaService = _iTarefaService;
@@ -84,7 +76,6 @@ namespace Maui.ViewModel.Tarefa
 
             PreencherCabecario();
 
-
             MostrarErroTitulo = false;
             MostrarErroPrioridade = false;
             MostrarErroPrazo = false;
@@ -92,9 +83,9 @@ namespace Maui.ViewModel.Tarefa
             MostrarErroStatus = false;
         }
 
-        partial void OnIdTarefaChanged(int value)
+        private partial void OnIdTarefaChanged(int value)
         {
-            CarregarTarefaAsync(value);
+            _ = CarregarTarefaAsync(value);
         }
 
         private async Task CarregarTarefaAsync(int idTarefa)
@@ -120,6 +111,7 @@ namespace Maui.ViewModel.Tarefa
                     "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
             }
         }
+
         private void PreencherCabecario()
         {
             IconeCabecalho = "lapis.png";
@@ -131,7 +123,6 @@ namespace Maui.ViewModel.Tarefa
 
         private void PreencherListaItensCabecario()
         {
-
             ListaItensCabecalho.AddRange(new[]
             {
                 new ItemCabecalhoTarefa.ItensCabecario
@@ -166,7 +157,6 @@ namespace Maui.ViewModel.Tarefa
             ListaDeStatus.Add("Concluído");
         }
 
-
         [RelayCommand]
         private async Task Salvar()
         {
@@ -186,20 +176,16 @@ namespace Maui.ViewModel.Tarefa
 
                 if (Sucesso)
                 {
-
-
                     var resposta = await Application.Current.MainPage.DisplayAlert("Atenção!",
                         "Tem certeza de que deseja salvar as alterações feitas nesta tarefa?",
                         "Sim", "Não");
 
                     if (resposta)
                     {
+                        await Shell.Current.GoToAsync($"//{Origin}");
 
-                    await Shell.Current.GoToAsync($"//{Origin}");
-
-                    await iNotificacaoService.MostrarNotificacaoAsync("Operação realizada com sucesso!");
+                        await iNotificacaoService.MostrarNotificacaoAsync("Operação realizada com sucesso!");
                     }
-
                 }
                 else
                 {
@@ -237,8 +223,6 @@ namespace Maui.ViewModel.Tarefa
             return true;
         }
 
-
-
         [RelayCommand]
         private async Task Cancelar()
         {
@@ -248,7 +232,6 @@ namespace Maui.ViewModel.Tarefa
 
             if (resposta)
             {
-
                 await Shell.Current.GoToAsync($"//{Origin}");
             }
         }

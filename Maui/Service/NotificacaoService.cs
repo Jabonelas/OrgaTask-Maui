@@ -6,8 +6,6 @@ namespace Maui.Service
 {
     public class NotificacaoService : INotificacaoService
     {
-
-
         public async Task MostrarNotificacaoAsync(string message)
         {
             await MostrarNotificacaoAsync(message, ToastDuration.Short, 14);
@@ -31,12 +29,8 @@ namespace Maui.Service
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine($"Erro ao exibir notificação: {ex.Message}");
-
-
             }
         }
-
     }
 }

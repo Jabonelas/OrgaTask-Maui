@@ -5,10 +5,9 @@ using Maui.Interface;
 using Newtonsoft.Json;
 using System.Text;
 
-
 namespace Maui.Service
 {
-    class UsuarioService : IUsuarioService
+    internal class UsuarioService : IUsuarioService
     {
         private readonly HttpClient http;
 
@@ -41,15 +40,12 @@ namespace Maui.Service
 
                 var endpoint = ApiRoutes.SetandoEndPoint("api/usuarios/login");
 
-
-
                 using (var response = await http.PostAsync(endpoint, content))
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode)
                     {
-
                         var result = JsonConvert.DeserializeObject<UserToken>(responseContent);
 
                         Preferences.Set("authToken", result.Token);
@@ -105,7 +101,5 @@ namespace Maui.Service
                 return (false, ex.Message);
             }
         }
-
-
     }
 }

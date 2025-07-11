@@ -23,10 +23,13 @@ namespace Maui
                     fonts.AddFont("SEGOEUI.ttf", "SegoeUI");
                 }).UseMauiCommunityToolkit();
 
-            builder.ConfigureLifecycleEvents(events => {
+            builder.ConfigureLifecycleEvents(events =>
+            {
 #if ANDROID
-                events.AddAndroid(android => {
-                    android.OnCreate((activity, bundle) => {
+                events.AddAndroid(android =>
+                {
+                    android.OnCreate((activity, bundle) =>
+                    {
                         // Cor da StatusBar (Azul claro no exemplo)
                         activity.Window?.SetStatusBarColor(Android.Graphics.Color.Rgb(0, 157, 224));
 

@@ -6,18 +6,53 @@ namespace Maui.View.Tarefa;
 public partial class ExibirTarefas : ContentPage
 {
     private readonly ExibirTarefasViewModel exibirTarefasViewModel;
+
+    private DateTime lastLoadTime = DateTime.MinValue;
+
     public ExibirTarefas(ITarefaService _iTarefaService)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
 
         exibirTarefasViewModel = new ExibirTarefasViewModel(_iTarefaService);
         BindingContext = exibirTarefasViewModel;
+
+        MainScrollView.Scrolled += OnScrollViewScrolled;
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
 
-        await exibirTarefasViewModel.InitializeAsync();
+        if (BindingContext is ExibirTarefasViewModel vm)
+        {
+            await vm.InitializeAsync();
+        }
+    }
+
+    private async void OnScrollViewScrolled(object sender, ScrolledEventArgs e)
+    {
+        if ((DateTime.Now - lastLoadTime).TotalMilliseconds < 500) return;
+
+        var scrollView = (ScrollView)sender;
+        var scrollingSpace = scrollView.ContentSize.Height - scrollView.Height;
+
+        if (scrollingSpace <= 0) return;
+
+        var currentPosition = e.ScrollY;
+        var threshold = scrollingSpace * 0.8;
+
+        if (currentPosition >= threshold)
+        {
+            lastLoadTime = DateTime.Now;
+            await exibirTarefasViewModel.LoadMoreItemsCommand.ExecuteAsync(null);
+        }
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        MainScrollView.Scrolled -= OnScrollViewScrolled;
+
+        exibirTarefasViewModel.Status = null;
     }
 }

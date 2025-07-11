@@ -7,5 +7,4 @@
         public int Concluido { get; set; }
         public decimal PorcentagemConcluidas { get; set; }
     }
-
 }

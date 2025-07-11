@@ -4,7 +4,6 @@
              x:Class="Maui.View.TarefaFormView"
              BackgroundColor="{StaticResource Background}">
 
-
     <Grid>
 
         <ScrollView>
@@ -12,30 +11,30 @@
             <VerticalStackLayout Spacing="10" Padding="10">
 
                 <!-- Cabeçalho -->
-                <Frame BackgroundColor="{StaticResource Azul}" 
-                   Padding="20" 
-                   CornerRadius="15" 
+                <Frame BackgroundColor="{StaticResource Azul}"
+                   Padding="20"
+                   CornerRadius="15"
                    HasShadow="True">
 
                     <VerticalStackLayout Spacing="20">
                         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
-                            <Image Source="{Binding IconeCabecalho}" 
-                               HeightRequest="28" 
-                               WidthRequest="28"/>
-                            <Label Text="{Binding TituloCabecalho}" 
-                               TextColor="White" 
-                               FontSize="24" 
-                               Margin="10,0,0,0" 
-                               FontAttributes="Bold"/>
+                            <Image Source="{Binding IconeCabecalho}"
+                               HeightRequest="28"
+                               WidthRequest="28" />
+                            <Label Text="{Binding TituloCabecalho}"
+                               TextColor="White"
+                               FontSize="24"
+                               Margin="10,0,0,0"
+                               FontAttributes="Bold" />
                         </HorizontalStackLayout>
 
                         <ContentView HorizontalOptions="Center" VerticalOptions="Center">
-                            <Label Text="{Binding SubtituloCabecalho}" 
-                           FontSize="14" 
+                            <Label Text="{Binding SubtituloCabecalho}"
+                           FontSize="14"
                            TextColor="White"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           HorizontalTextAlignment="Center"/>
+                           HorizontalTextAlignment="Center" />
                         </ContentView>
 
                         <!-- Itens do cabeçalho -->
@@ -43,13 +42,13 @@
                             <BindableLayout.ItemTemplate>
                                 <DataTemplate>
                                     <HorizontalStackLayout>
-                                        <Image Source="{Binding Icone}" 
-                                           HeightRequest="20" 
-                                           WidthRequest="20"/>
-                                        <Label Text="{Binding Texto}" 
-                                           TextColor="White" 
-                                           FontSize="12" 
-                                           Margin="8,0,0,0"/>
+                                        <Image Source="{Binding Icone}"
+                                           HeightRequest="20"
+                                           WidthRequest="20" />
+                                        <Label Text="{Binding Texto}"
+                                           TextColor="White"
+                                           FontSize="12"
+                                           Margin="8,0,0,0" />
                                     </HorizontalStackLayout>
                                 </DataTemplate>
                             </BindableLayout.ItemTemplate>
@@ -61,20 +60,19 @@
                 <Frame Padding="20" CornerRadius="15" HasShadow="True">
                     <VerticalStackLayout Spacing="10">
 
-                        <Label Text="Título:" 
-                               TextColor="{StaticResource Text}"/>
+                        <Label Text="Título:"
+                               TextColor="{StaticResource Text}" />
 
                         <Entry x:Name="txtTitulo"
-                               Placeholder="Digite o título..." 
+                               Placeholder="Digite o título..."
                                Text="{Binding TarefaAlterarDTO.Titulo, Mode=TwoWay}"
                                IsEnabled="{Binding IsEnabled}"
                                BackgroundColor="{StaticResource Background}"
                                TextColor="{StaticResource Text}"
-                               PlaceholderColor="{StaticResource Placeholder}"/>
+                               PlaceholderColor="{StaticResource Placeholder}" />
 
-
-                        <Label Text="O título é obrigatório!" 
-                               TextColor="{StaticResource TextAlert}" 
+                        <Label Text="O título é obrigatório!"
+                               TextColor="{StaticResource TextAlert}"
                                IsVisible="{Binding MostrarErroTitulo}" />
 
                         <Grid>
@@ -89,81 +87,78 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
 
-                            <Label Text="Prioridade:" 
-                                   Grid.Column="0" Grid.Row="0" 
-                                   TextColor="{StaticResource Text}"/>
+                            <Label Text="Prioridade:"
+                                   Grid.Column="0" Grid.Row="0"
+                                   TextColor="{StaticResource Text}" />
 
-                            <Picker 
-                                Grid.Column="0" 
+                            <Picker
+                                Grid.Column="0"
                                 Grid.Row="1"
-                                ItemsSource="{Binding ListaDePrioridades}" 
+                                ItemsSource="{Binding ListaDePrioridades}"
                                 SelectedItem="{Binding TarefaAlterarDTO.Prioridade, Mode=TwoWay}"
                                 IsEnabled="{Binding IsEnabled}"
                                 BackgroundColor="{StaticResource Background}"
-                                TextColor="{StaticResource Text}"/>
+                                TextColor="{StaticResource Text}" />
 
-                            <Label Text="A prioridade é obrigatória!"   
-                                   Grid.Column="0" Grid.Row="2" 
-                                   TextColor="{StaticResource TextAlert}" 
+                            <Label Text="A prioridade é obrigatória!"
+                                   Grid.Column="0" Grid.Row="2"
+                                   TextColor="{StaticResource TextAlert}"
                                    IsVisible="{Binding MostrarErroPrioridade}" />
 
-                            <Label Text="Prazo (dias):" Grid.Column="1" 
+                            <Label Text="Prazo (dias):" Grid.Column="1"
                                    Grid.Row="0"
-                                   TextColor="{StaticResource Text}"/>
+                                   TextColor="{StaticResource Text}" />
 
-                            <Entry 
-                                x:Name="txtPrazo" 
-                                Grid.Column="1" 
+                            <Entry
+                                x:Name="txtPrazo"
+                                Grid.Column="1"
                                 Grid.Row="1"
-                                Placeholder="Informe um prazo..." 
-                                Keyboard="Numeric" 
+                                Placeholder="Informe um prazo..."
+                                Keyboard="Numeric"
                                 Text="{Binding TarefaAlterarDTO.Prazo, Mode=TwoWay}"
                                 IsEnabled ="{Binding IsEnabled}"
                                 BackgroundColor="{StaticResource Background}"
                                 TextColor="{StaticResource Text}"
-                                PlaceholderColor="{StaticResource Placeholder}"
-                            />
+                                PlaceholderColor="{StaticResource Placeholder}" />
 
-                            <Label Text="O prazo é obrigatório!"   
-                                   Grid.Column="1" Grid.Row="2" 
-                                   TextColor="{StaticResource TextAlert}" 
+                            <Label Text="O prazo é obrigatório!"
+                                   Grid.Column="1" Grid.Row="2"
+                                   TextColor="{StaticResource TextAlert}"
                                    IsVisible="{Binding MostrarErroPrazo}" />
-
                         </Grid>
 
-                        <Label Text="Descrição:" 
-                               TextColor="{StaticResource Text}"/>
+                        <Label Text="Descrição:"
+                               TextColor="{StaticResource Text}" />
 
-                        <Editor 
-                            x:Name="txtDescricao" 
-                            Placeholder="Digite a descrição..." 
-                            AutoSize="TextChanges" 
+                        <Editor
+                            x:Name="txtDescricao"
+                            Placeholder="Digite a descrição..."
+                            AutoSize="TextChanges"
                             MaxLength="500"
                             HeightRequest="100"
                             Text="{Binding TarefaAlterarDTO.Descricao, Mode=TwoWay}"
                             IsEnabled="{Binding IsEnabled}"
                             BackgroundColor="{StaticResource Background}"
                             TextColor="{StaticResource Text}"
-                            PlaceholderColor="{StaticResource Placeholder}"
-                        />
+                            PlaceholderColor="{StaticResource Placeholder}" />
 
                         <Label Text="A descrição é obrigatório!"
-                               TextColor="{StaticResource TextAlert}" 
+                               TextColor="{StaticResource TextAlert}"
                                IsVisible="{Binding MostrarErroDescricao}" />
 
-                        <Label Text="Status:" 
-                               TextColor="{StaticResource Text}"/>
+                        <Label Text="Status:"
+                               TextColor="{StaticResource Text}" />
 
-                        <Picker 
+                        <Picker
                             Margin="0,5,10,0"
-                            ItemsSource="{Binding ListaDeStatus}" 
+                            ItemsSource="{Binding ListaDeStatus}"
                             SelectedItem="{Binding TarefaAlterarDTO.Status, Mode=TwoWay}"
                             IsEnabled="{Binding IsEnabled}"
                             BackgroundColor="{StaticResource Background}"
-                            TextColor="{StaticResource Text}"/>
+                            TextColor="{StaticResource Text}" />
 
-                        <Label Text="O status é obrigatório!" 
-                               TextColor="{StaticResource TextAlert}" 
+                        <Label Text="O status é obrigatório!"
+                               TextColor="{StaticResource TextAlert}"
                                IsVisible="{Binding MostrarErroStatus}" />
 
                         <Grid>
@@ -177,7 +172,6 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
 
-
                             <Button x:Name="btnCancelar" Text="Cancelar" Grid.Column="0" Grid.Row="0" Margin="0,10,20,0"
                                     ImageSource="cancelar.png"
                                     ContentLayout="Left, 10"
@@ -188,7 +182,7 @@
                                     CornerRadius="10"
                                     HeightRequest="45"
                                     Command="{Binding CancelarCommand}"
-                                    IsVisible="{Binding MostarBtnCancelar}"/>
+                                    IsVisible="{Binding MostarBtnCancelar}" />
 
                             <Button x:Name="btnSalvar" Grid.Column="1" Grid.Row="0" Margin="20,10,0,0"
                                 Text="Salvar"
@@ -197,10 +191,9 @@
                                 BackgroundColor="{StaticResource Azul}"
                                 TextColor="White"
                                 HeightRequest="45"
-                                CornerRadius="10" 
+                                CornerRadius="10"
                                 Command="{Binding SalvarCommand}"
-                                IsVisible="{Binding MostarBtnSalvar}"/>
-
+                                IsVisible="{Binding MostarBtnSalvar}" />
                         </Grid>
 
                         <Button x:Name="btnVoltar" Text="Voltar" Margin="0,10,0,0"
@@ -213,15 +206,10 @@
                             CornerRadius="10"
                             HeightRequest="45"
                             Command="{Binding VoltarCommand}"
-                            IsVisible="{Binding MostarBtnVoltar}"/>
-
-
-
+                            IsVisible="{Binding MostarBtnVoltar}" />
                     </VerticalStackLayout>
                 </Frame>
-
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-
 </ContentView>

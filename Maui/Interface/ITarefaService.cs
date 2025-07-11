@@ -1,12 +1,9 @@
 ﻿using Maui.DTOs.Tarefa;
 
-
 namespace Maui.Interface
 {
     public interface ITarefaService
     {
-
-
         Task<(bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount)> ObterTarefasPaginadasAsync(int _pageNumber, int _pageSize, string _status);
 
         Task<(bool Sucesso, string ErrorMessagem)> DeletarTarefaAsync(int _id);
