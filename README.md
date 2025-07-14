@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-OrgaTask Maui é uma aplicação multiplataforma desenvolvida com .NET MAUI, projetada para gerenciar tarefas de forma eficiente e intuitiva. A aplicação consome a OrgaTask API, permitindo aos usuários organizar, rastrear e gerenciar suas tarefas em dispositivos Android, iOS, macOS e Windows. Com uma interface nativa e responsiva, construída com XAML e seguindo a arquitetura MVVM, OrgaTask Maui oferece uma experiência fluida, ideal para produtividade pessoal ou em equipe.
+OrgaTask Maui é uma aplicação multiplataforma desenvolvida com .NET MAUI, projetada para gerenciar tarefas de forma eficiente e intuitiva. A aplicação consome a OrgaTask API, permitindo aos usuários organizar e gerenciar suas tarefas em dispositivos Android, iOS, macOS e Windows. Com uma construída com XAML e seguindo a arquitetura MVVM.
 
 ## Tecnologias Utilizadas
 
