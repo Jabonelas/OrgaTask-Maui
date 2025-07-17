@@ -1,0 +1,108 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
+build_property.CsWinRTComponent = 
+build_property.CsWinRTAotOptimizerEnabled = 
+build_property.CsWinRTAotWarningLevel = 
+build_property.TargetFramework = net9.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Maui
+build_property.ProjectDir = C:\Users\israe\source\repos\Maui\Maui\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/israe/AppData/Roaming/SonarLint for Visual Studio/.global/csharp/SonarLint.xml]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = 
+build_metadata.AdditionalFiles.RelativePath = 
+
+[C:/Users/israe/source/repos/Maui/Maui/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/TarefaFormView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.TarefaFormView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\TarefaFormView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\TarefaFormView.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/CadastrarTarefa.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.CadastrarTarefa.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\CadastrarTarefa.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\CadastrarTarefa.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/DashboardTarefas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.DashboardTarefas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\DashboardTarefas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\DashboardTarefas.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/EditarTarefa.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.EditarTarefa.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\EditarTarefa.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\EditarTarefa.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/ExibirTarefas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.ExibirTarefas.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\ExibirTarefas.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\ExibirTarefas.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Tarefa/VisualizarTarefa.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Tarefa.VisualizarTarefa.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Tarefa\VisualizarTarefa.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Tarefa\VisualizarTarefa.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Usuario/CadastrarUsuario.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Usuario.CadastrarUsuario.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Usuario\CadastrarUsuario.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Usuario\CadastrarUsuario.xaml
+
+[C:/Users/israe/source/repos/Maui/Maui/View/Usuario/Login.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Maui.View.Usuario.Login.xaml
+build_metadata.AdditionalFiles.TargetPath = View\Usuario\Login.xaml
+build_metadata.AdditionalFiles.RelativePath = View\Usuario\Login.xaml

@@ -83,7 +83,7 @@ namespace Maui.ViewModel.Tarefa
             MostrarErroStatus = false;
         }
 
-        private partial void OnIdTarefaChanged(int value)
+         partial void OnIdTarefaChanged(int value)
         {
             _ = CarregarTarefaAsync(value);
         }

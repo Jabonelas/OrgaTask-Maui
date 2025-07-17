@@ -11,18 +11,27 @@ public partial class ExibirTarefas : ContentPage
 
     public ExibirTarefas(ITarefaService _iTarefaService)
     {
-        InitializeComponent();
+        try
+        {
+            InitializeComponent();
+            exibirTarefasViewModel = new ExibirTarefasViewModel(_iTarefaService);
+            BindingContext = exibirTarefasViewModel;
+            MainScrollView.Scrolled += OnScrollViewScrolled;
 
-        exibirTarefasViewModel = new ExibirTarefasViewModel(_iTarefaService);
-        BindingContext = exibirTarefasViewModel;
-
-        MainScrollView.Scrolled += OnScrollViewScrolled;
+            // Prevent linker from removing InverseBoolConverter
+            //var dummy = new Maui.Helpers.InverseBoolConverter();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error initializing ExibirTarefas: {ex}");
+            Application.Current.MainPage.DisplayAlert("Initialization Error", ex.Message, "OK").GetAwaiter().GetResult();
+            throw;
+        }
     }
 
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-
         if (BindingContext is ExibirTarefasViewModel vm)
         {
             await vm.InitializeAsync();
@@ -31,7 +40,8 @@ public partial class ExibirTarefas : ContentPage
 
     private async void OnScrollViewScrolled(object sender, ScrolledEventArgs e)
     {
-        if ((DateTime.Now - lastLoadTime).TotalMilliseconds < 500) return;
+        if ((DateTime.Now - lastLoadTime).TotalMilliseconds < 1000) return;
+        if (exibirTarefasViewModel.IsLoadingMore || !exibirTarefasViewModel.HasMoreItems) return;
 
         var scrollView = (ScrollView)sender;
         var scrollingSpace = scrollView.ContentSize.Height - scrollView.Height;
@@ -52,7 +62,6 @@ public partial class ExibirTarefas : ContentPage
     {
         base.OnDisappearing();
         MainScrollView.Scrolled -= OnScrollViewScrolled;
-
         exibirTarefasViewModel.Status = null;
     }
 }

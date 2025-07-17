@@ -76,7 +76,7 @@ namespace Maui.ViewModel.Tarefa
             PreencherListaStatus();
         }
 
-        private partial void OnIdTarefaChanged(int value)
+         partial void OnIdTarefaChanged(int value)
         {
             _ = CarregarTarefaAsync(value);
         }

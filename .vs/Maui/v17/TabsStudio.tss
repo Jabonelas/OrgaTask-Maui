@@ -2,21 +2,29 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ArrayOfArrayOfString>
     <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\ExibirTarefasViewModel.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\ExibirTarefas.xaml</string>
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\ExibirTarefas.xaml.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\ExibirTarefasViewModel.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\MauiProgram.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\DashboardTarefasViewModel.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\App.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\DashboardTarefas.xaml</string>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\DashboardTarefas.xaml.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Maui.csproj</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Helpers\InverseBoolConverter.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\LoginViewModel.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Service\TarefaService.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\EditarTarefaViewModel.cs</string>
@@ -25,13 +33,7 @@
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\VisualizarTarefaViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\Login.xaml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\AppShell.xaml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\Service\TarefaService.cs</string>
+      <string>Archive Manager</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

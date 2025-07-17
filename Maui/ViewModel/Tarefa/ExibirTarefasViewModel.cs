@@ -36,6 +36,9 @@ namespace Maui.ViewModel.Tarefa
         private bool listaCarregada;
 
         [ObservableProperty]
+        private bool tarefaCadastradas;
+
+        [ObservableProperty]
         private bool recarregarPage;
 
         [ObservableProperty]
@@ -47,23 +50,29 @@ namespace Maui.ViewModel.Tarefa
         [ObservableProperty]
         private bool hasMoreItems = true;
 
+        [ObservableProperty]
+        private bool hasNoMoreItems;
+
         public ExibirTarefasViewModel(ITarefaService _iTarefaService)
         {
             iTarefaService = _iTarefaService;
-
-            ListaTarefas = new ObservableCollection<ExibirTarefasViewModel.Tarefas>();
-
+            ListaTarefas = new ObservableCollection<Tarefas>();
             TarefaQtdStatusDTO = new TarefaQtdStatusDTO();
+            HasMoreItems = true; // Explicit initialization
         }
 
-        private partial void OnStatusChanged(string value)
+         partial void OnStatusChanged(string value)
         {
-            if (!string.IsNullOrEmpty(Status))
+            if (!string.IsNullOrEmpty(value))
             {
                 status = value;
-
                 _ = CarregarDadosAsync();
             }
+        }
+
+         partial void OnHasMoreItemsChanged(bool value)
+        {
+            HasNoMoreItems = !value;
         }
 
         public async Task InitializeAsync()
@@ -78,7 +87,6 @@ namespace Maui.ViewModel.Tarefa
         private async Task CarregarDadosAsync()
         {
             SetandoTitulo(Status);
-
             await PreencherTarefasAsync();
         }
 
@@ -88,13 +96,11 @@ namespace Maui.ViewModel.Tarefa
             try
             {
                 RecarregarPage = true;
-
                 await PreencherTarefasAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao exibir dados do dashboard: {ex.Message}");
-
                 await Application.Current.MainPage.DisplayAlert("Erro", "Falha ao recarregar Dashboard.", "OK");
             }
             finally
@@ -103,60 +109,76 @@ namespace Maui.ViewModel.Tarefa
             }
         }
 
+        [RelayCommand]
+        private async Task NovaTarefa()
+        {
+            await Shell.Current.GoToAsync($"///CadastrarTarefa");
+        }
+
         private async Task PreencherTarefasAsync(bool loadMore = false)
         {
+            Console.WriteLine("Iniciando PreencherTarefasAsync");
+
             try
             {
                 if (!loadMore)
                 {
                     ListaCarregada = false;
-                    currentPage = 1;
-                    hasMoreItems = true;
+                    CurrentPage = 1;
+                    HasMoreItems = true;
                     ListaTarefas.Clear();
                 }
                 else
                 {
-                    if (isLoadingMore || !hasMoreItems)
+                    if (IsLoadingMore || !HasMoreItems)
                     {
                         return;
                     }
-
-                    isLoadingMore = true;
+                    IsLoadingMore = true;
                 }
 
                 int pageSize = 12;
 
                 (bool Sucesso, string ErrorMessagem, List<TarefaConsultaDTO> ListaTarefaConsultaDTO, int totalCount) =
-                    await iTarefaService.ObterTarefasPaginadasAsync(currentPage, pageSize, Status);
+                    await iTarefaService.ObterTarefasPaginadasAsync(CurrentPage, pageSize, Status);
 
-                if (Sucesso && ListaTarefaConsultaDTO.Any())
+                Console.WriteLine("Iniciando PreencherTarefasAsync2");
+
+                if (Sucesso && !ListaTarefaConsultaDTO?.Any() == true)
                 {
-                    ListaTarefas.Clear();
+                    TarefaCadastradas = true;
+                }
+                else
+                {
+                    TarefaCadastradas = false;
+                }
 
-                    foreach (var tarefa in ListaTarefaConsultaDTO)
+                if (Sucesso && ListaTarefaConsultaDTO?.Any() == true)
+                {
+                    var newItems = ListaTarefaConsultaDTO.Select(CriarItemTarefa).ToList();
+                    foreach (var item in newItems)
                     {
-                        ListaTarefas.Add(CriarItemTarefa(tarefa));
+                        ListaTarefas.Add(item);
                     }
 
-                    hasMoreItems = ListaTarefaConsultaDTO.Count >= pageSize;
-                    currentPage++;
+                    HasMoreItems = (CurrentPage * pageSize) < totalCount;
+                    CurrentPage++;
                 }
-                else if (!ListaTarefaConsultaDTO.Any() && loadMore)
+                else if (!ListaTarefaConsultaDTO?.Any() == true && loadMore)
                 {
-                    hasMoreItems = false;
+                    HasMoreItems = false;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao exibir lista de tarefas: {ex.Message}");
-
                 await Application.Current.MainPage.DisplayAlert("Atenção!",
                     "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
             }
             finally
             {
                 ListaCarregada = true;
-                isLoadingMore = false;
+                IsLoadingMore = false;
             }
         }
 
@@ -321,13 +343,11 @@ namespace Maui.ViewModel.Tarefa
             try
             {
                 RecarregarPage = true;
-
                 await CarregarDadosAsync();
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao exibir lista de tarefas: {ex.Message}");
-
                 await Application.Current.MainPage.DisplayAlert("Erro", "Falha ao recarregar Dashboard.", "OK");
             }
             finally
@@ -360,7 +380,6 @@ namespace Maui.ViewModel.Tarefa
             if (resposta)
             {
                 await iTarefaService.DeletarTarefaAsync(id);
-
                 await RecarregarPagina();
             }
         }

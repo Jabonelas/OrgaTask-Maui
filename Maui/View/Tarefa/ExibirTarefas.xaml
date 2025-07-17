@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Maui.Helpers"
              x:Class="Maui.View.Tarefa.ExibirTarefas"
              x:Name="ExibirTarefasPage"
              BackgroundColor="{StaticResource Background}">
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:InverseBoolConverter x:Key="InverseBoolConverter" />
+            <Color x:Key="Cinza">#808080</Color>
+            <!-- Define Cinza locally to avoid resource issues -->
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <RefreshView
         IsRefreshing="{Binding RecarregarPage, Mode=TwoWay}"
         Command="{Binding RecarregarPaginaCommand}"
         RefreshColor="{StaticResource Azul}">
-
         <ScrollView x:Name="MainScrollView">
-
             <VerticalStackLayout Padding="10"
-                                 Spacing="10">
-
+                                Spacing="10">
                 <VerticalStackLayout>
-
                     <Label Text="{Binding Titulo}"
                            HorizontalOptions="Center"
                            TextColor="{StaticResource Azul}"
                            FontSize="20"
                            FontAttributes="Bold" />
-
                     <Button x:Name="btnNovaTarefa"
                             Margin="0,10,0,10"
                             Text="Nova Tarefa"
@@ -31,139 +33,115 @@
                             TextColor="White"
                             HeightRequest="45"
                             CornerRadius="10"
-                            Command="{Binding SalvarCommand}" HorizontalOptions="Start" />
-
+                            Command="{Binding NovaTarefaCommand}"
+                            HorizontalOptions="Start" />
                     <Frame>
-
                         <VerticalStackLayout>
+                            <Label HorizontalOptions="Center"
+                                   Text="Não existe tarefas cadastradas"
+                                   IsVisible="{Binding TarefaCadastradas}" />
                             <VerticalStackLayout BindableLayout.ItemsSource="{Binding ListaTarefas}"
-                                             IsVisible="{Binding ListaCarregada}">
-
+                                                IsVisible="{Binding ListaCarregada}">
                                 <BindableLayout.ItemTemplate>
-
                                     <DataTemplate>
-
                                         <Frame CornerRadius="15"
-                                           BackgroundColor= "{Binding CorFundo}"
-                                           Padding="15"
-                                           Margin="0,5"
-                                           HasShadow="False">
-
+                                               BackgroundColor="{Binding CorFundo}"
+                                               Padding="15"
+                                               Margin="0,5"
+                                               HasShadow="False">
                                             <Grid>
-
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="Auto" />
                                                     <RowDefinition Height="Auto" />
                                                     <RowDefinition Height="Auto" />
                                                     <RowDefinition Height="Auto" />
                                                 </Grid.RowDefinitions>
-
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="*" />
                                                     <ColumnDefinition Width="*" />
                                                 </Grid.ColumnDefinitions>
-
                                                 <Frame Grid.Row="0" Grid.Column="0"
-                                                   Margin="0,0,0,10"
-                                                   Padding="6,2"
-                                                   BackgroundColor="{Binding CorPrioridade}"
-                                                   CornerRadius="12"
-                                                   HorizontalOptions="Start">
-
+                                                       Margin="0,0,0,10"
+                                                       Padding="6,2"
+                                                       BackgroundColor="{Binding CorPrioridade}"
+                                                       CornerRadius="12"
+                                                       HorizontalOptions="Start">
                                                     <HorizontalStackLayout>
-
                                                         <Image Source="{Binding IconePrioridade}"
-                                                           WidthRequest="14"
-                                                           HeightRequest="14"
-                                                           VerticalOptions="Center" />
-
+                                                               WidthRequest="14"
+                                                               HeightRequest="14"
+                                                               VerticalOptions="Center" />
                                                         <Label Text="{Binding Prioridade}"
-                                                           FontSize="10"
-                                                           FontAttributes="Bold"
-                                                           TextColor="White"
-                                                           VerticalOptions="Center" />
+                                                               FontSize="10"
+                                                               FontAttributes="Bold"
+                                                               TextColor="White"
+                                                               VerticalOptions="Center" />
                                                     </HorizontalStackLayout>
                                                 </Frame>
-
                                                 <Frame Grid.Row="0" Grid.Column="1"
-                                                   Margin="0,0,0,10"
-                                                   Padding="6,2"
-                                                   BackgroundColor="{Binding CorStatus}"
-                                                   CornerRadius="12"
-                                                   HorizontalOptions="End">
-
+                                                       Margin="0,0,0,10"
+                                                       Padding="6,2"
+                                                       BackgroundColor="{Binding CorStatus}"
+                                                       CornerRadius="12"
+                                                       HorizontalOptions="End">
                                                     <HorizontalStackLayout>
-
                                                         <Image Source="{Binding IconeStatus}"
-                                                           WidthRequest="14"
-                                                           HeightRequest="14"
-                                                           HorizontalOptions="Start" />
-
+                                                               WidthRequest="14"
+                                                               HeightRequest="14"
+                                                               HorizontalOptions="Start" />
                                                         <Label Text="{Binding Status}"
-                                                           FontSize="10"
-                                                           FontAttributes="Bold"
-                                                           TextColor="White"
-                                                           HorizontalOptions="End" />
+                                                               FontSize="10"
+                                                               FontAttributes="Bold"
+                                                               TextColor="White"
+                                                               HorizontalOptions="End" />
                                                     </HorizontalStackLayout>
                                                 </Frame>
-
                                                 <VerticalStackLayout Grid.Row="1"
-                                                                 Grid.Column="0"
-                                                                 Grid.ColumnSpan="2"
-                                                                 Margin="0,0,0,10">
-
+                                                                    Grid.Column="0"
+                                                                    Grid.ColumnSpan="2"
+                                                                    Margin="0,0,0,10">
                                                     <Label Text="{Binding Titulo}"
-                                                       FontAttributes="Bold"
-                                                       FontSize="14"
-                                                       TextColor="Black"
-                                                       Margin="0,0,0,10" />
-
+                                                           FontAttributes="Bold"
+                                                           FontSize="14"
+                                                           TextColor="Black"
+                                                           Margin="0,0,0,10" />
                                                     <Label Text="{Binding Descricao}"
-                                                       FontAttributes="Bold"
-                                                       FontSize="12"
-                                                       TextColor="Gray"
-                                                       Margin="0,0,0,5" />
+                                                           FontAttributes="Bold"
+                                                           FontSize="12"
+                                                           TextColor="Gray"
+                                                           Margin="0,0,0,5" />
                                                 </VerticalStackLayout>
-
                                                 <VerticalStackLayout Grid.Row="2"
-                                                                 Spacing="10">
-
+                                                                    Spacing="10">
                                                     <HorizontalStackLayout Spacing="4">
-
                                                         <Image Source="calendar.png"
-                                                           WidthRequest="14"
-                                                           HeightRequest="14"
-                                                           VerticalOptions="Center" />
-
+                                                               WidthRequest="14"
+                                                               HeightRequest="14"
+                                                               VerticalOptions="Center" />
                                                         <Label Text="{Binding Data, StringFormat='Criado: {0:dd/MM/yyyy}'}"
-                                                       FontSize="11"
-                                                       TextColor="Gray"
-                                                       VerticalOptions="Center" />
+                                                               FontSize="11"
+                                                               TextColor="Gray"
+                                                               VerticalOptions="Center" />
                                                     </HorizontalStackLayout>
-
                                                     <HorizontalStackLayout Spacing="4">
                                                         <Image Source="clock_gray.png"
-                                                           WidthRequest="14"
-                                                           HeightRequest="14"
-                                                           VerticalOptions="Center" />
-
+                                                               WidthRequest="14"
+                                                               HeightRequest="14"
+                                                               VerticalOptions="Center" />
                                                         <Label Text="{Binding DescricaoPrazo}"
-                                                           FontSize="11"
-                                                           TextColor="Gray"
-                                                           VerticalOptions="Center" />
+                                                               FontSize="11"
+                                                               TextColor="Gray"
+                                                               VerticalOptions="Center" />
                                                     </HorizontalStackLayout>
                                                 </VerticalStackLayout>
-
-                                                <VerticalStackLayout Grid.Row="3"     Grid.ColumnSpan="2">
-
+                                                <VerticalStackLayout Grid.Row="3"
+                                                                    Grid.ColumnSpan="2">
                                                     <BoxView
-                                                    HeightRequest="1"
-                                                    Color="Gray"
-                                                    HorizontalOptions="Fill"
-                                                    Margin="0,10,0,10" />
-
+                                                        HeightRequest="1"
+                                                        Color="Gray"
+                                                        HorizontalOptions="Fill"
+                                                        Margin="0,10,0,10" />
                                                     <HorizontalStackLayout HorizontalOptions="End">
-
                                                         <Button
                                                             x:Name="btnVisualizarTarefa"
                                                             ImageSource="eye_blue_visualizar_tarefa.png"
@@ -174,43 +152,41 @@
                                                             HeightRequest="40"
                                                             CornerRadius="5"
                                                             Padding="2"
-                                                            Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.VisualizarCommand}"
+                                                            Command="{Binding VisualizarCommand}"
                                                             CommandParameter="{Binding Id}"
                                                             HorizontalOptions="End"
                                                             VerticalOptions="End"
                                                             Margin="0,0,10,0" />
-
                                                         <Button
-                                                                x:Name="btnEditarTarefa"
-                                                                ImageSource="pen_editar_tarefa.png"
-                                                                ContentLayout="Left, 5"
-                                                                BackgroundColor="White"
-                                                                BorderColor="#ffc107"
-                                                                BorderWidth="1"
-                                                                HeightRequest="5"
-                                                                CornerRadius="5"
-                                                                Padding="2"
-                                                                Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.EditarTarefaCommand}"
-                                                                CommandParameter="{Binding Id}"
-                                                                HorizontalOptions="End"
-                                                                VerticalOptions="End"
-                                                                Margin="0,0,10,0" />
-
+                                                            x:Name="btnEditarTarefa"
+                                                            ImageSource="pen_editar_tarefa.png"
+                                                            ContentLayout="Left, 5"
+                                                            BackgroundColor="White"
+                                                            BorderColor="#ffc107"
+                                                            BorderWidth="1"
+                                                            HeightRequest="40"
+                                                            CornerRadius="5"
+                                                            Padding="2"
+                                                            Command="{Binding EditarTarefaCommand}"
+                                                            CommandParameter="{Binding Id}"
+                                                            HorizontalOptions="End"
+                                                            VerticalOptions="End"
+                                                            Margin="0,0,10,0" />
                                                         <Button
-                                                                x:Name="btnExcluirTarefa"
-                                                                ImageSource="trash_excluir_tarefa.png"
-                                                                ContentLayout="Left, 5"
-                                                                BackgroundColor="White"
-                                                                BorderColor="#dc3545"
-                                                                BorderWidth="1"
-                                                                HeightRequest="5"
-                                                                CornerRadius="5"
-                                                                Padding="2"
-                                                                Margin="0"
-                                                                Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.ExcluirTarefaCommand}"
-                                                                CommandParameter="{Binding Id}"
-                                                                HorizontalOptions="End"
-                                                                VerticalOptions="End" />
+                                                            x:Name="btnExcluirTarefa"
+                                                            ImageSource="trash_excluir_tarefa.png"
+                                                            ContentLayout="Left, 5"
+                                                            BackgroundColor="White"
+                                                            BorderColor="#dc3545"
+                                                            BorderWidth="1"
+                                                            HeightRequest="40"
+                                                            CornerRadius="5"
+                                                            Padding="2"
+                                                            Margin="0"
+                                                            Command="{Binding ExcluirTarefaCommand}"
+                                                            CommandParameter="{Binding Id}"
+                                                            HorizontalOptions="End"
+                                                            VerticalOptions="End" />
                                                     </HorizontalStackLayout>
                                                 </VerticalStackLayout>
                                             </Grid>
@@ -218,24 +194,20 @@
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
                             </VerticalStackLayout>
-
                             <Grid IsVisible="{Binding ListaCarregada, Converter={StaticResource InverseBoolConverter}}"
                                   BackgroundColor="{StaticResource BackgroundLoader}"
                                   VerticalOptions="Fill"
                                   HorizontalOptions="Fill">
-
                                 <ActivityIndicator IsRunning="True"
-                                                   Color="{StaticResource Azul}"
-                                                   WidthRequest="60"
-                                                   HeightRequest="60"
-                                                   HorizontalOptions="Center"
-                                                   VerticalOptions="Center" />
+                                                  Color="{StaticResource Azul}"
+                                                  WidthRequest="60"
+                                                  HeightRequest="60"
+                                                  HorizontalOptions="Center"
+                                                  VerticalOptions="Center" />
                             </Grid>
                         </VerticalStackLayout>
                     </Frame>
                 </VerticalStackLayout>
-
-                <!-- Adicione este ActivityIndicator no final da lista -->
                 <ActivityIndicator
                     IsVisible="{Binding IsLoadingMore}"
                     IsRunning="{Binding IsLoadingMore}"
@@ -243,11 +215,9 @@
                     HeightRequest="50"
                     HorizontalOptions="Center"
                     VerticalOptions="Center" />
-
-                <!-- Adicione este Label para mostrar quando não há mais itens -->
                 <Label
                     Text="Não há mais tarefas para carregar"
-                    IsVisible="{Binding HasMoreItems, Converter={StaticResource InverseBoolConverter}}"
+                    IsVisible="{Binding HasNoMoreItems}"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Margin="0,20"
