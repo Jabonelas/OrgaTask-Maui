@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-OrgaTask Maui é uma aplicação multiplataforma desenvolvida com .NET MAUI, projetada para gerenciar tarefas de forma eficiente e intuitiva. A aplicação consome a OrgaTask API, permitindo aos usuários organizar e gerenciar suas tarefas em dispositivos Android, iOS, macOS e Windows. Com uma construída com XAML e seguindo a arquitetura MVVM.
+OrgaTask Maui é uma aplicação multiplataforma desenvolvida com .NET MAUI, projetada para gerenciar tarefas de forma eficiente e intuitiva. A aplicação consome a OrgaTask API, permitindo aos usuários organizar e gerenciar suas tarefas em dispositivos Android e Windows. Com uma construída com XAML e seguindo a arquitetura MVVM.
 
 ## Tecnologias Utilizadas
 
@@ -22,7 +22,7 @@ OrgaTask Maui é uma aplicação multiplataforma desenvolvida com .NET MAUI, pro
 
 
 
-Plataformas Suportadas: Android (API 21+), iOS (13+), macOS (10.15+), Windows (10+)
+Plataformas Suportadas: Android (API 21+) e Windows (10+)
 
 ## Funcionalidades
 
@@ -37,7 +37,7 @@ Plataformas Suportadas: Android (API 21+), iOS (13+), macOS (10.15+), Windows (1
 - .NET 9 SDK
 - OrgaTask API rodando localmente ou em um servidor
 - Visual Studio 2022 ou 2025 com workload MAUI
-- Dispositivo ou emulador Android/iOS ou Windows Desktop
+- Dispositivo ou emulador Android ou Windows Desktop
 
 ## Como Executar o Projeto
 
@@ -68,11 +68,7 @@ dotnet restore
 dotnet run --framework net8.0-android
 ```
 
-- iOS (requer macOS):
 
-```bash
-dotnet run --framework net8.0-ios
-```
 
 - Windows:
 
@@ -80,11 +76,6 @@ dotnet run --framework net8.0-ios
 dotnet run --framework net8.0-windows
 ```
 
-- macOS:
-- 
-```bash
-dotnet run --framework net8.0-macos
-```
 
 Ou use o Visual Studio, selecionando a plataforma desejada.
 
