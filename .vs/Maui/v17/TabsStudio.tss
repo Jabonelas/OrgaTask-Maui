@@ -9,9 +9,6 @@
       <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\ExibirTarefas.xaml.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\MauiProgram.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\App.xaml</string>
     </ArrayOfString>
     <ArrayOfString>
@@ -33,7 +30,10 @@
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\VisualizarTarefaViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>Archive Manager</string>
+      <string>C:\Program Files\dotnet\packs\Microsoft.Android.Sdk.Windows\35.0.61\targets\Microsoft.Android.Sdk.Aot.targets</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\.nuget\packages\microsoft.maui.resizetizer\9.0.51\buildTransitive\Microsoft.Maui.Resizetizer.After.targets</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

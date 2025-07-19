@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Net.Sockets;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Maui.DTOs.Usuario;
 using Maui.Interface;
@@ -69,8 +70,22 @@ namespace Maui.ViewModel.Usuario
             {
                 Console.WriteLine($"Erro ao realizar login: {ex.Message}");
 
-                await Application.Current.MainPage.DisplayAlert("Atenção!",
-                      "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+
+                    if (ex is HttpRequestException || ex.InnerException is SocketException)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Atenção!",
+                            "Não foi possível conectar. Verifique sua conexão com a internet.", "OK");
+                    }
+                    else if (ex is TaskCanceledException)
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Atenção!",
+                            "A solicitação demorou demais para responder. Verifique sua conexão.", "OK");
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("Atenção!",
+                            "Ocorreu um erro interno. Nossa equipe já foi notificada.", "OK");
+                    }
             }
             finally
             {

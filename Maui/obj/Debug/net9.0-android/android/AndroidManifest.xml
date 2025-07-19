@@ -11,7 +11,7 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <permission android:name="com.companyname.maui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.maui.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-  <application android:name="crc641b69aaa7725200ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="Maui" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+  <application android:name="crc641b69aaa7725200ab.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="OrgaTask" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
     <activity android:name="crc641b69aaa7725200ab.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:theme="@style/Maui.SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
