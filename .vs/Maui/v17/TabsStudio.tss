@@ -21,7 +21,7 @@
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\LoginViewModel.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\Users\israe\source\repos\Maui\Maui\Service\TarefaService.cs</string>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Service\Tarefa\TarefaService.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\EditarTarefaViewModel.cs</string>
@@ -34,6 +34,39 @@
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\Users\israe\.nuget\packages\microsoft.maui.resizetizer\9.0.51\buildTransitive\Microsoft.Maui.Resizetizer.After.targets</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\MauiProgram.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Usuario\CadastrarUsuario.xaml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Usuario\CadastrarUsuarioViewModel.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Tarefa\TarefaAlterarDTO.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\Tarefa\CadastrarTarefa.xaml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\View\TarefaFormView.xaml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Tarefa\TarefaConsultaDTO.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Tarefa\TarefaCadastrarDTO.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\Interface\Tarefa\ITarefaService.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\ViewModel\Tarefa\CadastrarTarefaViewModel.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\Users\israe\source\repos\Maui\Maui\DTOs\Tarefa\TarefaDTO.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

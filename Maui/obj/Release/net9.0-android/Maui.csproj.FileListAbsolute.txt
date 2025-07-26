@@ -1,11 +1,4 @@
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.runtimeconfig.json
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.dll
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.pdb
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui.apk
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui.aab
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.aab
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.apk
-C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.apk.idsig
+C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\134\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\build.props
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\adb.props
@@ -126,7 +119,6 @@ C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\130\jl\files
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\131\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\132\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\133\jl\files.cache
-C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\134\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\136\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\137\jl\files.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\lp\138\jl\files.cache
@@ -164,6 +156,14 @@ C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.AssemblyIn
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.AssemblyInfo.cs
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.csproj.CoreCompileInputs.cache
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.sourcelink.json
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.runtimeconfig.json
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.dll
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\Maui.pdb
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui.apk
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui.aab
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.aab
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.apk
+C:\Users\israe\source\repos\Maui\Maui\bin\Release\net9.0-android\com.companyname.maui-Signed.apk.idsig
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\XamlC.stamp
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.dll
 C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-android\Maui.pdb

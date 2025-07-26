@@ -61,7 +61,7 @@ namespace Maui.ViewModel.Tarefa
             HasMoreItems = true; // Explicit initialization
         }
 
-         partial void OnStatusChanged(string value)
+        private partial void OnStatusChanged(string value)
         {
             if (!string.IsNullOrEmpty(value))
             {
@@ -70,7 +70,7 @@ namespace Maui.ViewModel.Tarefa
             }
         }
 
-         partial void OnHasMoreItemsChanged(bool value)
+        private partial void OnHasMoreItemsChanged(bool value)
         {
             HasNoMoreItems = !value;
         }

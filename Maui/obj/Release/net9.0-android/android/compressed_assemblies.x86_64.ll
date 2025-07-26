@@ -431,7 +431,7 @@ target triple = "x86_64-unknown-linux-android21"
 		ptr @__compressedAssemblyData_81; uint8_t* data
 	}, ; 81: Xamarin.KotlinX.Serialization.Core.Jvm
 	%struct.CompressedAssemblyDescriptor {
-		i32 304128, ; uint32_t uncompressed_file_size
+		i32 305152, ; uint32_t uncompressed_file_size
 		i1 false, ; bool loaded
 		ptr @__compressedAssemblyData_82; uint8_t* data
 	}, ; 82: Maui
@@ -711,12 +711,12 @@ target triple = "x86_64-unknown-linux-android21"
 		ptr @__compressedAssemblyData_137; uint8_t* data
 	}, ; 137: Java.Interop
 	%struct.CompressedAssemblyDescriptor {
-		i32 18976, ; uint32_t uncompressed_file_size
+		i32 19008, ; uint32_t uncompressed_file_size
 		i1 false, ; bool loaded
 		ptr @__compressedAssemblyData_138; uint8_t* data
 	}, ; 138: Mono.Android.Runtime
 	%struct.CompressedAssemblyDescriptor {
-		i32 1863680, ; uint32_t uncompressed_file_size
+		i32 1864192, ; uint32_t uncompressed_file_size
 		i1 false, ; bool loaded
 		ptr @__compressedAssemblyData_139; uint8_t* data
 	} ; 139: Mono.Android
@@ -804,7 +804,7 @@ target triple = "x86_64-unknown-linux-android21"
 @__compressedAssemblyData_79 = internal dso_local global [86016 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_80 = internal dso_local global [18432 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_81 = internal dso_local global [89600 x i8] zeroinitializer, align 16
-@__compressedAssemblyData_82 = internal dso_local global [304128 x i8] zeroinitializer, align 16
+@__compressedAssemblyData_82 = internal dso_local global [305152 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_83 = internal dso_local global [227328 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_84 = internal dso_local global [25600 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_85 = internal dso_local global [23552 x i8] zeroinitializer, align 16
@@ -860,15 +860,15 @@ target triple = "x86_64-unknown-linux-android21"
 @__compressedAssemblyData_135 = internal dso_local global [4608 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_136 = internal dso_local global [2325504 x i8] zeroinitializer, align 16
 @__compressedAssemblyData_137 = internal dso_local global [166912 x i8] zeroinitializer, align 16
-@__compressedAssemblyData_138 = internal dso_local global [18976 x i8] zeroinitializer, align 16
-@__compressedAssemblyData_139 = internal dso_local global [1863680 x i8] zeroinitializer, align 16
+@__compressedAssemblyData_138 = internal dso_local global [19008 x i8] zeroinitializer, align 16
+@__compressedAssemblyData_139 = internal dso_local global [1864192 x i8] zeroinitializer, align 16
 
 ; Metadata
 !llvm.module.flags = !{!0, !1}
 !0 = !{i32 1, !"wchar_size", i32 4}
 !1 = !{i32 7, !"PIC Level", i32 2}
 !llvm.ident = !{!2}
-!2 = !{!".NET for Android remotes/origin/release/9.0.1xx @ e7876a4f92d894b40c191a24c2b74f06d4bf4573"}
+!2 = !{!".NET for Android remotes/origin/release/9.0.1xx @ 9abff7703206541fdb83ffa80fe2c2753ad1997b"}
 !3 = !{!4, !4, i64 0}
 !4 = !{!"any pointer", !5, i64 0}
 !5 = !{!"omnipotent char", !6, i64 0}

@@ -14,7 +14,7 @@ namespace Maui.ViewModel.Tarefa
         private readonly INotificacaoService iNotificacaoService;
 
         [ObservableProperty]
-        private TarefaAlterarDTO tarefaAlterarDTO;
+        private TarefaDTO tarefaDto;
 
         [ObservableProperty]
         private int idTarefa;
@@ -67,7 +67,7 @@ namespace Maui.ViewModel.Tarefa
 
             iNotificacaoService = _iNotificacaoService;
 
-            TarefaAlterarDTO = new TarefaAlterarDTO();
+            TarefaDto = new TarefaDTO();
 
             PreencherListaPrioridade();
 
@@ -142,7 +142,7 @@ namespace Maui.ViewModel.Tarefa
         {
             try
             {
-                (bool Sucesso, string ErrorMessagem) = await iTarefaService.CadastrarTarefaAsync(TarefaAlterarDTO);
+                (bool Sucesso, string ErrorMessagem) = await iTarefaService.CadastrarTarefaAsync(TarefaDto);
 
                 if (Sucesso)
                 {
@@ -166,11 +166,11 @@ namespace Maui.ViewModel.Tarefa
 
         private bool IsCamposPreenchidos()
         {
-            MostrarErroTitulo = string.IsNullOrEmpty(TarefaAlterarDTO?.Titulo) ? true : false;
-            MostrarErroPrioridade = string.IsNullOrEmpty(TarefaAlterarDTO?.Prioridade) ? true : false;
-            MostrarErroPrazo = string.IsNullOrEmpty(TarefaAlterarDTO?.Prazo?.ToString()) ? true : false;
-            MostrarErroDescricao = string.IsNullOrEmpty(TarefaAlterarDTO?.Descricao) ? true : false;
-            MostrarErroStatus = string.IsNullOrEmpty(TarefaAlterarDTO?.Status) ? true : false;
+            MostrarErroTitulo = string.IsNullOrEmpty(TarefaDto?.Titulo) ? true : false;
+            MostrarErroPrioridade = string.IsNullOrEmpty(TarefaDto?.Prioridade) ? true : false;
+            MostrarErroPrazo = string.IsNullOrEmpty(TarefaDto?.Prazo?.ToString()) ? true : false;
+            MostrarErroDescricao = string.IsNullOrEmpty(TarefaDto?.Descricao) ? true : false;
+            MostrarErroStatus = string.IsNullOrEmpty(TarefaDto?.Status) ? true : false;
 
             OnPropertyChanged(nameof(MostrarErroTitulo));
             OnPropertyChanged(nameof(MostrarErroPrioridade));
@@ -188,9 +188,9 @@ namespace Maui.ViewModel.Tarefa
 
         private void LimparCampos()
         {
-            TarefaAlterarDTO = new TarefaAlterarDTO();
+            TarefaDto = new TarefaDTO();
 
-            OnPropertyChanged(nameof(TarefaAlterarDTO));
+            OnPropertyChanged(nameof(TarefaDto));
         }
 
         [RelayCommand]

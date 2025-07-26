@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot@2x.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\dotnet_bot@3x.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\aceitar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\adicionar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\adicionar_amigo.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\cadastrar_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\calendar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\cancelar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\chart.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\chart_status.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\check.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\clock.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\clock_gray.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\detalhe_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\entrada.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\eye_blue_visualizar_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\home.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\icone.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\information.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\lista_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\olho_aberto.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\olho_fechado.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\pen.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\pen_editar_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\prioridade_alta.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\prioridade_baixa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\prioridade_media.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\seguranca.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\status_concluido.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\status_em_progresso.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\status_pendente.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\task.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\trash_excluir_tarefa.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\trocar_usuario.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\usuario_final.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\verificar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\voltar.png" />
+    <BundleResource Include="C:\Users\israe\source\repos\Maui\Maui\obj\Release\net9.0-maccatalyst\resizetizer\r\Resources\warning.png" />
+  </ItemGroup>
+</Project>

@@ -141,6 +141,7 @@
                                                         Color="Gray"
                                                         HorizontalOptions="Fill"
                                                         Margin="0,10,0,10" />
+
                                                     <HorizontalStackLayout HorizontalOptions="End">
                                                         <Button
                                                             x:Name="btnVisualizarTarefa"
@@ -152,11 +153,12 @@
                                                             HeightRequest="40"
                                                             CornerRadius="5"
                                                             Padding="2"
-                                                            Command="{Binding VisualizarCommand}"
+                                                            Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.VisualizarCommand}"
                                                             CommandParameter="{Binding Id}"
                                                             HorizontalOptions="End"
                                                             VerticalOptions="End"
                                                             Margin="0,0,10,0" />
+
                                                         <Button
                                                             x:Name="btnEditarTarefa"
                                                             ImageSource="pen_editar_tarefa.png"
@@ -167,11 +169,12 @@
                                                             HeightRequest="40"
                                                             CornerRadius="5"
                                                             Padding="2"
-                                                            Command="{Binding EditarTarefaCommand}"
+                                                            Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.EditarTarefaCommand}"
                                                             CommandParameter="{Binding Id}"
                                                             HorizontalOptions="End"
                                                             VerticalOptions="End"
                                                             Margin="0,0,10,0" />
+
                                                         <Button
                                                             x:Name="btnExcluirTarefa"
                                                             ImageSource="trash_excluir_tarefa.png"
@@ -183,7 +186,7 @@
                                                             CornerRadius="5"
                                                             Padding="2"
                                                             Margin="0"
-                                                            Command="{Binding ExcluirTarefaCommand}"
+                                                            Command="{Binding Source={x:Reference ExibirTarefasPage}, Path=BindingContext.ExcluirTarefaCommand}"
                                                             CommandParameter="{Binding Id}"
                                                             HorizontalOptions="End"
                                                             VerticalOptions="End" />

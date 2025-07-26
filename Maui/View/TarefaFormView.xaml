@@ -65,7 +65,7 @@
 
                         <Entry x:Name="txtTitulo"
                                Placeholder="Digite o título..."
-                               Text="{Binding TarefaAlterarDTO.Titulo, Mode=TwoWay}"
+                               Text="{Binding TarefaDto.Titulo, Mode=TwoWay}"
                                IsEnabled="{Binding IsEnabled}"
                                BackgroundColor="{StaticResource Background}"
                                TextColor="{StaticResource Text}"
@@ -95,7 +95,7 @@
                                 Grid.Column="0"
                                 Grid.Row="1"
                                 ItemsSource="{Binding ListaDePrioridades}"
-                                SelectedItem="{Binding TarefaAlterarDTO.Prioridade, Mode=TwoWay}"
+                                SelectedItem="{Binding TarefaDto.Prioridade, Mode=TwoWay}"
                                 IsEnabled="{Binding IsEnabled}"
                                 BackgroundColor="{StaticResource Background}"
                                 TextColor="{StaticResource Text}" />
@@ -115,11 +115,12 @@
                                 Grid.Row="1"
                                 Placeholder="Informe um prazo..."
                                 Keyboard="Numeric"
-                                Text="{Binding TarefaAlterarDTO.Prazo, Mode=TwoWay}"
+                                Text="{Binding TarefaDto.Prazo, Mode=TwoWay}"
                                 IsEnabled ="{Binding IsEnabled}"
                                 BackgroundColor="{StaticResource Background}"
                                 TextColor="{StaticResource Text}"
-                                PlaceholderColor="{StaticResource Placeholder}" />
+                                PlaceholderColor="{StaticResource Placeholder}"
+                                MaxLength="999" />
 
                             <Label Text="O prazo é obrigatório!"
                                    Grid.Column="1" Grid.Row="2"
@@ -136,7 +137,7 @@
                             AutoSize="TextChanges"
                             MaxLength="500"
                             HeightRequest="100"
-                            Text="{Binding TarefaAlterarDTO.Descricao, Mode=TwoWay}"
+                            Text="{Binding TarefaDto.Descricao, Mode=TwoWay}"
                             IsEnabled="{Binding IsEnabled}"
                             BackgroundColor="{StaticResource Background}"
                             TextColor="{StaticResource Text}"
@@ -152,7 +153,7 @@
                         <Picker
                             Margin="0,5,10,0"
                             ItemsSource="{Binding ListaDeStatus}"
-                            SelectedItem="{Binding TarefaAlterarDTO.Status, Mode=TwoWay}"
+                            SelectedItem="{Binding TarefaDto.Status, Mode=TwoWay}"
                             IsEnabled="{Binding IsEnabled}"
                             BackgroundColor="{StaticResource Background}"
                             TextColor="{StaticResource Text}" />

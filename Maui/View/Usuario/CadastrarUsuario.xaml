@@ -119,7 +119,9 @@
 
                         <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
 
-                            <Entry x:Name="txtSenha"
+                            <VerticalStackLayout>
+
+                                <Entry x:Name="txtSenha"
                                    Placeholder="Digite a senha..."
                                    IsPassword="{Binding IsSenhaOculta}"
                                    Text="{Binding DadosUsuario.Senha}"
@@ -129,9 +131,10 @@
                                    TextColor="{StaticResource Text}"
                                    PlaceholderColor="{StaticResource Placeholder}" />
 
-                            <Label Text="A senha é obrigatório!"
+                                <Label Text="A senha é obrigatório!"
                                    TextColor="{StaticResource TextAlert}"
                                    IsVisible="{Binding MostrarErroSenha}" />
+                            </VerticalStackLayout>
 
                             <ImageButton Source="{Binding IconeOlhoSenha}"
                                          Command="{Binding ExibirSenhaCommand}"
@@ -146,7 +149,9 @@
 
                         <HorizontalStackLayout VerticalOptions="Center" Spacing="5">
 
-                            <Entry x:Name="txtConfirmarSenha"
+                            <VerticalStackLayout>
+
+                                <Entry x:Name="txtConfirmarSenha"
                                    Placeholder="Digite a confirmação da senha..."
                                    IsPassword="{Binding IsConfirmacaoSenhaOculta}"
                                    Text="{Binding DadosUsuario.ConfirmarSenha}"
@@ -156,9 +161,10 @@
                                    TextColor="{StaticResource Text}"
                                    PlaceholderColor="{StaticResource Placeholder}" />
 
-                            <Label Text="A confimação senha é obrigatório!"
+                                <Label Text="A confimação senha é obrigatório!"
                                    TextColor="{StaticResource TextAlert}"
                                    IsVisible="{Binding MostrarErroConfirmarSenha}" />
+                            </VerticalStackLayout>
 
                             <ImageButton Source="{Binding IconeOlhoConfirmacaoSenha}"
                                          Command="{Binding ExibirConfirmacaoSenhaCommand}"

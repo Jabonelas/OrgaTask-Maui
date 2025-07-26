@@ -17,9 +17,6 @@ public partial class ExibirTarefas : ContentPage
             exibirTarefasViewModel = new ExibirTarefasViewModel(_iTarefaService);
             BindingContext = exibirTarefasViewModel;
             MainScrollView.Scrolled += OnScrollViewScrolled;
-
-            // Prevent linker from removing InverseBoolConverter
-            //var dummy = new Maui.Helpers.InverseBoolConverter();
         }
         catch (Exception ex)
         {

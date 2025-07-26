@@ -1,6 +1,6 @@
 ﻿namespace Maui.DTOs.Tarefa
 {
-    public class TarefaAlterarDTO
+    public class TarefaAlterarDTOAPI
     {
         public int Id { get; set; }
 
@@ -8,10 +8,17 @@
 
         public string Descricao { get; set; }
 
-        public string Prioridade { get; set; }
-
         public int? Prazo { get; set; }
 
-        public string Status { get; set; }
+        public static implicit operator TarefaAlterarDTOAPI(TarefaDTO _tarefa)
+        {
+            return new TarefaAlterarDTOAPI()
+            {
+                Id = _tarefa.Id,
+                Titulo = _tarefa.Titulo,
+                Descricao = _tarefa.Descricao,
+                Prazo = _tarefa.Prazo
+            };
+        }
     }
 }

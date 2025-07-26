@@ -13,7 +13,7 @@ namespace Maui.ViewModel.Tarefa
         private readonly ITarefaService iTarefaService;
 
         [ObservableProperty]
-        private TarefaAlterarDTO tarefaAlterarDTO;
+        private TarefaDTO tarefaDto;
 
         [ObservableProperty]
         private int idTarefa;
@@ -67,7 +67,7 @@ namespace Maui.ViewModel.Tarefa
         {
             iTarefaService = _iTarefaService;
 
-            TarefaAlterarDTO = new TarefaAlterarDTO();
+            TarefaDto = new TarefaDTO();
 
             PreencherCabecario();
 
@@ -76,7 +76,7 @@ namespace Maui.ViewModel.Tarefa
             PreencherListaStatus();
         }
 
-         partial void OnIdTarefaChanged(int value)
+        private partial void OnIdTarefaChanged(int value)
         {
             _ = CarregarTarefaAsync(value);
         }
@@ -130,11 +130,11 @@ namespace Maui.ViewModel.Tarefa
         {
             try
             {
-                (bool Sucesso, string ErrorMessagem, TarefaAlterarDTO TarefaAlterarDTO) = await iTarefaService.BuscarTarefaAsync(IdTarefa);
+                (bool Sucesso, string ErrorMessagem, TarefaDTO TarefaAlterarDTO) = await iTarefaService.BuscarTarefaAsync(IdTarefa);
 
                 if (Sucesso)
                 {
-                    this.TarefaAlterarDTO = TarefaAlterarDTO;
+                    this.TarefaDto = TarefaAlterarDTO;
                 }
                 else
                 {
